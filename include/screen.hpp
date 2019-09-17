@@ -10,7 +10,7 @@ class Screen {
     Abstract screen object.
     */
     public:
-        virtual ScreenType display(sf::RenderWindow&) = 0;
+        virtual ScreenType display(sf::RenderWindow& window) = 0;
 };
 
 #endif // SCREEN_HPP

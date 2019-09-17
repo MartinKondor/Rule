@@ -2,7 +2,7 @@
 
 
 GameScreen::GameScreen() {
-
+    this->subScreen = GameSubScreen::GAME;
 }
 
 ScreenType GameScreen::display(sf::RenderWindow&) {

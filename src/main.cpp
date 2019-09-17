@@ -8,7 +8,8 @@
 
 int main(const int argc, const char** argv) {
     sf::Event windowEvent;
-    sf::RenderWindow window(sf::VideoMode(CONFIG.WINDOW_WIDTH, CONFIG.WINDOW_HEIGHT), WINDOW_TITLE, CONFIG.IS_FULLSCREEN ? sf::Style::Fullscreen : sf::Style::Close);
+    sf::RenderWindow window(sf::VideoMode(CONFIG.WINDOW_WIDTH, CONFIG.WINDOW_HEIGHT),
+                                WINDOW_TITLE, CONFIG.IS_FULLSCREEN ? sf::Style::Fullscreen : sf::Style::Close);
     window.setFramerateLimit(CONFIG.FPS_LIMIT);
     window.resetGLStates();
 

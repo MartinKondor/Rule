@@ -2,13 +2,16 @@
 1568578445 source:c:\files\projects\rule\src\config.cpp
 	"config.hpp"
 
-1568578495 c:\files\projects\rule\include\config.hpp
+1568734895 c:\files\projects\rule\include\config.hpp
+	<SFML/Graphics.hpp>
 
-1568581156 source:c:\files\projects\rule\src\main.cpp
+1568736998 source:c:\files\projects\rule\src\main.cpp
 	<iostream>
 	<SFML/Graphics.hpp>
-	"../include/consts.hpp"
-	"../include/main_menu_screen.hpp"
+	<config.hpp>
+	<consts.hpp>
+	<main_menu_screen.hpp>
+	<game_screen.hpp>
 
 1525815618 c:\files\projects\rule\lib\sfml-2.5.1\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -419,26 +422,30 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1568580633 c:\files\projects\rule\include\consts.hpp
-	"../include/config.hpp"
+1568737398 c:\files\projects\rule\include\consts.hpp
+	<config.hpp>
 
-1568581147 source:c:\files\projects\rule\src\main_menu_screen.cpp
+1568737036 source:c:\files\projects\rule\src\main_menu_screen.cpp
 	"main_menu_screen.hpp"
 
-1568581449 c:\files\projects\rule\include\main_menu_screen.hpp
-	"../include/screen.hpp"
-
-1568581378 c:\files\projects\rule\include\screen.hpp
+1568736875 c:\files\projects\rule\include\main_menu_screen.hpp
 	<SFML/Graphics.hpp>
-	"../include/enums.hpp"
-	"../include/button.hpp"
+	<enums.hpp>
+	<screen.hpp>
+	<button.hpp>
 
-1568580635 c:\files\projects\rule\include\enums.hpp
+1568736878 c:\files\projects\rule\include\screen.hpp
+	<SFML/Graphics.hpp>
+	<enums.hpp>
 
-1568581362 c:\files\projects\rule\include\button.hpp
+1568737098 c:\files\projects\rule\include\enums.hpp
 
-1568581355 source:c:\files\projects\rule\src\button.cpp
-	"button.hpp"
+1568737439 c:\files\projects\rule\include\button.hpp
+	<string>
+	<SFML/Graphics.hpp>
+
+1568737421 source:c:\files\projects\rule\src\button.cpp
+	<button.hpp>
 
 1568728210 source:d:\projects\rule\src\button.cpp
 	<button.hpp>
@@ -892,4 +899,12 @@
 
 1568727829 source:d:\projects\rule\src\game_screen.cpp
 	"game_screen.hpp"
+
+1568737518 c:\files\projects\rule\include\game_screen.hpp
+	<enums.hpp>
+	<screen.hpp>
+	<button.hpp>
+
+1568734895 source:c:\files\projects\rule\src\game_screen.cpp
+	<game_screen.hpp>
 
