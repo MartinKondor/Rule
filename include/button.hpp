@@ -1,12 +1,18 @@
 #ifndef BUTTON_HPP
 #define BUTTON_HPP
-
+/**
+GUI button class.
+*/
 #include <string>
 #include <SFML/Graphics.hpp>
+#include <consts.hpp>
 
 
 enum class ButtonState {
-    NORMAL
+    NORMAL,
+    CLICKED,
+    HOVERED,
+    RELEASED
 };
 
 
@@ -16,13 +22,16 @@ class Button {
         unsigned int yPos;
         unsigned int width;
         unsigned int height;
+        unsigned int outlineThickness;
         ButtonState state;
+        sf::Color outlineColor;
+        sf::Text label;
 
     public:
-        static const unsigned int CHARACTER_SIZE = 15;
-
         Button();
         Button(const unsigned int xPos, const unsigned int yPos, const std::string label);
+        Button(const unsigned int xPos, const unsigned int yPos, const std::string label,
+               const unsigned int width, const unsigned int height);
         void display(sf::RenderWindow& window);
 };
 

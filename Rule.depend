@@ -1,15 +1,19 @@
 # depslib dependency file v1.0
-1568578445 source:c:\files\projects\rule\src\config.cpp
-	"config.hpp"
+1568754508 source:c:\files\projects\rule\src\config.cpp
+	<config.hpp>
 
-1568734895 c:\files\projects\rule\include\config.hpp
+1568754613 c:\files\projects\rule\include\config.hpp
+	<fstream>
+	<string>
 	<SFML/Graphics.hpp>
 
-1568736998 source:c:\files\projects\rule\src\main.cpp
+1568754377 source:c:\files\projects\rule\src\main.cpp
 	<iostream>
 	<SFML/Graphics.hpp>
 	<config.hpp>
 	<consts.hpp>
+	<loading_screen.hpp>
+	<settings_screen.hpp>
 	<main_menu_screen.hpp>
 	<game_screen.hpp>
 
@@ -422,7 +426,8 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1568737398 c:\files\projects\rule\include\consts.hpp
+1568754071 c:\files\projects\rule\include\consts.hpp
+	<iostream>
 	<config.hpp>
 
 1568737036 source:c:\files\projects\rule\src\main_menu_screen.cpp
@@ -438,13 +443,14 @@
 	<SFML/Graphics.hpp>
 	<enums.hpp>
 
-1568737098 c:\files\projects\rule\include\enums.hpp
+1568750096 c:\files\projects\rule\include\enums.hpp
 
-1568737439 c:\files\projects\rule\include\button.hpp
+1568750919 c:\files\projects\rule\include\button.hpp
 	<string>
 	<SFML/Graphics.hpp>
+	<consts.hpp>
 
-1568737421 source:c:\files\projects\rule\src\button.cpp
+1568750904 source:c:\files\projects\rule\src\button.cpp
 	<button.hpp>
 
 1568728210 source:d:\projects\rule\src\button.cpp
@@ -905,6 +911,30 @@
 	<screen.hpp>
 	<button.hpp>
 
-1568734895 source:c:\files\projects\rule\src\game_screen.cpp
+1568737536 source:c:\files\projects\rule\src\game_screen.cpp
 	<game_screen.hpp>
+
+1568748764 source:c:\files\projects\rule\src\loading_screen.cpp
+	<loading_screen.hpp>
+
+1568749011 c:\files\projects\rule\include\loading_screen.hpp
+	<SFML/Graphics.hpp>
+	<enums.hpp>
+	<screen.hpp>
+
+1568749051 source:c:\files\projects\rule\src\settings_screen.cpp
+	"settings_screen.hpp"
+
+1568749116 c:\files\projects\rule\include\settings_screen.hpp
+	<SFML/Graphics.hpp>
+	<enums.hpp>
+	<screen.hpp>
+
+1568754549 c:\files\projects\rule\include\utils.hpp
+	<sys/stat.h>
+	<sstream>
+	<string>
+
+1568753815 source:c:\files\projects\rule\src\utils.cpp
+	<utils.hpp>
 
