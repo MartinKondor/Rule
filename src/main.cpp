@@ -1,9 +1,9 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
-
-#include "../include/consts.hpp"
-#include "../include/main_menu_screen.hpp"
-
+#include <config.hpp>
+#include <consts.hpp>
+#include <main_menu_screen.hpp>
+#include <game_screen.hpp>
 
 
 int main(const int argc, const char** argv) {

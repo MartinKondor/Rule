@@ -2,8 +2,7 @@
 #define SCREEN_HPP
 
 #include <SFML/Graphics.hpp>
-#include "../include/enums.hpp"
-#include "../include/button.hpp"
+#include <enums.hpp>
 
 
 class Screen {

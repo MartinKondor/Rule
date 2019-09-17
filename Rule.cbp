@@ -52,10 +52,12 @@
 		<Unit filename="include/config.hpp" />
 		<Unit filename="include/consts.hpp" />
 		<Unit filename="include/enums.hpp" />
+		<Unit filename="include/game_screen.hpp" />
 		<Unit filename="include/main_menu_screen.hpp" />
 		<Unit filename="include/screen.hpp" />
 		<Unit filename="src/button.cpp" />
 		<Unit filename="src/config.cpp" />
+		<Unit filename="src/game_screen.cpp" />
 		<Unit filename="src/main.cpp" />
 		<Unit filename="src/main_menu_screen.cpp" />
 		<Extensions>

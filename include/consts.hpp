@@ -1,7 +1,7 @@
 #ifndef CONSTS_HPP
 #define CONSTS_HPP
 
-#include "../include/config.hpp"
+#include <config.hpp>
 
 
 #define WINDOW_TITLE "Rule"

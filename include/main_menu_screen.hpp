@@ -1,7 +1,9 @@
 #ifndef MAIN_MENU_SCREEN_HPP
 #define MAIN_MENU_SCREEN_HPP
 
-#include "../include/screen.hpp"
+#include <enums.hpp>
+#include <screen.hpp>
+#include <button.hpp>
 
 
 class MainMenuScreen : public Screen {
