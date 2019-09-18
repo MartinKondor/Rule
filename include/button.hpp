@@ -3,7 +3,8 @@
 /**
 Button class and it's utilities.
 
-See https://paletton.com/#uid=3010u0klEy-bKPnhfGnq5urtHo+ for colors.
+https://paletton.com/#uid=3010u0klEy-bKPnhfGnq5urtHo+
+https://paletton.com/#uid=7010u0klEy-bKPnhfGnq5urtHo+
 
 */
 #include <string>
@@ -31,7 +32,6 @@ class Button {
         unsigned int width;
         unsigned int height;
         unsigned int outlineThickness;
-        sf::Text label;
         sf::Color outlineColor;
         sf::Color fontColor;
         sf::Color hoverFontColor;
@@ -39,6 +39,7 @@ class Button {
         sf::RectangleShape body;
 
     public:
+        sf::Text label;
         ButtonState state;
 
 

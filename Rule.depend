@@ -453,34 +453,34 @@
 1568750904 source:c:\files\projects\rule\src\button.cpp
 	<button.hpp>
 
-1568797969 source:d:\projects\rule\src\button.cpp
-	<button.hpp>
+1568810253 source:d:\projects\rule\src\button.cpp
+	"button.hpp"
 
-1568802916 d:\projects\rule\include\button.hpp
+1568812210 d:\projects\rule\include\button.hpp
 	<string>
 	<SFML/Graphics.hpp>
 	<config.hpp>
 
-1568792994 source:d:\projects\rule\src\config.cpp
-	<config.hpp>
+1568816238 source:d:\projects\rule\src\config.cpp
+	"config.hpp"
 
-1568802968 d:\projects\rule\include\config.hpp
+1568815178 d:\projects\rule\include\config.hpp
 	<string>
 	<fstream>
 	<SFML/Graphics.hpp>
 	<utils.hpp>
 
-1568800757 source:d:\projects\rule\src\main.cpp
+1568803337 source:d:\projects\rule\src\main.cpp
 	<iostream>
 	<string>
 	<SFML/Graphics.hpp>
-	<config.hpp>
-	<screen.hpp>
-	<credits_screen.hpp>
-	<loading_screen.hpp>
-	<settings_screen.hpp>
-	<main_menu_screen.hpp>
-	<game_screen.hpp>
+	"config.hpp"
+	"screen.hpp"
+	"credits_screen.hpp"
+	"loading_screen.hpp"
+	"settings_screen.hpp"
+	"main_menu_screen.hpp"
+	"game_screen.hpp"
 
 1568705448 d:\projects\rule\lib\sfml-2.5.1\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -895,7 +895,7 @@
 	<string>
 	<config.hpp>
 
-1568803088 d:\projects\rule\include\main_menu_screen.hpp
+1568815363 d:\projects\rule\include\main_menu_screen.hpp
 	<SFML/Graphics.hpp>
 	<screen.hpp>
 	<button.hpp>
@@ -905,7 +905,7 @@
 
 1568787942 d:\projects\rule\include\enums.hpp
 
-1568801948 source:d:\projects\rule\src\main_menu_screen.cpp
+1568816298 source:d:\projects\rule\src\main_menu_screen.cpp
 	"main_menu_screen.hpp"
 
 1568803016 d:\projects\rule\include\game_screen.hpp
@@ -913,8 +913,8 @@
 	<screen.hpp>
 	<button.hpp>
 
-1568787110 source:d:\projects\rule\src\game_screen.cpp
-	<game_screen.hpp>
+1568803514 source:d:\projects\rule\src\game_screen.cpp
+	"game_screen.hpp"
 
 1568737518 c:\files\projects\rule\include\game_screen.hpp
 	<enums.hpp>
@@ -953,35 +953,55 @@
 	<sstream>
 	<sys/stat.h>
 
-1568803052 d:\projects\rule\include\loading_screen.hpp
+1568815754 d:\projects\rule\include\loading_screen.hpp
 	<SFML/Graphics.hpp>
 	<screen.hpp>
 	<config.hpp>
 
-1568803136 d:\projects\rule\include\settings_screen.hpp
+1568815973 d:\projects\rule\include\settings_screen.hpp
 	<SFML/Graphics.hpp>
-	<screen.hpp>
-	<button.hpp>
+	"screen.hpp"
+	"button.hpp"
+	"checkbox.hpp"
+	"slider.hpp"
+	"config.hpp"
 
-1568801035 source:d:\projects\rule\src\loading_screen.cpp
-	<loading_screen.hpp>
+1568815947 source:d:\projects\rule\src\loading_screen.cpp
+	"loading_screen.hpp"
 
-1568801292 source:d:\projects\rule\src\settings_screen.cpp
+1568816049 source:d:\projects\rule\src\settings_screen.cpp
 	"settings_screen.hpp"
 
-1568803165 source:d:\projects\rule\src\utils.cpp
-	<utils.hpp>
+1568803546 source:d:\projects\rule\src\utils.cpp
+	"utils.hpp"
 
-1568802835 source:d:\projects\rule\src\global.cpp
-	<config.hpp>
+1568812544 source:d:\projects\rule\src\global.cpp
 	<string>
+	"config.hpp"
 
-1568801234 source:d:\projects\rule\src\credits_screen.cpp
+1568816085 source:d:\projects\rule\src\credits_screen.cpp
 	"credits_screen.hpp"
 
-1568802996 d:\projects\rule\include\credits_screen.hpp
+1568815216 d:\projects\rule\include\credits_screen.hpp
 	<SFML/Graphics.hpp>
 	<screen.hpp>
 	<button.hpp>
 	<config.hpp>
+
+1568809318 d:\projects\rule\include\slider.hpp
+	<SFML/Graphics.hpp>
+	"config.hpp"
+	"utils.hpp"
+
+1568811441 d:\projects\rule\include\checkbox.hpp
+	<string>
+	<SFML/Graphics.hpp>
+	"button.hpp"
+	"config.hpp"
+
+1568811530 source:d:\projects\rule\src\checkbox.cpp
+	"checkbox.hpp"
+
+1568807519 source:d:\projects\rule\src\slider.cpp
+	"slider.hpp"
 

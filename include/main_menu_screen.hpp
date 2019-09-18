@@ -21,6 +21,8 @@ class MainMenuScreen : public Screen {
     Main menu screen.
     */
     private:
+        sf::Text newGameSubScreenTitle;
+        sf::Text loadGameSubScreenTitle;
         Button newGameButton;
         Button loadSaveGameButton;
         Button settingsButton;

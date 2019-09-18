@@ -14,16 +14,26 @@ MainMenuScreen::MainMenuScreen() {
 
     // Load logo
     sf::Image logoImage;
-
     logoImage.loadFromFile(IMAGE_FOLDER + "logo.png");
     this->logoTexture.loadFromImage(logoImage);
     this->logo.setTexture(logoTexture);
     this->logo.setPosition(CONFIG.WINDOW_WIDTH - logoImage.getSize().x, 0);
 
     this->subScreen = MainMenuSubScreen::NONE;
+    this->newGameSubScreenTitle = sf::Text("New game", CONFIG.TITLE_FONT, CONFIG.TITLE_CHARACTER_SIZE);
+    this->loadGameSubScreenTitle = sf::Text("Load game", CONFIG.TITLE_FONT, CONFIG.TITLE_CHARACTER_SIZE);
+    this->newGameSubScreenTitle.setPosition(2 * CONFIG.CHARACTER_SIZE, 2 * CONFIG.CHARACTER_SIZE);
+    this->loadGameSubScreenTitle.setPosition(2 * CONFIG.CHARACTER_SIZE, 2 * CONFIG.CHARACTER_SIZE);
 }
 
 ScreenType MainMenuScreen::displaySubScreen(sf::RenderWindow &window) {
+    if (this->subScreen == MainMenuSubScreen::NEW_GAME) {
+        window.draw(this->newGameSubScreenTitle);
+    }
+    else if (this->subScreen == MainMenuSubScreen::LOAD_GAME) {
+        window.draw(this->loadGameSubScreenTitle);
+    }
+    window.draw(this->logo);
     this->subScreenBackButton.display(window);
 
     if (this->subScreenBackButton.state == ButtonState::RELEASED) {

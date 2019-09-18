@@ -14,7 +14,7 @@ class LoadingScreen : public Screen {
     The first screen what the user see.
     */
     private:
-        sf::Text loadingText;
+        sf::Text screenTitle;
         sf::Texture logoTexture;
         sf::Texture sfmlLogoTexture;
         sf::Sprite logo;

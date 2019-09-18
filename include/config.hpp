@@ -20,6 +20,7 @@ class Config {
         unsigned int WINDOW_HEIGHT = 600;
         unsigned int FPS_LIMIT = 60;
         unsigned int CHARACTER_SIZE = 14;
+        unsigned int TITLE_CHARACTER_SIZE = 42;
         unsigned int MASTER_VOLUME = 100;
         unsigned int SOUND_VOLUME = 100;
         unsigned int MUSIC_VOLUME = 100;
@@ -31,6 +32,7 @@ class Config {
 
         // Not settable variables
         sf::Font MAIN_FONT;
+        sf::Font TITLE_FONT;
         sf::Color BG_COLOR;
 
         Config();

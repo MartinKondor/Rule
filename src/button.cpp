@@ -18,7 +18,7 @@ Button::Button(const unsigned int xPos, const unsigned int yPos, const std::stri
 
     this->bodyColor = sf::Color(28, 141, 147);
     this->outlineColor = sf::Color(139, 215, 218);
-    this->fontColor = sf::Color(240, 240, 240);
+    this->fontColor = sf::Color(250, 250, 250);
     this->hoverFontColor = sf::Color(255 - this->fontColor.r, 255 - this->fontColor.g, 255 - this->fontColor.b);
 
     this->body.setPosition(this->xPos, this->yPos);
@@ -40,7 +40,7 @@ void Button::display(sf::RenderWindow &window) {
         if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
             this->state = ButtonState::CLICKED;
         }
-        else if (state == ButtonState::CLICKED) {
+        else if (this->state == ButtonState::CLICKED) {
             this->state = ButtonState::RELEASED;
         }
         else {

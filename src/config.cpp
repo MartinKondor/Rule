@@ -47,7 +47,10 @@ bool Config::load(std::string fileName) {
     if (!this->MAIN_FONT.loadFromFile(BASE_FOLDER + "fonts/FreeSans.ttf")) {
         return false;
     }
-    this->BG_COLOR = sf::Color(126, 185, 13);
+    if (!this->TITLE_FONT.loadFromFile(BASE_FOLDER + "fonts/OldLondon.ttf")) {
+        return false;
+    }
+    this->BG_COLOR = sf::Color(37, 37, 37);
 
     // Check errorous settings
     if (this->WINDOW_WIDTH < 800) {
@@ -71,6 +74,7 @@ void Config::save(std::string fileName) {
     data += "WINDOW_HEIGHT=" + Utils::to_string(this->WINDOW_HEIGHT) + "\n";
     data += "FPS_LIMIT=" + Utils::to_string(this->FPS_LIMIT) + "\n";
     data += "CHARACTER_SIZE=" + Utils::to_string(this->CHARACTER_SIZE) + "\n";
+    data += "TITLE_CHARACTER_SIZE=" + Utils::to_string(this->TITLE_CHARACTER_SIZE) + "\n";
     data += "KEY_UP=" + Utils::to_string(this->KEY_UP) + "\n";
     data += "KEY_DOWN=" + Utils::to_string(this->KEY_DOWN) + "\n";
     data += "KEY_LEFT=" + Utils::to_string(this->KEY_LEFT) + "\n";
@@ -103,6 +107,11 @@ void Config::parseConfigKey(std::string key, std::string value) {
     else if ("CHARACTER_SIZE" == key) {
         try {
             this->CHARACTER_SIZE = std::stoi(value.c_str());
+        } catch (std::exception) {}
+    }
+    else if ("TITLE_CHARACTER_SIZE" == key) {
+        try {
+            this->TITLE_CHARACTER_SIZE = std::stoi(value.c_str());
         } catch (std::exception) {}
     }
     else if ("KEY_UP" == key) {

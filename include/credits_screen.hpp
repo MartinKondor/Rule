@@ -7,6 +7,7 @@
 #include <config.hpp>
 
 extern Config CONFIG;
+extern std::string IMAGE_FOLDER;
 
 
 class CreditsScreen : public Screen {
@@ -14,6 +15,12 @@ class CreditsScreen : public Screen {
     Credits.
     */
     private:
+        sf::Text screenTitle;
+        sf::Text credits;
+        sf::Texture logoTexture;
+        sf::Texture sfmlLogoTexture;
+        sf::Sprite logo;
+        sf::Sprite sfmlLogo;
         Button backButton;
 
     public:
