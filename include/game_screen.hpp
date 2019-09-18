@@ -1,7 +1,7 @@
 #ifndef GAMESCREEN_HPP
 #define GAMESCREEN_HPP
 
-#include <enums.hpp>
+#include <SFML/Graphics.hpp>
 #include <screen.hpp>
 #include <button.hpp>
 

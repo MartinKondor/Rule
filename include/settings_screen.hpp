@@ -2,7 +2,6 @@
 #define SETTINGS_SCREEN_HPP
 
 #include <SFML/Graphics.hpp>
-#include <enums.hpp>
 #include <screen.hpp>
 
 

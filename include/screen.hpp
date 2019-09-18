@@ -2,8 +2,14 @@
 #define SCREEN_HPP
 
 #include <SFML/Graphics.hpp>
-#include <enums.hpp>
 
+
+enum class ScreenType {
+    LOADING,
+    MAIN_MENU,
+    SETTINGS,
+    GAME
+};
 
 class Screen {
     /**

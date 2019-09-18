@@ -2,7 +2,6 @@
 #define MAIN_MENU_SCREEN_HPP
 
 #include <SFML/Graphics.hpp>
-#include <enums.hpp>
 #include <screen.hpp>
 #include <button.hpp>
 

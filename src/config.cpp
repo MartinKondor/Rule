@@ -1,5 +1,4 @@
 #include <config.hpp>
-#include <utils.hpp>
 
 
 Config::Config() {}
@@ -63,25 +62,22 @@ void Config::save(std::string fileName) {
     configFile.open(fileName);
 
     data += "WINDOW_WIDTH=" + Utils::to_string(this->WINDOW_WIDTH) + "\n";
-    data += "WINDOW_HEIGHT=" + std::to_string(this->WINDOW_HEIGHT) + "\n";
-    data += "FPS_LIMIT=" + std::to_string(this->FPS_LIMIT) + "\n";
-    data += "CHARACTER_SIZE=" + std::to_string(this->CHARACTER_SIZE) + "\n";
-    data += "KEY_UP=" + std::to_string(this->KEY_UP) + "\n";
-    data += "KEY_DOWN=" + std::to_string(this->KEY_DOWN) + "\n";
-    data += "KEY_LEFT=" + std::to_string(this->KEY_LEFT) + "\n";
-    data += "KEY_RIGHT=" + std::to_string(this->KEY_RIGHT) + "\n";
-    data += "MASTER_VOLUME=" + std::to_string(this->MASTER_VOLUME) + "\n";
-    data += "SOUND_VOLUME=" + std::to_string(this->SOUND_VOLUME) + "\n";
-    data += "MUSIC_VOLUME=" + std::to_string(this->MUSIC_VOLUME) + "\n";
-    data += "IS_FULLSCREEN=" + std::to_string(this->IS_FULLSCREEN) + "\n";
+    data += "WINDOW_HEIGHT=" + Utils::to_string(this->WINDOW_HEIGHT) + "\n";
+    data += "FPS_LIMIT=" + Utils::to_string(this->FPS_LIMIT) + "\n";
+    data += "CHARACTER_SIZE=" + Utils::to_string(this->CHARACTER_SIZE) + "\n";
+    data += "KEY_UP=" + Utils::to_string(this->KEY_UP) + "\n";
+    data += "KEY_DOWN=" + Utils::to_string(this->KEY_DOWN) + "\n";
+    data += "KEY_LEFT=" + Utils::to_string(this->KEY_LEFT) + "\n";
+    data += "KEY_RIGHT=" + Utils::to_string(this->KEY_RIGHT) + "\n";
+    data += "MASTER_VOLUME=" + Utils::to_string(this->MASTER_VOLUME) + "\n";
+    data += "SOUND_VOLUME=" + Utils::to_string(this->SOUND_VOLUME) + "\n";
+    data += "MUSIC_VOLUME=" + Utils::to_string(this->MUSIC_VOLUME) + "\n";
+    data += "IS_FULLSCREEN=" + Utils::to_string(this->IS_FULLSCREEN) + "\n";
 
     configFile.write(data.c_str(), data.length());
     configFile.close();
 }
 
-/**
-Setting the "config" class variable "key" to the given "value"
-*/
 void Config::parseConfigKey(std::string key, std::string value) {
     if ("WINDOW_WIDTH" == key) {
         try {

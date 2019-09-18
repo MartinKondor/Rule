@@ -1,21 +1,22 @@
 #ifndef UTILS_HPP
 #define UTILS_HPP
 
+#include <string>
+#include <sstream>
+#include <sys/stat.h>
+
 
 namespace Utils {
 
     /**
     @returns true if the given file exists
     */
-    bool Utils::isFileExists(const std::string fileName) {
-        struct stat buffer;
-        return (stat(fileName.c_str(), &buffer) == 0);
-    }
+    bool isFileExists(const std::string fileName);
 
     /**
     Turns type T to string.
     */
-    template<typename T> std::string Utils::to_string(T const& n) {
+    template<typename T> std::string to_string(T const& n) {
         std::ostringstream stm;
         stm << n;
         return stm.str();

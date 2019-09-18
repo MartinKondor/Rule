@@ -1,9 +1,10 @@
 #ifndef CONFIG_HPP
 #define CONFIG_HPP
 
-#include <fstream>
 #include <string>
+#include <fstream>
 #include <SFML/Graphics.hpp>
+#include <utils.hpp>
 
 
 class Config {
@@ -31,6 +32,10 @@ class Config {
         void save(std::string fileName);
 
     private:
+
+        /**
+        Setting the "config" class variable "key" to the given "value"
+        */
         void parseConfigKey(std::string key, std::string value);
 };
 

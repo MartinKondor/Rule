@@ -2,10 +2,16 @@
 #define BUTTON_HPP
 /**
 GUI button class.
+
+See https://paletton.com/#uid=3010u0klEy-bKPnhfGnq5urtHo+ for colors.
+
 */
 #include <string>
 #include <SFML/Graphics.hpp>
-#include <consts.hpp>
+#include <config.hpp>
+
+
+extern Config CONFIG;
 
 
 enum class ButtonState {
