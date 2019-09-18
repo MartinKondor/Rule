@@ -2,11 +2,11 @@
 #define SETTINGS_SCREEN_HPP
 
 #include <SFML/Graphics.hpp>
-#include "screen.hpp"
-#include "button.hpp"
-#include "checkbox.hpp"
-#include "slider.hpp"
 #include "config.hpp"
+#include "screen.hpp"
+#include "gui/button.hpp"
+#include "gui/checkbox.hpp"
+#include "gui/slider.hpp"
 
 extern Config CONFIG;
 extern std::string IMAGE_FOLDER;

@@ -1,4 +1,4 @@
-#include "credits_screen.hpp"
+#include "screens/credits.hpp"
 
 
 CreditsScreen::CreditsScreen() {

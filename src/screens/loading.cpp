@@ -1,4 +1,4 @@
-#include "loading_screen.hpp"
+#include "screens/loading.hpp"
 
 
 LoadingScreen::LoadingScreen() {

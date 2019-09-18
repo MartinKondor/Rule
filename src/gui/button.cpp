@@ -1,4 +1,4 @@
-#include "button.hpp"
+#include "gui/button.hpp"
 
 
 Button::Button() : Button(0, 0, "-") {}

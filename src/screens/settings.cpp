@@ -1,4 +1,4 @@
-#include "settings_screen.hpp"
+#include "screens/settings.hpp"
 
 
 const unsigned int KEY_COUNT = 101;

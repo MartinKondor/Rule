@@ -2,8 +2,8 @@
 #define GAMESCREEN_HPP
 
 #include <SFML/Graphics.hpp>
-#include <screen.hpp>
-#include <button.hpp>
+#include "screen.hpp"
+#include "gui/button.hpp"
 
 
 enum class GameSubScreen {

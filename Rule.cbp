@@ -45,34 +45,28 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename=".gitignore">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="bin/config.ini">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="include/button.hpp" />
-		<Unit filename="include/checkbox.hpp" />
 		<Unit filename="include/config.hpp" />
-		<Unit filename="include/credits_screen.hpp" />
-		<Unit filename="include/game_screen.hpp" />
-		<Unit filename="include/loading_screen.hpp" />
-		<Unit filename="include/main_menu_screen.hpp" />
+		<Unit filename="include/gui/button.hpp" />
+		<Unit filename="include/gui/checkbox.hpp" />
+		<Unit filename="include/gui/slider.hpp" />
 		<Unit filename="include/screen.hpp" />
-		<Unit filename="include/settings_screen.hpp" />
-		<Unit filename="include/slider.hpp" />
+		<Unit filename="include/screens/credits.hpp" />
+		<Unit filename="include/screens/game.hpp" />
+		<Unit filename="include/screens/loading.hpp" />
+		<Unit filename="include/screens/main_menu.hpp" />
+		<Unit filename="include/screens/settings.hpp" />
 		<Unit filename="include/utils.hpp" />
-		<Unit filename="src/button.cpp" />
-		<Unit filename="src/checkbox.cpp" />
 		<Unit filename="src/config.cpp" />
-		<Unit filename="src/credits_screen.cpp" />
-		<Unit filename="src/game_screen.cpp" />
 		<Unit filename="src/global.cpp" />
-		<Unit filename="src/loading_screen.cpp" />
+		<Unit filename="src/gui/button.cpp" />
+		<Unit filename="src/gui/checkbox.cpp" />
+		<Unit filename="src/gui/slider.cpp" />
 		<Unit filename="src/main.cpp" />
-		<Unit filename="src/main_menu_screen.cpp" />
-		<Unit filename="src/settings_screen.cpp" />
-		<Unit filename="src/slider.cpp" />
+		<Unit filename="src/screens/credits.cpp" />
+		<Unit filename="src/screens/game.cpp" />
+		<Unit filename="src/screens/loading.cpp" />
+		<Unit filename="src/screens/main_menu.cpp" />
+		<Unit filename="src/screens/settings.cpp" />
 		<Unit filename="src/utils.cpp" />
 		<Extensions>
 			<code_completion />

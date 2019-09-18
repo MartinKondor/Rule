@@ -2,8 +2,8 @@
 #define LOADING_SCREEN_HPP
 
 #include <SFML/Graphics.hpp>
-#include <screen.hpp>
-#include <config.hpp>
+#include "config.hpp"
+#include "screen.hpp"
 
 extern Config CONFIG;
 extern std::string IMAGE_FOLDER;

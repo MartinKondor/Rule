@@ -1,4 +1,4 @@
-#include "main_menu_screen.hpp"
+#include "screens/main_menu.hpp"
 
 
 MainMenuScreen::MainMenuScreen() {

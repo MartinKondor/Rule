@@ -2,9 +2,9 @@
 #define CREDITS_SCREEN_HPP
 
 #include <SFML/Graphics.hpp>
-#include <screen.hpp>
-#include <button.hpp>
-#include <config.hpp>
+#include "config.hpp"
+#include "screen.hpp"
+#include "gui/button.hpp"
 
 extern Config CONFIG;
 extern std::string IMAGE_FOLDER;

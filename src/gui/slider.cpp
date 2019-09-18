@@ -1,4 +1,4 @@
-#include "slider.hpp"
+#include "gui/slider.hpp"
 
 
 Slider::Slider() {}
