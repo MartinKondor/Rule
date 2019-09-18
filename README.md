@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="bin/images/logo.png" width=350>
+    <img src="bin/images/flag/flag.png" width=350>
 </p>
 
 # Rule
