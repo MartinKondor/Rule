@@ -4,7 +4,8 @@
 #include <SFML/Graphics.hpp>
 
 
-enum class ScreenType {
+enum class ScreenType
+{
     EXIT,
     SETTINGS,
     LOADING,
@@ -13,15 +14,16 @@ enum class ScreenType {
     GAME
 };
 
-class Screen {
+class Screen
+{
     /**
     Abstract screen object.
     */
-    public:
-        /**
-        Called for displaying and updating the given screen.
-        */
-        virtual ScreenType display(sf::RenderWindow& window) = 0;
+public:
+    /**
+    Called for displaying and updating the given screen.
+    */
+    virtual ScreenType display(sf::RenderWindow& window) = 0;
 };
 
 #endif // SCREEN_HPP

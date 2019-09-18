@@ -1,15 +1,17 @@
 #include "screens/main_menu.hpp"
 
 
-MainMenuScreen::MainMenuScreen() {
+MainMenuScreen::MainMenuScreen()
+{
     int buttonMargin = 45;
-    int commonX = 15;
+    int commonX = 50;
+    int commonY = 29;
 
-    this->newGameButton = Button(commonX, CONFIG.WINDOW_HEIGHT - 5 * buttonMargin, "NEW GAME", 157, 0);
-    this->loadSaveGameButton = Button(commonX, CONFIG.WINDOW_HEIGHT - 4 * buttonMargin, "LOAD GAME", 157, 0);
-    this->settingsButton = Button(commonX, CONFIG.WINDOW_HEIGHT - 3 * buttonMargin, "SETTINGS", 157, 0);
-    this->creditsButton = Button(commonX, CONFIG.WINDOW_HEIGHT - 2 * buttonMargin, "CREDITS", 157, 0);
-    this->exitButton = Button(commonX, CONFIG.WINDOW_HEIGHT - buttonMargin, "EXIT", 157, 0);
+    this->newGameButton = Button(commonX, CONFIG.WINDOW_HEIGHT - 5 * buttonMargin - commonY, "NEW GAME", 157, 0);
+    this->loadSaveGameButton = Button(commonX, CONFIG.WINDOW_HEIGHT - 4 * buttonMargin - commonY, "LOAD GAME", 157, 0);
+    this->settingsButton = Button(commonX, CONFIG.WINDOW_HEIGHT - 3 * buttonMargin - commonY, "SETTINGS", 157, 0);
+    this->creditsButton = Button(commonX, CONFIG.WINDOW_HEIGHT - 2 * buttonMargin - commonY, "CREDITS", 157, 0);
+    this->exitButton = Button(commonX, CONFIG.WINDOW_HEIGHT - buttonMargin - commonY, "EXIT", 157, 0);
     this->subScreenBackButton = Button(2 * CONFIG.CHARACTER_SIZE, CONFIG.WINDOW_HEIGHT - 3.5 * CONFIG.CHARACTER_SIZE, "BACK");
 
     // Load logo
@@ -26,24 +28,30 @@ MainMenuScreen::MainMenuScreen() {
     this->loadGameSubScreenTitle.setPosition(2 * CONFIG.CHARACTER_SIZE, 2 * CONFIG.CHARACTER_SIZE);
 }
 
-ScreenType MainMenuScreen::displaySubScreen(sf::RenderWindow &window) {
-    if (this->subScreen == MainMenuSubScreen::NEW_GAME) {
+ScreenType MainMenuScreen::displaySubScreen(sf::RenderWindow &window)
+{
+    if (this->subScreen == MainMenuSubScreen::NEW_GAME)
+    {
         window.draw(this->newGameSubScreenTitle);
     }
-    else if (this->subScreen == MainMenuSubScreen::LOAD_GAME) {
+    else if (this->subScreen == MainMenuSubScreen::LOAD_GAME)
+    {
         window.draw(this->loadGameSubScreenTitle);
     }
     window.draw(this->logo);
     this->subScreenBackButton.display(window);
 
-    if (this->subScreenBackButton.state == ButtonState::RELEASED) {
+    if (this->subScreenBackButton.state == ButtonState::RELEASED)
+    {
         this->subScreen = MainMenuSubScreen::NONE;
     }
     return ScreenType::MAIN_MENU;
 }
 
-ScreenType MainMenuScreen::display(sf::RenderWindow &window) {
-    if (this->subScreen != MainMenuSubScreen::NONE) {
+ScreenType MainMenuScreen::display(sf::RenderWindow &window)
+{
+    if (this->subScreen != MainMenuSubScreen::NONE)
+    {
         return this->displaySubScreen(window);
     }
 
@@ -54,21 +62,26 @@ ScreenType MainMenuScreen::display(sf::RenderWindow &window) {
     this->exitButton.display(window);
     window.draw(this->logo);
 
-    if (this->exitButton.state == ButtonState::RELEASED) {
+    if (this->exitButton.state == ButtonState::RELEASED)
+    {
         return ScreenType::EXIT;
     }
-    else if (this->newGameButton.state == ButtonState::RELEASED) {
+    else if (this->newGameButton.state == ButtonState::RELEASED)
+    {
         this->subScreen = MainMenuSubScreen::NEW_GAME;
         return ScreenType::MAIN_MENU;
     }
-    else if (this->loadSaveGameButton.state == ButtonState::RELEASED) {
+    else if (this->loadSaveGameButton.state == ButtonState::RELEASED)
+    {
         this->subScreen = MainMenuSubScreen::LOAD_GAME;
         return ScreenType::MAIN_MENU;
     }
-    else if (this->settingsButton.state == ButtonState::RELEASED) {
+    else if (this->settingsButton.state == ButtonState::RELEASED)
+    {
         return ScreenType::SETTINGS;
     }
-    else if (this->creditsButton.state == ButtonState::RELEASED) {
+    else if (this->creditsButton.state == ButtonState::RELEASED)
+    {
         return ScreenType::CREDITS;
     }
 

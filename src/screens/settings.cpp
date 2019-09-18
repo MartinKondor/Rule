@@ -2,7 +2,8 @@
 
 
 const unsigned int KEY_COUNT = 101;
-std::string KEY_LABELS[KEY_COUNT] = {
+std::string KEY_LABELS[KEY_COUNT] =
+{
     "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W",
     "X","Y","Z","0","1","2","3","4","5","6","7","8","9","Escape","Left Control","Left Shift",
     "Left Alt","Left System","Right Control","Right Shift","Right Alt","Right System","Menu",
@@ -15,7 +16,8 @@ std::string KEY_LABELS[KEY_COUNT] = {
 };
 
 
-SettingsScreen::SettingsScreen() {
+SettingsScreen::SettingsScreen()
+{
     sf::Image logoImage;
     logoImage.loadFromFile(IMAGE_FOLDER + "logo.png");
     this->logoTexture.loadFromImage(logoImage);
@@ -25,44 +27,55 @@ SettingsScreen::SettingsScreen() {
     // Texts
     this->screenTitle = sf::Text("Settings", CONFIG.TITLE_FONT, CONFIG.TITLE_CHARACTER_SIZE);
     this->controlsTitle = sf::Text("CONTROLS", CONFIG.MAIN_FONT, CONFIG.CHARACTER_SIZE);
-    // this->videoTitle = sf::Text("VIDEO", CONFIG.MAIN_FONT, CONFIG.CHARACTER_SIZE);
-    this->upKeyLabel = sf::Text("UP", CONFIG.MAIN_FONT, CONFIG.CHARACTER_SIZE);
-    this->downKeyLabel = sf::Text("DOWN", CONFIG.MAIN_FONT, CONFIG.CHARACTER_SIZE);
-    this->leftKeyLabel = sf::Text("LEFT", CONFIG.MAIN_FONT, CONFIG.CHARACTER_SIZE);
-    this->rightKeyLabel = sf::Text("RIGHT", CONFIG.MAIN_FONT, CONFIG.CHARACTER_SIZE);
+    this->videoTitle = sf::Text("VIDEO", CONFIG.MAIN_FONT, CONFIG.CHARACTER_SIZE);
+    this->upKeyLabel = sf::Text("Up key", CONFIG.MAIN_FONT, CONFIG.CHARACTER_SIZE);
+    this->downKeyLabel = sf::Text("Down key", CONFIG.MAIN_FONT, CONFIG.CHARACTER_SIZE);
+    this->leftKeyLabel = sf::Text("Left key", CONFIG.MAIN_FONT, CONFIG.CHARACTER_SIZE);
+    this->rightKeyLabel = sf::Text("Right key", CONFIG.MAIN_FONT, CONFIG.CHARACTER_SIZE);
     this->volumeTitle = sf::Text("VOLUME", CONFIG.MAIN_FONT, CONFIG.CHARACTER_SIZE);
     this->masterVolumeLabel = sf::Text("MASTER", CONFIG.MAIN_FONT, CONFIG.CHARACTER_SIZE);
     this->soundVolumeLabel = sf::Text("SOUND", CONFIG.MAIN_FONT, CONFIG.CHARACTER_SIZE);
     this->musicVolumeLabel = sf::Text("MUSIC", CONFIG.MAIN_FONT, CONFIG.CHARACTER_SIZE);
 
-    int commonX = this->controlsTitle.getString().getSize() * CONFIG.CHARACTER_SIZE / 2;
+    int thirdX = this->controlsTitle.getString().getSize() * CONFIG.CHARACTER_SIZE;
+    int commonX = thirdX / 2;
+    int sliderCommonX = CONFIG.WINDOW_WIDTH - 2.5 * thirdX;
 
     this->backButton = Button(2 * CONFIG.CHARACTER_SIZE, CONFIG.WINDOW_HEIGHT - 3.5 * CONFIG.CHARACTER_SIZE, "BACK");
     this->fullscreenCheckbox = Checkbox(0, 0, "Full screen");
-    this->upButton = Button(3.5 * commonX, 12 * CONFIG.CHARACTER_SIZE, KEY_LABELS[CONFIG.KEY_UP]);
-    this->downButton = Button(3.5 * commonX, 15 * CONFIG.CHARACTER_SIZE, KEY_LABELS[CONFIG.KEY_DOWN]);
-    this->leftButton = Button(3.5 * commonX, 18 * CONFIG.CHARACTER_SIZE, KEY_LABELS[CONFIG.KEY_LEFT]);
-    this->rightButton = Button(3.5 * commonX, 21 * CONFIG.CHARACTER_SIZE, KEY_LABELS[CONFIG.KEY_RIGHT]);
-    this->masterVolumeSlider = Slider(0, 0, 0, 100);
-    this->soundVolumeSlider = Slider(0, 0, 0, 100);
-    this->musicVolumeSlider = Slider(0, 0, 0, 100);
-    this->fullscreenCheckbox = Checkbox(commonX, 27 * CONFIG.CHARACTER_SIZE, "Full screen");
+    this->upButton = Button(3.5 * commonX, 11 * CONFIG.CHARACTER_SIZE, KEY_LABELS[CONFIG.KEY_UP]);
+    this->downButton = Button(3.5 * commonX, 14 * CONFIG.CHARACTER_SIZE, KEY_LABELS[CONFIG.KEY_DOWN]);
+    this->leftButton = Button(3.5 * commonX, 17 * CONFIG.CHARACTER_SIZE, KEY_LABELS[CONFIG.KEY_LEFT]);
+    this->rightButton = Button(3.5 * commonX, 20 * CONFIG.CHARACTER_SIZE, KEY_LABELS[CONFIG.KEY_RIGHT]);
+    this->fullscreenCheckbox = Checkbox(commonX, 29 * CONFIG.CHARACTER_SIZE, "Full screen");
+    this->masterVolumeSlider = Slider(CONFIG.WINDOW_WIDTH - sliderCommonX / 2, 29 * CONFIG.CHARACTER_SIZE + 0.85 * CONFIG.CHARACTER_SIZE, 0, 100);
+    this->soundVolumeSlider = Slider(CONFIG.WINDOW_WIDTH - sliderCommonX / 2, 32 * CONFIG.CHARACTER_SIZE + 0.85 * CONFIG.CHARACTER_SIZE, 0, 100);
+    this->musicVolumeSlider = Slider(CONFIG.WINDOW_WIDTH - sliderCommonX / 2, 35 * CONFIG.CHARACTER_SIZE + 0.85 * CONFIG.CHARACTER_SIZE, 0, 100);
+
+    this->controlsTitle.setStyle(sf::Text::Bold);
+    this->volumeTitle.setStyle(sf::Text::Bold);
+    this->videoTitle.setStyle(sf::Text::Bold);
 
     this->screenTitle.setPosition(2 * CONFIG.CHARACTER_SIZE, 2 * CONFIG.CHARACTER_SIZE);
-    // this->videoTitle.setPosition(commonX, 24 * CONFIG.CHARACTER_SIZE);
-    this->controlsTitle.setPosition(this->controlsTitle.getString().getSize() * CONFIG.CHARACTER_SIZE, 8 * CONFIG.CHARACTER_SIZE);
-    this->upKeyLabel.setPosition(commonX, 12 * CONFIG.CHARACTER_SIZE + CONFIG.CHARACTER_SIZE / 2);
-    this->downKeyLabel.setPosition(commonX, 15 * CONFIG.CHARACTER_SIZE + CONFIG.CHARACTER_SIZE / 2);
-    this->leftKeyLabel.setPosition(commonX, 18 * CONFIG.CHARACTER_SIZE + CONFIG.CHARACTER_SIZE / 2);
-    this->rightKeyLabel.setPosition(commonX, 21 * CONFIG.CHARACTER_SIZE + CONFIG.CHARACTER_SIZE / 2);
-    this->volumeTitle.setPosition(0, 0);
-    this->masterVolumeLabel.setPosition(0, 0);
-    this->soundVolumeLabel.setPosition(0, 0);
-    this->musicVolumeLabel.setPosition(0, 0);
+    this->controlsTitle.setPosition(thirdX, 7 * CONFIG.CHARACTER_SIZE);
+    this->upKeyLabel.setPosition(commonX, 11 * CONFIG.CHARACTER_SIZE + CONFIG.CHARACTER_SIZE / 2);
+    this->downKeyLabel.setPosition(commonX, 14 * CONFIG.CHARACTER_SIZE + CONFIG.CHARACTER_SIZE / 2);
+    this->leftKeyLabel.setPosition(commonX, 17 * CONFIG.CHARACTER_SIZE + CONFIG.CHARACTER_SIZE / 2);
+    this->rightKeyLabel.setPosition(commonX, 20 * CONFIG.CHARACTER_SIZE + CONFIG.CHARACTER_SIZE / 2);
+    this->videoTitle.setPosition(thirdX, 26 * CONFIG.CHARACTER_SIZE);
+    this->volumeTitle.setPosition(CONFIG.WINDOW_WIDTH - 1.5 * thirdX, 26 * CONFIG.CHARACTER_SIZE);
+    this->masterVolumeLabel.setPosition(sliderCommonX - 2 * CONFIG.CHARACTER_SIZE, 29 * CONFIG.CHARACTER_SIZE);
+    this->soundVolumeLabel.setPosition(sliderCommonX - 2 * CONFIG.CHARACTER_SIZE, 32 * CONFIG.CHARACTER_SIZE);
+    this->musicVolumeLabel.setPosition(sliderCommonX - 2 * CONFIG.CHARACTER_SIZE, 35 * CONFIG.CHARACTER_SIZE);
 
+    this->fullscreenCheckbox.isChecked = CONFIG.IS_FULLSCREEN;
+    this->masterVolumeSlider.setSliderValue(CONFIG.MASTER_VOLUME);
+    this->soundVolumeSlider.setSliderValue(CONFIG.SOUND_VOLUME);
+    this->musicVolumeSlider.setSliderValue(CONFIG.MUSIC_VOLUME);
 }
 
-ScreenType SettingsScreen::display(sf::RenderWindow &window) {
+ScreenType SettingsScreen::display(sf::RenderWindow &window)
+{
     window.draw(this->logo);
     this->backButton.display(window);
     this->upButton.display(window);
@@ -70,7 +83,7 @@ ScreenType SettingsScreen::display(sf::RenderWindow &window) {
     this->leftButton.display(window);
     this->rightButton.display(window);
     window.draw(this->screenTitle);
-    // window.draw(this->videoTitle);
+    window.draw(this->videoTitle);
     window.draw(this->controlsTitle);
     window.draw(this->upKeyLabel);
     window.draw(this->downKeyLabel);
@@ -86,11 +99,13 @@ ScreenType SettingsScreen::display(sf::RenderWindow &window) {
     this->fullscreenCheckbox.display(window);
 
     // Handle buttons
-    if (this->backButton.state == ButtonState::RELEASED) {
+    if (this->backButton.state == ButtonState::RELEASED)
+    {
         CONFIG.save(BASE_FOLDER + "config.ini");
         return ScreenType::MAIN_MENU;
     }
-    else if (this->upButton.state == ButtonState::RELEASED && !this->waitingForKey) {
+    else if (this->upButton.state == ButtonState::RELEASED && !this->waitingForKey)
+    {
         this->waitingForKey = true;
         this->upButton.label.setString("Please press a key ...");
         this->upButton.display(window);
@@ -98,7 +113,8 @@ ScreenType SettingsScreen::display(sf::RenderWindow &window) {
         CONFIG.KEY_UP = this->getPressedKey(CONFIG.KEY_UP);
         this->upButton.label.setString(KEY_LABELS[CONFIG.KEY_UP]);
     }
-    else if (this->downButton.state == ButtonState::RELEASED && !this->waitingForKey) {
+    else if (this->downButton.state == ButtonState::RELEASED && !this->waitingForKey)
+    {
         this->waitingForKey = true;
         this->downButton.label.setString("Please press a key ...");
         this->downButton.display(window);
@@ -106,7 +122,8 @@ ScreenType SettingsScreen::display(sf::RenderWindow &window) {
         CONFIG.KEY_DOWN = this->getPressedKey(CONFIG.KEY_DOWN);
         this->downButton.label.setString(KEY_LABELS[CONFIG.KEY_DOWN]);
     }
-    else if (this->leftButton.state == ButtonState::RELEASED && !this->waitingForKey) {
+    else if (this->leftButton.state == ButtonState::RELEASED && !this->waitingForKey)
+    {
         this->waitingForKey = true;
         this->leftButton.label.setString("Please press a key ...");
         this->leftButton.display(window);
@@ -114,7 +131,8 @@ ScreenType SettingsScreen::display(sf::RenderWindow &window) {
         CONFIG.KEY_LEFT = this->getPressedKey(CONFIG.KEY_LEFT);
         this->leftButton.label.setString(KEY_LABELS[CONFIG.KEY_LEFT]);
     }
-    else if (this->rightButton.state == ButtonState::RELEASED && !this->waitingForKey) {
+    else if (this->rightButton.state == ButtonState::RELEASED && !this->waitingForKey)
+    {
         this->waitingForKey = true;
         this->rightButton.label.setString("Please press a key ...");
         this->rightButton.display(window);
@@ -131,14 +149,19 @@ ScreenType SettingsScreen::display(sf::RenderWindow &window) {
     return ScreenType::SETTINGS;
 }
 
-sf::Keyboard::Key SettingsScreen::getPressedKey(sf::Keyboard::Key currentKey) {
-    while (this->waitingForKey) {
-        for (unsigned int i = 0; i < KEY_COUNT; i++) {
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
+sf::Keyboard::Key SettingsScreen::getPressedKey(sf::Keyboard::Key currentKey)
+{
+    while (this->waitingForKey)
+    {
+        for (unsigned int i = 0; i < KEY_COUNT; i++)
+        {
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+            {
                 this->waitingForKey = false;
                 return currentKey;
             }
-            else if (sf::Keyboard::isKeyPressed((sf::Keyboard::Key) i)) {
+            else if (sf::Keyboard::isKeyPressed((sf::Keyboard::Key) i))
+            {
                 this->waitingForKey = false;
                 return (sf::Keyboard::Key) i;
             }

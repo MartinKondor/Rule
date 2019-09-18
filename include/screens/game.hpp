@@ -6,22 +6,24 @@
 #include "gui/button.hpp"
 
 
-enum class GameSubScreen {
+enum class GameSubScreen
+{
     IN_GAME,
     GAME
 };
 
 
-class GameScreen : public Screen {
+class GameScreen : public Screen
+{
     /**
     Game screen, where the game is happending.
     */
-    private:
-        GameSubScreen subScreen;
+private:
+    GameSubScreen subScreen;
 
-    public:
-        GameScreen();
-        virtual ScreenType display(sf::RenderWindow& window);
+public:
+    GameScreen();
+    virtual ScreenType display(sf::RenderWindow& window);
 };
 
 #endif // GAMESCREEN_HPP

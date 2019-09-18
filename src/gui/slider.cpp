@@ -3,7 +3,8 @@
 
 Slider::Slider() {}
 
-Slider::Slider(const unsigned int xPos, const unsigned int yPos, const unsigned int min, const unsigned int max) {
+Slider::Slider(const unsigned int xPos, const unsigned int yPos, const unsigned int min, const unsigned int max)
+{
     this->xPos = xPos;
     this->yPos = yPos;
     this->axisHeight = 20;
@@ -29,15 +30,18 @@ Slider::Slider(const unsigned int xPos, const unsigned int yPos, const unsigned 
     this->slider.setFillColor(sf::Color(192, 192, 192));
 }
 
-sf::Text Slider::returnText(const unsigned int x, const unsigned int y, const std::string z) {
+sf::Text Slider::returnText(const unsigned int x, const unsigned int y, const std::string z)
+{
     this->text.setCharacterSize(CONFIG.CHARACTER_SIZE);
     this->text.setPosition(x, y);
     this->text.setString(z);
     return text;
 }
 
-void Slider::setSliderValue(const float newValue) {
-    if (newValue >= this->minValue && newValue <= this->maxValue) {
+void Slider::setSliderValue(const float newValue)
+{
+    if (newValue >= this->minValue && newValue <= this->maxValue)
+    {
         this->sliderValue = newValue;
         const float diff = this->maxValue - this->minValue;
         const float diff2 = newValue - this->minValue;
@@ -48,21 +52,26 @@ void Slider::setSliderValue(const float newValue) {
     }
 }
 
-void Slider::setSliderPercentValue(const float newPercentValue) {
-    if (newPercentValue >= 0 && newPercentValue <= 100) {
+void Slider::setSliderPercentValue(const float newPercentValue)
+{
+    if (newPercentValue >= 0 && newPercentValue <= 100)
+    {
         this->sliderValue = newPercentValue / 100 * this->maxValue;
         this->slider.setPosition(this->xPos + (this->axisWidth * newPercentValue / 100), this->yPos);
     }
 }
 
-void Slider::display(sf::RenderWindow &window) {
+void Slider::display(sf::RenderWindow &window)
+{
     sf::Vector2i mpos = sf::Mouse::getPosition(window);
 
-    if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && this->axis.getGlobalBounds().contains(mpos.x, mpos.y)) {
+    if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && this->axis.getGlobalBounds().contains(mpos.x, mpos.y))
+    {
         this->slider.setPosition(mpos.x, this->yPos);
         this->sliderValue = (this->minValue + ((this->slider.getPosition().x - this->xPos) / this->axisWidth * (this->maxValue - this->minValue)));
 
-        if (this->sliderValue >= 98) {
+        if (this->sliderValue >= 98)
+        {
             this->sliderValue = 100;
         }
     }

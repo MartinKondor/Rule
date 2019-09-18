@@ -1,10 +1,12 @@
 #include "screens/game.hpp"
 
 
-GameScreen::GameScreen() {
+GameScreen::GameScreen()
+{
     this->subScreen = GameSubScreen::GAME;
 }
 
-ScreenType GameScreen::display(sf::RenderWindow&) {
+ScreenType GameScreen::display(sf::RenderWindow&)
+{
     return ScreenType::GAME;
 }

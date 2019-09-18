@@ -10,34 +10,36 @@ extern Config CONFIG;
 extern std::string IMAGE_FOLDER;
 
 
-enum class MainMenuSubScreen {
+enum class MainMenuSubScreen
+{
     NONE,
     NEW_GAME,
     LOAD_GAME
 };
 
 
-class MainMenuScreen : public Screen {
+class MainMenuScreen : public Screen
+{
     /**
     Main menu screen.
     */
-    private:
-        sf::Text newGameSubScreenTitle;
-        sf::Text loadGameSubScreenTitle;
-        Button newGameButton;
-        Button loadSaveGameButton;
-        Button settingsButton;
-        Button creditsButton;
-        Button exitButton;
-        Button subScreenBackButton;
-        sf::Texture logoTexture;
-        sf::Sprite logo;
-        MainMenuSubScreen subScreen;
+private:
+    sf::Text newGameSubScreenTitle;
+    sf::Text loadGameSubScreenTitle;
+    Button newGameButton;
+    Button loadSaveGameButton;
+    Button settingsButton;
+    Button creditsButton;
+    Button exitButton;
+    Button subScreenBackButton;
+    sf::Texture logoTexture;
+    sf::Sprite logo;
+    MainMenuSubScreen subScreen;
 
-    public:
-        MainMenuScreen();
-        ScreenType displaySubScreen(sf::RenderWindow &window);
-        virtual ScreenType display(sf::RenderWindow& window);
+public:
+    MainMenuScreen();
+    ScreenType displaySubScreen(sf::RenderWindow &window);
+    virtual ScreenType display(sf::RenderWindow& window);
 };
 
 #endif // MAIN_MENU_SCREEN_HPP

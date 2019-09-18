@@ -3,7 +3,8 @@
 
 Checkbox::Checkbox() {}
 
-Checkbox::Checkbox(const unsigned int xPos, const unsigned int yPos, const std::string label) {
+Checkbox::Checkbox(const unsigned int xPos, const unsigned int yPos, const std::string label)
+{
     this->xPos = xPos;
     this->yPos = yPos;
     this->label = sf::Text(label, CONFIG.MAIN_FONT, CONFIG.CHARACTER_SIZE);
@@ -26,38 +27,49 @@ Checkbox::Checkbox(const unsigned int xPos, const unsigned int yPos, const std::
     this->innerBody.setPosition(this->xPos + outlineThickness / 2, this->yPos + this->body.getSize().y / 4 + outlineThickness / 2);
 }
 
-void Checkbox::display(sf::RenderWindow &window) {
+void Checkbox::display(sf::RenderWindow &window)
+{
     sf::Vector2i mousePos = sf::Mouse::getPosition(window);
 
-    if (mousePos.x > this->xPos && mousePos.y > this->yPos && mousePos.x < this->xPos + this->width && mousePos.y < this->yPos + this->height) {
-        if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+    if (mousePos.x > this->xPos && mousePos.y > this->yPos && mousePos.x < this->xPos + this->width && mousePos.y < this->yPos + this->height)
+    {
+        if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+        {
             this->state = ButtonState::CLICKED;
         }
-        else if (this->state == ButtonState::CLICKED) {
+        else if (this->state == ButtonState::CLICKED)
+        {
             this->state = ButtonState::RELEASED;
         }
-        else {
+        else
+        {
             this->state = ButtonState::HOVERED;
         }
     }
-    else {
+    else
+    {
         this->state = ButtonState::NORMAL;
     }
 
-    if (this->state == ButtonState::RELEASED) {
+    if (this->state == ButtonState::RELEASED)
+    {
         this->isChecked = !this->isChecked;
     }
-    else if (this->state == ButtonState::HOVERED) {
+    else if (this->state == ButtonState::HOVERED)
+    {
         this->body.setFillColor(this->hoverColor);
     }
-    else {
+    else
+    {
         this->body.setFillColor(this->unCheckedColor);
     }
 
-    if (this->isChecked) {
+    if (this->isChecked)
+    {
         this->innerBody.setFillColor(this->checkedColor);
     }
-    else {
+    else
+    {
         this->innerBody.setFillColor(this->unCheckedColor);
     }
 

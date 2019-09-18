@@ -14,7 +14,8 @@ https://paletton.com/#uid=7010u0klEy-bKPnhfGnq5urtHo+
 extern Config CONFIG;
 
 
-enum class ButtonState {
+enum class ButtonState
+{
     NORMAL,
     CLICKED,
     HOVERED,
@@ -22,32 +23,33 @@ enum class ButtonState {
 };
 
 
-class Button {
+class Button
+{
     /**
     GUI button with outline and hover effects.
     */
-    private:
-        unsigned int xPos;
-        unsigned int yPos;
-        unsigned int width;
-        unsigned int height;
-        unsigned int outlineThickness;
-        sf::Color outlineColor;
-        sf::Color fontColor;
-        sf::Color hoverFontColor;
-        sf::Color bodyColor;
-        sf::RectangleShape body;
+private:
+    unsigned int xPos;
+    unsigned int yPos;
+    unsigned int width;
+    unsigned int height;
+    unsigned int outlineThickness;
+    sf::Color outlineColor;
+    sf::Color fontColor;
+    sf::Color hoverFontColor;
+    sf::Color bodyColor;
+    sf::RectangleShape body;
 
-    public:
-        sf::Text label;
-        ButtonState state;
+public:
+    sf::Text label;
+    ButtonState state;
 
 
-        Button();
-        Button(const unsigned int xPos, const unsigned int yPos, const std::string label);
-        Button(const unsigned int xPos, const unsigned int yPos, const std::string label,
-               const unsigned int width, const unsigned int height);
-        void display(sf::RenderWindow& window);
+    Button();
+    Button(const unsigned int xPos, const unsigned int yPos, const std::string label);
+    Button(const unsigned int xPos, const unsigned int yPos, const std::string label,
+           const unsigned int width, const unsigned int height);
+    void display(sf::RenderWindow& window);
 };
 
 #endif // BUTTON_HPP

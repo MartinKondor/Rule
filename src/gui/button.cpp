@@ -7,7 +7,8 @@ Button::Button(const unsigned int xPos, const unsigned int yPos, const std::stri
     : Button(xPos, yPos, label, 0, 0) {}
 
 Button::Button(const unsigned int xPos, const unsigned int yPos, const std::string label,
-               const unsigned int width, const unsigned int height) {
+               const unsigned int width, const unsigned int height)
+{
     this->xPos = xPos;
     this->yPos = yPos;
     this->label = sf::Text(label, CONFIG.MAIN_FONT, CONFIG.CHARACTER_SIZE);
@@ -33,40 +34,50 @@ Button::Button(const unsigned int xPos, const unsigned int yPos, const std::stri
     this->label.setPosition(this->xPos + (int)(this->width / 2), this->yPos + (int)(this->height / 2 - CONFIG.CHARACTER_SIZE / 4));
 }
 
-void Button::display(sf::RenderWindow &window) {
+void Button::display(sf::RenderWindow &window)
+{
     sf::Vector2i mousePos = sf::Mouse::getPosition(window);
 
-    if (mousePos.x > this->xPos && mousePos.y > this->yPos && mousePos.x < this->xPos + this->width && mousePos.y < this->yPos + this->height) {
-        if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+    if (mousePos.x > this->xPos && mousePos.y > this->yPos && mousePos.x < this->xPos + this->width && mousePos.y < this->yPos + this->height)
+    {
+        if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+        {
             this->state = ButtonState::CLICKED;
         }
-        else if (this->state == ButtonState::CLICKED) {
+        else if (this->state == ButtonState::CLICKED)
+        {
             this->state = ButtonState::RELEASED;
         }
-        else {
+        else
+        {
             this->state = ButtonState::HOVERED;
         }
     }
-    else {
+    else
+    {
         this->state = ButtonState::NORMAL;
     }
 
     this->body.setOutlineColor(this->outlineColor);
 
-    if (this->state == ButtonState::HOVERED) {
+    if (this->state == ButtonState::HOVERED)
+    {
         this->body.setFillColor(this->outlineColor);
         this->label.setFillColor(this->hoverFontColor);
     }
-    else if (this->state == ButtonState::CLICKED) {
+    else if (this->state == ButtonState::CLICKED)
+    {
         this->body.setOutlineColor(this->bodyColor);
         this->body.setFillColor(this->outlineColor);
         this->label.setFillColor(this->hoverFontColor);
     }
-    else if (this->state == ButtonState::RELEASED) {
+    else if (this->state == ButtonState::RELEASED)
+    {
         this->body.setFillColor(this->outlineColor);
         this->label.setFillColor(this->hoverFontColor);
     }
-    else {
+    else
+    {
         this->body.setFillColor(this->bodyColor);
         this->label.setFillColor(this->fontColor);
     }

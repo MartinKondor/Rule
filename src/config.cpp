@@ -3,8 +3,10 @@
 
 Config::Config() {}
 
-bool Config::load(std::string fileName) {
-    if (!Utils::isFileExists(fileName)) {
+bool Config::load(std::string fileName)
+{
+    if (!Utils::isFileExists(fileName))
+    {
         this->save(fileName);
     }
 
@@ -12,28 +14,35 @@ bool Config::load(std::string fileName) {
     std::string line;
 
     // Start reading from file
-    if (infile.is_open()) {
-        while (std::getline(infile, line)) {
+    if (infile.is_open())
+    {
+        while (std::getline(infile, line))
+        {
 
             std::string key;
             std::string value;
             bool parseKey = true;
 
             // Parse each line char by char
-            for (uint8_t i = 0; i < line.length(); i++) {
-                if (line[i] == ' ') {
+            for (uint8_t i = 0; i < line.length(); i++)
+            {
+                if (line[i] == ' ')
+                {
                     continue;
                 }
 
-                if (line[i] == '=') {
+                if (line[i] == '=')
+                {
                     parseKey = false;
                     continue;
                 }
 
-                if (parseKey) {
+                if (parseKey)
+                {
                     key += line[i];
                 }
-                else {
+                else
+                {
                     value += line[i];
                 }
             }
@@ -44,28 +53,34 @@ bool Config::load(std::string fileName) {
     }
 
     // Load fonts
-    if (!this->MAIN_FONT.loadFromFile(BASE_FOLDER + "fonts/FreeSans.ttf")) {
+    if (!this->MAIN_FONT.loadFromFile(BASE_FOLDER + "fonts/FreeSans.ttf"))
+    {
         return false;
     }
-    if (!this->TITLE_FONT.loadFromFile(BASE_FOLDER + "fonts/OldLondon.ttf")) {
+    if (!this->TITLE_FONT.loadFromFile(BASE_FOLDER + "fonts/OldLondon.ttf"))
+    {
         return false;
     }
     this->BG_COLOR = sf::Color(37, 37, 37);
 
     // Check errorous settings
-    if (this->WINDOW_WIDTH < 800) {
+    if (this->WINDOW_WIDTH < 800)
+    {
         this->WINDOW_WIDTH = 800;
     }
-    else if (this->WINDOW_HEIGHT < 600) {
+    else if (this->WINDOW_HEIGHT < 600)
+    {
         this->WINDOW_HEIGHT = 600;
     }
-    else if (this->CHARACTER_SIZE < 10) {
+    else if (this->CHARACTER_SIZE < 10)
+    {
         this->CHARACTER_SIZE = 15;
     }
     return true;
 }
 
-void Config::save(std::string fileName) {
+void Config::save(std::string fileName)
+{
     std::string data = "";
     std::ofstream configFile;
     configFile.open(fileName);
@@ -88,70 +103,110 @@ void Config::save(std::string fileName) {
     configFile.close();
 }
 
-void Config::parseConfigKey(std::string key, std::string value) {
-    if ("WINDOW_WIDTH" == key) {
-        try {
+void Config::parseConfigKey(std::string key, std::string value)
+{
+    if ("WINDOW_WIDTH" == key)
+    {
+        try
+        {
             this->WINDOW_WIDTH = std::stoi(value.c_str());
-        } catch (std::exception) {}
+        }
+        catch (std::exception) {}
     }
-    else if ("WINDOW_HEIGHT" == key) {
-        try {
+    else if ("WINDOW_HEIGHT" == key)
+    {
+        try
+        {
             this->WINDOW_HEIGHT = std::stoi(value.c_str());
-        } catch (std::exception) {}
+        }
+        catch (std::exception) {}
     }
-    else if ("FPS_LIMIT" == key) {
-        try {
+    else if ("FPS_LIMIT" == key)
+    {
+        try
+        {
             this->FPS_LIMIT = std::stoi(value.c_str());
-        } catch (std::exception) {}
+        }
+        catch (std::exception) {}
     }
-    else if ("CHARACTER_SIZE" == key) {
-        try {
+    else if ("CHARACTER_SIZE" == key)
+    {
+        try
+        {
             this->CHARACTER_SIZE = std::stoi(value.c_str());
-        } catch (std::exception) {}
+        }
+        catch (std::exception) {}
     }
-    else if ("TITLE_CHARACTER_SIZE" == key) {
-        try {
+    else if ("TITLE_CHARACTER_SIZE" == key)
+    {
+        try
+        {
             this->TITLE_CHARACTER_SIZE = std::stoi(value.c_str());
-        } catch (std::exception) {}
+        }
+        catch (std::exception) {}
     }
-    else if ("KEY_UP" == key) {
-        try {
+    else if ("KEY_UP" == key)
+    {
+        try
+        {
             this->KEY_UP = (sf::Keyboard::Key) std::stoi(value.c_str());
-        } catch (std::exception) {}
+        }
+        catch (std::exception) {}
     }
-    else if ("KEY_DOWN" == key) {
-        try {
+    else if ("KEY_DOWN" == key)
+    {
+        try
+        {
             this->KEY_DOWN = (sf::Keyboard::Key) std::stoi(value.c_str());
-        } catch (std::exception) {}
+        }
+        catch (std::exception) {}
     }
-    else if ("KEY_LEFT" == key) {
-        try {
+    else if ("KEY_LEFT" == key)
+    {
+        try
+        {
             this->KEY_LEFT = (sf::Keyboard::Key) std::stoi(value.c_str());
-        } catch (std::exception) {}
+        }
+        catch (std::exception) {}
     }
-    else if ("KEY_RIGHT" == key) {
-        try {
+    else if ("KEY_RIGHT" == key)
+    {
+        try
+        {
             this->KEY_RIGHT = (sf::Keyboard::Key) std::stoi(value.c_str());
-        } catch (std::exception) {}
+        }
+        catch (std::exception) {}
     }
-    else if ("MASTER_VOLUME" == key) {
-        try {
+    else if ("MASTER_VOLUME" == key)
+    {
+        try
+        {
             this->MASTER_VOLUME = std::stoi(value.c_str());
-        } catch (std::exception) {}
+        }
+        catch (std::exception) {}
     }
-    else if ("SOUND_VOLUME" == key) {
-        try {
+    else if ("SOUND_VOLUME" == key)
+    {
+        try
+        {
             this->SOUND_VOLUME = std::stoi(value.c_str());
-        } catch (std::exception) {}
+        }
+        catch (std::exception) {}
     }
-    else if ("MUSIC_VOLUME" == key) {
-        try {
+    else if ("MUSIC_VOLUME" == key)
+    {
+        try
+        {
             this->MUSIC_VOLUME = std::stoi(value.c_str());
-        } catch (std::exception) {}
+        }
+        catch (std::exception) {}
     }
-    else if ("IS_FULLSCREEN" == key) {
-        try {
+    else if ("IS_FULLSCREEN" == key)
+    {
+        try
+        {
             this->IS_FULLSCREEN = (bool) std::stoi(value.c_str());
-        } catch (std::exception) {}
+        }
+        catch (std::exception) {}
     }
 }

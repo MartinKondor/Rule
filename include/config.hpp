@@ -9,46 +9,47 @@
 extern std::string BASE_FOLDER;
 
 
-class Config {
+class Config
+{
     /**
     Stores the configuration of the game.
 
     Declared in "global.cpp", defined in main.
     */
-    public:
-        unsigned int WINDOW_WIDTH = 800;
-        unsigned int WINDOW_HEIGHT = 600;
-        unsigned int FPS_LIMIT = 60;
-        unsigned int CHARACTER_SIZE = 14;
-        unsigned int TITLE_CHARACTER_SIZE = 42;
-        unsigned int MASTER_VOLUME = 100;
-        unsigned int SOUND_VOLUME = 100;
-        unsigned int MUSIC_VOLUME = 100;
-        bool IS_FULLSCREEN = false;
-        sf::Keyboard::Key KEY_UP = sf::Keyboard::W;
-        sf::Keyboard::Key KEY_DOWN = sf::Keyboard::S;
-        sf::Keyboard::Key KEY_LEFT = sf::Keyboard::A;
-        sf::Keyboard::Key KEY_RIGHT = sf::Keyboard::D;
+public:
+    unsigned int WINDOW_WIDTH = 800;
+    unsigned int WINDOW_HEIGHT = 600;
+    unsigned int FPS_LIMIT = 60;
+    unsigned int CHARACTER_SIZE = 14;
+    unsigned int TITLE_CHARACTER_SIZE = 42;
+    unsigned int MASTER_VOLUME = 100;
+    unsigned int SOUND_VOLUME = 100;
+    unsigned int MUSIC_VOLUME = 100;
+    bool IS_FULLSCREEN = false;
+    sf::Keyboard::Key KEY_UP = sf::Keyboard::W;
+    sf::Keyboard::Key KEY_DOWN = sf::Keyboard::S;
+    sf::Keyboard::Key KEY_LEFT = sf::Keyboard::A;
+    sf::Keyboard::Key KEY_RIGHT = sf::Keyboard::D;
 
-        // Not settable variables
-        sf::Font MAIN_FONT;
-        sf::Font TITLE_FONT;
-        sf::Color BG_COLOR;
+    // Not settable variables
+    sf::Font MAIN_FONT;
+    sf::Font TITLE_FONT;
+    sf::Color BG_COLOR;
 
-        Config();
+    Config();
 
-        /**
-        @returns true if loading was successful.
-        */
-        bool load(std::string fileName);
-        void save(std::string fileName);
+    /**
+    @returns true if loading was successful.
+    */
+    bool load(std::string fileName);
+    void save(std::string fileName);
 
-    private:
+private:
 
-        /**
-        Setting the "config" class variable "key" to the given "value"
-        */
-        void parseConfigKey(std::string key, std::string value);
+    /**
+    Setting the "config" class variable "key" to the given "value"
+    */
+    void parseConfigKey(std::string key, std::string value);
 };
 
 #endif // CONFIG_HPP

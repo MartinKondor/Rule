@@ -1,7 +1,8 @@
 #include "screens/credits.hpp"
 
 
-CreditsScreen::CreditsScreen() {
+CreditsScreen::CreditsScreen()
+{
     this->backButton = Button(2 * CONFIG.CHARACTER_SIZE, CONFIG.WINDOW_HEIGHT - 3.5 * CONFIG.CHARACTER_SIZE, "BACK");
 
     sf::Image logoImage;
@@ -24,14 +25,16 @@ CreditsScreen::CreditsScreen() {
     this->credits.setPosition(CONFIG.WINDOW_WIDTH / 2, 2.2 * this->logoTexture.getSize().y);
 }
 
-ScreenType CreditsScreen::display(sf::RenderWindow& window) {
+ScreenType CreditsScreen::display(sf::RenderWindow& window)
+{
     window.draw(screenTitle);
     window.draw(credits);
     window.draw(logo);
     window.draw(sfmlLogo);
     this->backButton.display(window);
 
-    if (this->backButton.state == ButtonState::RELEASED) {
+    if (this->backButton.state == ButtonState::RELEASED)
+    {
         return ScreenType::MAIN_MENU;
     }
     return ScreenType::CREDITS;

@@ -6,26 +6,28 @@
 #include <sys/stat.h>
 
 
-namespace Utils {
+namespace Utils
+{
 
-    /**
-    @returns true if the given file exists
-    */
-    bool isFileExists(const std::string fileName);
+/**
+@returns true if the given file exists
+*/
+bool isFileExists(const std::string fileName);
 
-    /**
-    Parses the current working directory from the exeFilePath parameter.
-    */
-    std::string getBaseDir(const std::string exeFilePath);
+/**
+Parses the current working directory from the exeFilePath parameter.
+*/
+std::string getBaseDir(const std::string exeFilePath);
 
-    /**
-    Turns type T to string.
-    */
-    template<typename T> std::string to_string(T const& n) {
-        std::ostringstream stm;
-        stm << n;
-        return stm.str();
-    }
+/**
+Turns type T to string.
+*/
+template<typename T> std::string to_string(T const& n)
+{
+    std::ostringstream stm;
+    stm << n;
+    return stm.str();
+}
 }
 
 #endif // UTILS_HPP

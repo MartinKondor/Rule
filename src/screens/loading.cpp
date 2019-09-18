@@ -1,7 +1,8 @@
 #include "screens/loading.hpp"
 
 
-LoadingScreen::LoadingScreen() {
+LoadingScreen::LoadingScreen()
+{
     sf::Image logoImage;
     sf::Image sfmlLogoImage;
 
@@ -21,7 +22,8 @@ LoadingScreen::LoadingScreen() {
     this->screenTitle.setPosition(2 * CONFIG.CHARACTER_SIZE, 2 * CONFIG.CHARACTER_SIZE);
 }
 
-ScreenType LoadingScreen::display(sf::RenderWindow &window) {
+ScreenType LoadingScreen::display(sf::RenderWindow &window)
+{
     window.draw(this->screenTitle);
     window.draw(this->logo);
     window.draw(this->sfmlLogo);
