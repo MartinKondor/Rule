@@ -10,6 +10,11 @@ extern std::string BASE_FOLDER;
 
 
 class Config {
+    /**
+    Stores the configuration of the game.
+
+    Declared in "global.cpp", defined in main.
+    */
     public:
         unsigned int WINDOW_WIDTH = 800;
         unsigned int WINDOW_HEIGHT = 600;

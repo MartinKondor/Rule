@@ -13,6 +13,9 @@ enum class GameSubScreen {
 
 
 class GameScreen : public Screen {
+    /**
+    Game screen, where the game is happending.
+    */
     private:
         GameSubScreen subScreen;
 

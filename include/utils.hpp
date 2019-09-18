@@ -16,7 +16,7 @@ namespace Utils {
     /**
     Parses the current working directory from the exeFilePath parameter.
     */
-    std::string getBaseDir(std::string exeFilePath);
+    std::string getBaseDir(const std::string exeFilePath);
 
     /**
     Turns type T to string.

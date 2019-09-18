@@ -10,6 +10,9 @@ extern std::string IMAGE_FOLDER;
 
 
 class LoadingScreen : public Screen {
+    /**
+    The first screen what the user see.
+    */
     private:
         sf::Text loadingText;
         sf::Texture logoTexture;

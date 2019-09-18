@@ -10,6 +10,9 @@ extern Config CONFIG;
 
 
 class CreditsScreen : public Screen {
+    /**
+    Credits.
+    */
     private:
         Button backButton;
 

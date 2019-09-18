@@ -18,6 +18,9 @@ class Screen {
     Abstract screen object.
     */
     public:
+        /**
+        Called for displaying and updating the given screen.
+        */
         virtual ScreenType display(sf::RenderWindow& window) = 0;
 };
 

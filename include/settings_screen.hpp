@@ -7,6 +7,9 @@
 
 
 class SettingsScreen : public Screen {
+    /**
+    Settings for changing the configuration.
+    */
     private:
         Button backButton;
 

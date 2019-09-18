@@ -1,7 +1,7 @@
 #ifndef BUTTON_HPP
 #define BUTTON_HPP
 /**
-GUI button class.
+Button class and it's utilities.
 
 See https://paletton.com/#uid=3010u0klEy-bKPnhfGnq5urtHo+ for colors.
 
@@ -22,6 +22,9 @@ enum class ButtonState {
 
 
 class Button {
+    /**
+    GUI button with outline and hover effects.
+    */
     private:
         unsigned int xPos;
         unsigned int yPos;

@@ -17,6 +17,9 @@ enum class MainMenuSubScreen {
 
 
 class MainMenuScreen : public Screen {
+    /**
+    Main menu screen.
+    */
     private:
         Button newGameButton;
         Button loadSaveGameButton;
