@@ -43,6 +43,12 @@ bool Config::load(std::string fileName) {
         infile.close();
     }
 
+    // Load fonts
+    if (!this->MAIN_FONT.loadFromFile(BASE_FOLDER + "fonts/FreeSans.ttf")) {
+        return false;
+    }
+    this->BG_COLOR = sf::Color(126, 185, 13);
+
     // Check errorous settings
     if (this->WINDOW_WIDTH < 800) {
         this->WINDOW_WIDTH = 800;

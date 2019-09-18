@@ -10,7 +10,6 @@ See https://paletton.com/#uid=3010u0klEy-bKPnhfGnq5urtHo+ for colors.
 #include <SFML/Graphics.hpp>
 #include <config.hpp>
 
-
 extern Config CONFIG;
 
 
@@ -29,11 +28,17 @@ class Button {
         unsigned int width;
         unsigned int height;
         unsigned int outlineThickness;
-        ButtonState state;
-        sf::Color outlineColor;
         sf::Text label;
+        sf::Color outlineColor;
+        sf::Color fontColor;
+        sf::Color hoverFontColor;
+        sf::Color bodyColor;
+        sf::RectangleShape body;
 
     public:
+        ButtonState state;
+
+
         Button();
         Button(const unsigned int xPos, const unsigned int yPos, const std::string label);
         Button(const unsigned int xPos, const unsigned int yPos, const std::string label,

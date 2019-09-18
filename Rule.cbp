@@ -53,12 +53,23 @@
 		</Unit>
 		<Unit filename="include/button.hpp" />
 		<Unit filename="include/config.hpp" />
+		<Unit filename="include/credits_screen.hpp" />
 		<Unit filename="include/game_screen.hpp" />
 		<Unit filename="include/loading_screen.hpp" />
 		<Unit filename="include/main_menu_screen.hpp" />
 		<Unit filename="include/screen.hpp" />
 		<Unit filename="include/settings_screen.hpp" />
+		<Unit filename="include/utils.hpp" />
+		<Unit filename="src/button.cpp" />
+		<Unit filename="src/config.cpp" />
+		<Unit filename="src/credits_screen.cpp" />
+		<Unit filename="src/game_screen.cpp" />
+		<Unit filename="src/global.cpp" />
+		<Unit filename="src/loading_screen.cpp" />
 		<Unit filename="src/main.cpp" />
+		<Unit filename="src/main_menu_screen.cpp" />
+		<Unit filename="src/settings_screen.cpp" />
+		<Unit filename="src/utils.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

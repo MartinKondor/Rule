@@ -1,18 +1,21 @@
-#ifndef SETTINGS_SCREEN_HPP
-#define SETTINGS_SCREEN_HPP
+#ifndef CREDITS_SCREEN_HPP
+#define CREDITS_SCREEN_HPP
 
 #include <SFML/Graphics.hpp>
 #include <screen.hpp>
 #include <button.hpp>
+#include <config.hpp>
+
+extern Config CONFIG;
 
 
-class SettingsScreen : public Screen {
+class CreditsScreen : public Screen {
     private:
         Button backButton;
 
     public:
-        SettingsScreen();
+        CreditsScreen();
         virtual ScreenType display(sf::RenderWindow& window);
 };
 
-#endif // SETTINGS_SCREEN_HPP
+#endif // CREDITS_SCREEN_HPP

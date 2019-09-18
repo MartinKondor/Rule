@@ -14,6 +14,11 @@ namespace Utils {
     bool isFileExists(const std::string fileName);
 
     /**
+    Parses the current working directory from the exeFilePath parameter.
+    */
+    std::string getBaseDir(std::string exeFilePath);
+
+    /**
     Turns type T to string.
     */
     template<typename T> std::string to_string(T const& n) {

@@ -6,13 +6,15 @@
 #include <SFML/Graphics.hpp>
 #include <utils.hpp>
 
+extern std::string BASE_FOLDER;
+
 
 class Config {
     public:
         unsigned int WINDOW_WIDTH = 800;
         unsigned int WINDOW_HEIGHT = 600;
         unsigned int FPS_LIMIT = 60;
-        unsigned int CHARACTER_SIZE = 15;
+        unsigned int CHARACTER_SIZE = 14;
         unsigned int MASTER_VOLUME = 100;
         unsigned int SOUND_VOLUME = 100;
         unsigned int MUSIC_VOLUME = 100;
@@ -21,7 +23,10 @@ class Config {
         sf::Keyboard::Key KEY_DOWN = sf::Keyboard::S;
         sf::Keyboard::Key KEY_LEFT = sf::Keyboard::A;
         sf::Keyboard::Key KEY_RIGHT = sf::Keyboard::D;
+
+        // Not settable variables
         sf::Font MAIN_FONT;
+        sf::Color BG_COLOR;
 
         Config();
 

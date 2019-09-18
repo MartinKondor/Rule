@@ -3,9 +3,20 @@
 
 #include <SFML/Graphics.hpp>
 #include <screen.hpp>
+#include <config.hpp>
+
+extern Config CONFIG;
+extern std::string IMAGE_FOLDER;
 
 
 class LoadingScreen : public Screen {
+    private:
+        sf::Text loadingText;
+        sf::Texture logoTexture;
+        sf::Texture sfmlLogoTexture;
+        sf::Sprite logo;
+        sf::Sprite sfmlLogo;
+
     public:
         LoadingScreen();
         virtual ScreenType display(sf::RenderWindow& window);

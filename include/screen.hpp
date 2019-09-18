@@ -5,9 +5,11 @@
 
 
 enum class ScreenType {
+    EXIT,
+    SETTINGS,
     LOADING,
     MAIN_MENU,
-    SETTINGS,
+    CREDITS,
     GAME
 };
 
