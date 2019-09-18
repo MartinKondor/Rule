@@ -1,5 +1,5 @@
 libraries
-obj
+bin/obj/
 *.db
 desktop.ini
 bin/Release
