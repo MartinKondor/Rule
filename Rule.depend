@@ -8,7 +8,7 @@
 	<SFML/Graphics.hpp>
 	<utils.hpp>
 
-1568836067 source:c:\files\projects\rule\src\main.cpp
+1568840456 source:c:\files\projects\rule\src\main.cpp
 	<iostream>
 	<string>
 	<SFML/Graphics.hpp>
@@ -1147,7 +1147,7 @@
 1568836067 source:c:\files\projects\rule\src\screens\loading.cpp
 	"screens/loading.hpp"
 
-1568836068 source:c:\files\projects\rule\src\screens\main_menu.cpp
+1568838862 source:c:\files\projects\rule\src\screens\main_menu.cpp
 	"screens/main_menu.hpp"
 
 1568838597 source:c:\files\projects\rule\src\screens\settings.cpp
