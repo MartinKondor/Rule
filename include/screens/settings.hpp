@@ -7,6 +7,7 @@
 #include "gui/button.hpp"
 #include "gui/checkbox.hpp"
 #include "gui/slider.hpp"
+#include "utils.hpp"
 
 extern Config CONFIG;
 extern std::string IMAGE_FOLDER;
@@ -27,6 +28,7 @@ class SettingsScreen : public Screen {
         Button leftButton;
         Button rightButton;
         sf::Text controlsTitle;
+        // sf::Text videoTitle;
         sf::Text upKeyLabel;
         sf::Text downKeyLabel;
         sf::Text leftKeyLabel;

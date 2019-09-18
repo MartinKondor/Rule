@@ -1064,14 +1064,15 @@
 	"screen.hpp"
 	"gui/button.hpp"
 
-1568816877 source:d:\projects\rule\src\screens\settings.cpp
+1568818133 source:d:\projects\rule\src\screens\settings.cpp
 	"screens/settings.hpp"
 
-1568816997 d:\projects\rule\include\screens\settings.hpp
+1568818195 d:\projects\rule\include\screens\settings.hpp
 	<SFML/Graphics.hpp>
 	"config.hpp"
 	"screen.hpp"
 	"gui/button.hpp"
 	"gui/checkbox.hpp"
 	"gui/slider.hpp"
+	"utils.hpp"
 

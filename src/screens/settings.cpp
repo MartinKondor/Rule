@@ -22,18 +22,10 @@ SettingsScreen::SettingsScreen() {
     this->logo.setTexture(this->logoTexture);
     this->logo.setPosition(CONFIG.WINDOW_WIDTH - logoImage.getSize().x, 0);
 
-    this->backButton = Button(2 * CONFIG.CHARACTER_SIZE, CONFIG.WINDOW_HEIGHT - 3.5 * CONFIG.CHARACTER_SIZE, "BACK");
-    this->fullscreenCheckbox = Checkbox(0, 0, "Full screen");
-    this->upButton = Button(0, 0, "-");
-    this->downButton = Button(0, 0, "-");
-    this->leftButton = Button(0, 0, "-");
-    this->rightButton = Button(0, 0, "-");
-    this->masterVolumeSlider = Slider(0, 0, 0, 100);
-    this->soundVolumeSlider = Slider(0, 0, 0, 100);
-    this->musicVolumeSlider = Slider(0, 0, 0, 100);
-    this->fullscreenCheckbox = Checkbox(0, 0, "Full screen");
+    // Texts
     this->screenTitle = sf::Text("Settings", CONFIG.TITLE_FONT, CONFIG.TITLE_CHARACTER_SIZE);
     this->controlsTitle = sf::Text("CONTROLS", CONFIG.MAIN_FONT, CONFIG.CHARACTER_SIZE);
+    // this->videoTitle = sf::Text("VIDEO", CONFIG.MAIN_FONT, CONFIG.CHARACTER_SIZE);
     this->upKeyLabel = sf::Text("UP", CONFIG.MAIN_FONT, CONFIG.CHARACTER_SIZE);
     this->downKeyLabel = sf::Text("DOWN", CONFIG.MAIN_FONT, CONFIG.CHARACTER_SIZE);
     this->leftKeyLabel = sf::Text("LEFT", CONFIG.MAIN_FONT, CONFIG.CHARACTER_SIZE);
@@ -43,12 +35,26 @@ SettingsScreen::SettingsScreen() {
     this->soundVolumeLabel = sf::Text("SOUND", CONFIG.MAIN_FONT, CONFIG.CHARACTER_SIZE);
     this->musicVolumeLabel = sf::Text("MUSIC", CONFIG.MAIN_FONT, CONFIG.CHARACTER_SIZE);
 
+    int commonX = this->controlsTitle.getString().getSize() * CONFIG.CHARACTER_SIZE / 2;
+
+    this->backButton = Button(2 * CONFIG.CHARACTER_SIZE, CONFIG.WINDOW_HEIGHT - 3.5 * CONFIG.CHARACTER_SIZE, "BACK");
+    this->fullscreenCheckbox = Checkbox(0, 0, "Full screen");
+    this->upButton = Button(3.5 * commonX, 12 * CONFIG.CHARACTER_SIZE, KEY_LABELS[CONFIG.KEY_UP]);
+    this->downButton = Button(3.5 * commonX, 15 * CONFIG.CHARACTER_SIZE, KEY_LABELS[CONFIG.KEY_DOWN]);
+    this->leftButton = Button(3.5 * commonX, 18 * CONFIG.CHARACTER_SIZE, KEY_LABELS[CONFIG.KEY_LEFT]);
+    this->rightButton = Button(3.5 * commonX, 21 * CONFIG.CHARACTER_SIZE, KEY_LABELS[CONFIG.KEY_RIGHT]);
+    this->masterVolumeSlider = Slider(0, 0, 0, 100);
+    this->soundVolumeSlider = Slider(0, 0, 0, 100);
+    this->musicVolumeSlider = Slider(0, 0, 0, 100);
+    this->fullscreenCheckbox = Checkbox(commonX, 27 * CONFIG.CHARACTER_SIZE, "Full screen");
+
     this->screenTitle.setPosition(2 * CONFIG.CHARACTER_SIZE, 2 * CONFIG.CHARACTER_SIZE);
-    this->controlsTitle.setPosition(0, 0);
-    this->upKeyLabel.setPosition(0, 0);
-    this->downKeyLabel.setPosition(0, 0);
-    this->leftKeyLabel.setPosition(0, 0);
-    this->rightKeyLabel.setPosition(0, 0);
+    // this->videoTitle.setPosition(commonX, 24 * CONFIG.CHARACTER_SIZE);
+    this->controlsTitle.setPosition(this->controlsTitle.getString().getSize() * CONFIG.CHARACTER_SIZE, 8 * CONFIG.CHARACTER_SIZE);
+    this->upKeyLabel.setPosition(commonX, 12 * CONFIG.CHARACTER_SIZE + CONFIG.CHARACTER_SIZE / 2);
+    this->downKeyLabel.setPosition(commonX, 15 * CONFIG.CHARACTER_SIZE + CONFIG.CHARACTER_SIZE / 2);
+    this->leftKeyLabel.setPosition(commonX, 18 * CONFIG.CHARACTER_SIZE + CONFIG.CHARACTER_SIZE / 2);
+    this->rightKeyLabel.setPosition(commonX, 21 * CONFIG.CHARACTER_SIZE + CONFIG.CHARACTER_SIZE / 2);
     this->volumeTitle.setPosition(0, 0);
     this->masterVolumeLabel.setPosition(0, 0);
     this->soundVolumeLabel.setPosition(0, 0);
@@ -64,6 +70,7 @@ ScreenType SettingsScreen::display(sf::RenderWindow &window) {
     this->leftButton.display(window);
     this->rightButton.display(window);
     window.draw(this->screenTitle);
+    // window.draw(this->videoTitle);
     window.draw(this->controlsTitle);
     window.draw(this->upKeyLabel);
     window.draw(this->downKeyLabel);
