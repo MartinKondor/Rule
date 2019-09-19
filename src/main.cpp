@@ -76,8 +76,12 @@ int main(const int argc, const char** argv)
         // Navigate to the next screen
         if (nextScreenType != currentScreenType)
         {
-
-            if (nextScreenType == ScreenType::MAIN_MENU)
+            if (currentScreenType == ScreenType::SETTINGS)
+            {
+                // Switch back to the screen before settings
+                screen = screen->prevScreen;
+            }
+            else if (nextScreenType == ScreenType::MAIN_MENU)
             {
                 screen = new MainMenuScreen();
             }
@@ -87,7 +91,7 @@ int main(const int argc, const char** argv)
             }
             else if (nextScreenType == ScreenType::SETTINGS)
             {
-                screen = new SettingsScreen();
+                screen = new SettingsScreen(screen);
             }
             else if (nextScreenType == ScreenType::CREDITS)
             {

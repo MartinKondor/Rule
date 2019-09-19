@@ -14,7 +14,8 @@ class Animation
     which is loaded from a spritesheet file.
     */
 private:
-    std::vector<sf::Sprite> frames;
+    std::vector<sf::Texture*> textures;
+    std::vector<sf::Sprite*> frames;
     std::string animationName;
     sf::Clock counter;
     unsigned int framesPerSecond;
@@ -31,6 +32,12 @@ public:
         which contains a spritesheet.png file.
     */
     Animation(const std::string animationName);
+
+    /**
+    Loads animation from the given file.
+    @returns false if animation cannot be loaded.
+    */
+    bool load(const std::string fileName);
 
     /**
     Changes the animation frame to the next one, and draws it out.

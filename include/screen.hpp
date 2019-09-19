@@ -20,6 +20,10 @@ class Screen
     Abstract screen object.
     */
 public:
+
+    // Stores the previous screen, if there is
+    Screen* prevScreen;
+
     /**
     Called for displaying and updating the given screen.
     */

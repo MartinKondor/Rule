@@ -472,7 +472,7 @@
 	<SFML/Graphics.hpp>
 	<utils.hpp>
 
-1568878364 source:d:\projects\rule\src\main.cpp
+1568886368 source:d:\projects\rule\src\main.cpp
 	<iostream>
 	<string>
 	<SFML/Graphics.hpp>
@@ -902,7 +902,7 @@
 	<screen.hpp>
 	<button.hpp>
 
-1568873662 d:\projects\rule\include\screen.hpp
+1568886432 d:\projects\rule\include\screen.hpp
 	<SFML/Graphics.hpp>
 
 1568787942 d:\projects\rule\include\enums.hpp
@@ -1049,11 +1049,12 @@
 	"screen.hpp"
 	"gui/button.hpp"
 
-1568878765 source:d:\projects\rule\src\screens\game.cpp
+1568886161 source:d:\projects\rule\src\screens\game.cpp
 	"screens/game.hpp"
 
-1568877331 d:\projects\rule\include\screens\game.hpp
+1568885521 d:\projects\rule\include\screens\game.hpp
 	<SFML/Graphics.hpp>
+	"config.hpp"
 	"screen.hpp"
 	"gui/button.hpp"
 	"game_play.hpp"
@@ -1067,10 +1068,10 @@
 	"screen.hpp"
 	"gui/button.hpp"
 
-1568874683 source:d:\projects\rule\src\screens\settings.cpp
+1568886260 source:d:\projects\rule\src\screens\settings.cpp
 	"screens/settings.hpp"
 
-1568874705 d:\projects\rule\include\screens\settings.hpp
+1568886407 d:\projects\rule\include\screens\settings.hpp
 	<SFML/Graphics.hpp>
 	"config.hpp"
 	"screen.hpp"
@@ -1160,7 +1161,7 @@
 1568876320 d:\projects\rule\include\entites\entity.hpp
 	<SFML/Graphics.hpp>
 
-1568879568 d:\projects\rule\include\entites\human.hpp
+1568883342 d:\projects\rule\include\entites\human.hpp
 	<string>
 	"gfx/animation.hpp"
 	"entity.hpp"
@@ -1191,11 +1192,11 @@
 1568879020 source:d:\projects\rule\src\game_play.cpp
 	"game_play.hpp"
 
-1568879974 d:\projects\rule\include\gfx\animation.hpp
+1568884642 d:\projects\rule\include\gfx\animation.hpp
 	<string>
 	<SFML/Graphics.hpp>
 
-1568879630 source:d:\projects\rule\src\gfx\animation.cpp
+1568884762 source:d:\projects\rule\src\gfx\animation.cpp
 	"animation.hpp"
 	<iostream>
 

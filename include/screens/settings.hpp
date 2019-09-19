@@ -44,7 +44,8 @@ private:
     bool waitingForKey;
 
 public:
-    SettingsScreen();
+
+    SettingsScreen(Screen* prevScreen);
     sf::Keyboard::Key getPressedKey(sf::Keyboard::Key currentKey);
     virtual ScreenType display(sf::RenderWindow& window);
 };
