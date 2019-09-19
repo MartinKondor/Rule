@@ -15,3 +15,4 @@ on the global scope.
 Config CONFIG;
 std::string BASE_FOLDER;
 std::string IMAGE_FOLDER;
+std::string ANIMATION_FOLDER;

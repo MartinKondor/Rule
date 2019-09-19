@@ -38,6 +38,7 @@ ScreenType MainMenuScreen::displaySubScreen(sf::RenderWindow &window)
     {
         window.draw(this->loadGameSubScreenTitle);
     }
+
     window.draw(this->logo);
     this->subScreenBackButton.display(window);
 
@@ -68,8 +69,10 @@ ScreenType MainMenuScreen::display(sf::RenderWindow &window)
     }
     else if (this->newGameButton.state == ButtonState::RELEASED)
     {
-        this->subScreen = MainMenuSubScreen::NEW_GAME;
-        return ScreenType::MAIN_MENU;
+        // Open the game imediatly for testing
+        // this->subScreen = MainMenuSubScreen::NEW_GAME;
+        // return ScreenType::MAIN_MENU;
+        return ScreenType::GAME;
     }
     else if (this->loadSaveGameButton.state == ButtonState::RELEASED)
     {

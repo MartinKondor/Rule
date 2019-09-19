@@ -21,7 +21,6 @@ class SettingsScreen : public Screen
 private:
     sf::Texture logoTexture;
     sf::Sprite logo;
-
     sf::Text screenTitle;
     Button backButton;
     Button upButton;

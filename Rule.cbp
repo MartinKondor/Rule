@@ -16,6 +16,8 @@
 					<Add option="-g" />
 					<Add directory="lib/SFML-2.5.1/include" />
 					<Add directory="include" />
+					<Add directory="include/entites" />
+					<Add directory="include/gfx" />
 				</Compiler>
 				<Linker>
 					<Add option="-static-libstdc++" />
@@ -36,6 +38,8 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="include" />
+					<Add directory="include/entites" />
+					<Add directory="include/gfx" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -46,6 +50,10 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="include/config.hpp" />
+		<Unit filename="include/entites/human.hpp" />
+		<Unit filename="include/entity.hpp" />
+		<Unit filename="include/game_play.hpp" />
+		<Unit filename="include/gfx/animation.hpp" />
 		<Unit filename="include/gui/button.hpp" />
 		<Unit filename="include/gui/checkbox.hpp" />
 		<Unit filename="include/gui/slider.hpp" />
@@ -57,6 +65,9 @@
 		<Unit filename="include/screens/settings.hpp" />
 		<Unit filename="include/utils.hpp" />
 		<Unit filename="src/config.cpp" />
+		<Unit filename="src/entites/human.cpp" />
+		<Unit filename="src/game_play.cpp" />
+		<Unit filename="src/gfx/animation.cpp" />
 		<Unit filename="src/global.cpp" />
 		<Unit filename="src/gui/button.cpp" />
 		<Unit filename="src/gui/checkbox.cpp" />

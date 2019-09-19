@@ -14,6 +14,7 @@
 extern Config CONFIG;
 extern std::string BASE_FOLDER;
 extern std::string IMAGE_FOLDER;
+extern std::string ANIMATION_FOLDER;
 
 
 int main(const int argc, const char** argv)
@@ -22,6 +23,7 @@ int main(const int argc, const char** argv)
     // Define global variables
     BASE_FOLDER = Utils::getBaseDir(argv[0]);
     IMAGE_FOLDER = BASE_FOLDER + "images/";
+    ANIMATION_FOLDER = BASE_FOLDER + "gfx/";
 
     if (!CONFIG.load(BASE_FOLDER + "config.ini"))
     {
@@ -40,6 +42,7 @@ int main(const int argc, const char** argv)
     Screen* screen = new LoadingScreen();
     ScreenType nextScreenType = ScreenType::LOADING;
     ScreenType currentScreenType = ScreenType::LOADING;
+    sf::Color gameBgColor(0, 0, 0);
 
 
     // Main loop
@@ -53,7 +56,15 @@ int main(const int argc, const char** argv)
             }
         }
 
-        window.clear(CONFIG.BG_COLOR);
+        if (currentScreenType == ScreenType::GAME)
+        {
+            window.clear(gameBgColor);
+        }
+        else
+        {
+            window.clear(CONFIG.BG_COLOR);
+        }
+
         nextScreenType = screen->display(window);
         window.display();
 
