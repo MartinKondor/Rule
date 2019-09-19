@@ -18,19 +18,19 @@ void GamePlay::display(sf::RenderWindow& window)
     // Check keypresses
     if (sf::Keyboard::isKeyPressed(CONFIG.KEY_UP))
     {
-        this->cameraY -= this->map->tileset.tileHeight / 2;
+        this->cameraY -= this->map->tileset.tileHeight / 4;
     }
     if (sf::Keyboard::isKeyPressed(CONFIG.KEY_DOWN))
     {
-        this->cameraY += this->map->tileset.tileHeight / 2;
+        this->cameraY += this->map->tileset.tileHeight / 4;
     }
     if (sf::Keyboard::isKeyPressed(CONFIG.KEY_LEFT))
     {
-        this->cameraX -= this->map->tileset.tileWidth / 2;
+        this->cameraX -= this->map->tileset.tileWidth / 4;
     }
     if (sf::Keyboard::isKeyPressed(CONFIG.KEY_RIGHT))
     {
-        this->cameraX += this->map->tileset.tileWidth / 2;
+        this->cameraX += this->map->tileset.tileWidth / 4;
     }
 
     // Display the map

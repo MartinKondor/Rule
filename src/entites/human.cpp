@@ -14,6 +14,7 @@ Human::Human(const unsigned int id, unsigned int xPos, const unsigned int yPos, 
     this->yPos = yPos;
     this->xSpeed = 0;
     this->ySpeed = 0;
+    this->direction = Direction::SOUTH;
     this->animation = animation;
 }
 
@@ -21,5 +22,5 @@ void Human::display(sf::RenderWindow& window)
 {
     this->xPos += this->xSpeed;
     this->yPos += this->ySpeed;
-    this->animation.play(this->xPos, this->yPos, window);
+    this->animation.play(this->xPos, this->yPos, this->direction, window);
 }

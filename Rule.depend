@@ -948,7 +948,7 @@
 	<sys/stat.h>
 	<algorithm>
 
-1568906991 source:c:\files\projects\rule\src\utils.cpp
+1568928514 source:c:\files\projects\rule\src\utils.cpp
 	"utils.hpp"
 
 1568893000 d:\projects\rule\include\utils.hpp
@@ -1138,7 +1138,7 @@
 	"screen.hpp"
 	"gui/button.hpp"
 
-1568906796 c:\files\projects\rule\include\screens\game.hpp
+1568928903 c:\files\projects\rule\include\screens\game.hpp
 	<string>
 	<SFML/Graphics.hpp>
 	"config.hpp"
@@ -1155,7 +1155,7 @@
 1568836067 source:c:\files\projects\rule\src\screens\loading.cpp
 	"screens/loading.hpp"
 
-1568906796 source:c:\files\projects\rule\src\screens\main_menu.cpp
+1568922975 source:c:\files\projects\rule\src\screens\main_menu.cpp
 	"screens/main_menu.hpp"
 
 1568922457 source:c:\files\projects\rule\src\screens\settings.cpp
@@ -1249,7 +1249,7 @@
 
 1568910347 c:\files\projects\rule\include\map
 
-1568906796 source:c:\files\projects\rule\src\entites\human.cpp
+1568928136 source:c:\files\projects\rule\src\entites\human.cpp
 	"human.hpp"
 
 1568906796 c:\files\projects\rule\include\entites\human.hpp
@@ -1257,22 +1257,23 @@
 	"gfx/animation.hpp"
 	"entity.hpp"
 
-1568906796 c:\files\projects\rule\include\gfx\animation.hpp
+1568928156 c:\files\projects\rule\include\gfx\animation.hpp
 	<string>
 	<SFML/Graphics.hpp>
+	"entity.hpp"
 	"log.hpp"
 
-1568921271 c:\files\projects\rule\include\log.hpp
+1568928735 c:\files\projects\rule\include\log.hpp
 	<iostream>
 	<string>
 	<SFML/Graphics.hpp>
 	"config.hpp"
 	"gui/button.hpp"
 
-1568906796 c:\files\projects\rule\include\entity.hpp
+1568928780 c:\files\projects\rule\include\entity.hpp
 	<SFML/Graphics.hpp>
 
-1568910409 source:c:\files\projects\rule\src\game_play.cpp
+1568928615 source:c:\files\projects\rule\src\game_play.cpp
 	"game_play.hpp"
 
 1568910256 c:\files\projects\rule\include\game_play.hpp
@@ -1301,7 +1302,7 @@
 	<SFML/Graphics.hpp>
 	"log.hpp"
 
-1568906796 source:c:\files\projects\rule\src\gfx\animation.cpp
+1568928405 source:c:\files\projects\rule\src\gfx\animation.cpp
 	"animation.hpp"
 
 1568906796 source:c:\files\projects\rule\src\map\resource.cpp

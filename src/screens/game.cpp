@@ -77,8 +77,7 @@ ScreenType GameScreen::display(sf::RenderWindow& window)
         this->subScreen = GameSubScreen::IN_GAME;
         return this->displayInGameMenu(window);
     }
-
-    if (this->subScreen == GameSubScreen::IN_GAME)
+    else if (this->subScreen == GameSubScreen::IN_GAME)
     {
         return this->displayInGameMenu(window);
     }

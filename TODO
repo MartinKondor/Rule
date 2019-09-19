@@ -1,9 +1,9 @@
-* Specify map format and data
-* Map loading
 * Not living objects
 * Specify resources in map file (fruits, wood, water and so on)
-* Animation directions
 * Action animations
+* Load animations info file
+* Thread the map, tileset, animation, and resources loading
+* Display the loadingscreen before loading the GamePlay class
 
 BUGS:
 

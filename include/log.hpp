@@ -1,7 +1,7 @@
 #ifndef LOG_HPP
 #define LOG_HPP
 /**
-For logging errors and for notifing the user.
+For logging errors and to notify the user.
 */
 #include <iostream>
 #include <string>

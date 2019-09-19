@@ -3,6 +3,7 @@
 
 #include <string>
 #include <SFML/Graphics.hpp>
+#include "entity.hpp"
 #include "log.hpp"
 
 extern std::string ANIMATION_FOLDER;
@@ -43,7 +44,7 @@ public:
     /**
     Changes the animation frame to the next one, and draws it out.
     */
-    void play(const unsigned int xPos, const unsigned int yPos, sf::RenderWindow &window);
+    void play(const unsigned int xPos, const unsigned int yPos, Direction direction, sf::RenderWindow &window);
 };
 
 #endif // ANIMATION_HPP

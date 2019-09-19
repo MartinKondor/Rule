@@ -4,6 +4,19 @@
 #include <SFML/Graphics.hpp>
 
 
+enum class Direction
+{
+    SOUTH,
+    SOUTH_WEST,
+    WEST,
+    NORTH_WEST,
+    NORTH,
+    NORTH_EAST,
+    EAST,
+    SOUTH_EAST
+};
+
+
 class Entity
 {
     /**
@@ -17,6 +30,7 @@ public:
     unsigned int yPos;
     unsigned int xSpeed;
     unsigned int ySpeed;
+    Direction direction;
 
     virtual void display(sf::RenderWindow& window) = 0;
 };

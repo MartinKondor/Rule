@@ -31,7 +31,7 @@ void Utils::trim(std::string &s)
 
 std::string Utils::getBaseDir(const std::string exeFilePath)
 {
-    int lastSlashIndex = 0;
+    unsigned int lastSlashIndex = 0;
     for (unsigned int i = 0; i < exeFilePath.length(); i++)
     {
         if (exeFilePath[i] == '\\' || exeFilePath[i] == '/')

@@ -29,7 +29,6 @@ private:
     GameSubScreen subScreen;
 
     // In game menu elements
-    sf::Texture* inGameMenuBackgroundTexture;
     sf::Sprite inGameMenuBackground;
     sf::Sprite logo;
     sf::Texture logoTexture;

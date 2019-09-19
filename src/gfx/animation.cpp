@@ -16,8 +16,8 @@ Animation::Animation(const std::string animationName)
     // Determine animation size
     if (animationName == "human")
     {
-        this->width = 138;
-        this->height = 138;
+        this->width = 48;
+        this->height = 48;
     }
     else
     {
@@ -49,7 +49,7 @@ bool Animation::load(const std::string fileName)
     */
     for (unsigned int i = 0; i < (unsigned int) (imgSize.y / this->height); i++)
     {
-        for (unsigned int j = 0; j < 8; j++)  // (unsigned int) (imgSize.x / this->width)
+        for (unsigned int j = 0; j < (unsigned int) (imgSize.x / this->width); j++)
         {
             sf::Texture* texture = new sf::Texture();
             if (!texture->loadFromImage(animImg, sf::IntRect(j * this->width, i * this->height, this->width, this->height)))
@@ -67,7 +67,7 @@ bool Animation::load(const std::string fileName)
     return true;
 }
 
-void Animation::play(const unsigned int xPos, const unsigned int yPos, sf::RenderWindow &window)
+void Animation::play(const unsigned int xPos, const unsigned int yPos, Direction direction, sf::RenderWindow &window)
 {
     if (this->framesPerSecond > 0 && this->counter.getElapsedTime().asMilliseconds() >= (1000 / this->framesPerSecond))
     {
@@ -79,6 +79,7 @@ void Animation::play(const unsigned int xPos, const unsigned int yPos, sf::Rende
     }
 
     // Set the position of the frame
-    this->frames[this->frameIndex]->setPosition(xPos, yPos);
-    window.draw(*this->frames[this->frameIndex]);
+    sf::Sprite* currentFrame = this->frames[10 * (int)(direction) + this->frameIndex];
+    currentFrame->setPosition(xPos, yPos);
+    window.draw(*currentFrame);
 }
