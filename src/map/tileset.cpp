@@ -1,7 +1,5 @@
 #include "tileset.hpp"
 
-#include <iostream>
-
 
 Tileset::Tileset() {}
 

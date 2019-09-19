@@ -47,7 +47,7 @@ int main(const int argc, const char** argv)
     Screen* screen = new LoadingScreen();
     ScreenType nextScreenType = ScreenType::LOADING;
     ScreenType currentScreenType = ScreenType::LOADING;
-    sf::Color gameBgColor(100, 0, 0);
+    sf::Color gameBgColor(0, 0, 0);
 
 
     // Main loop
@@ -81,10 +81,12 @@ int main(const int argc, const char** argv)
         // Navigate to the next screen
         if (nextScreenType != currentScreenType)
         {
-            if (currentScreenType == ScreenType::SETTINGS)
+            currentScreenType = nextScreenType;
+
+            // Switch to nextScreen if defined
+            if (screen->nextScreen != nullptr)
             {
-                // Switch back to the screen before settings
-                screen = screen->prevScreen;
+                screen = screen->nextScreen;
             }
             else if (nextScreenType == ScreenType::MAIN_MENU)
             {
@@ -106,8 +108,6 @@ int main(const int argc, const char** argv)
             {
                 screen = new LoadingScreen();
             }
-
-            currentScreenType = nextScreenType;
         }
 
     }

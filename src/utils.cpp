@@ -7,19 +7,24 @@ bool Utils::isFileExists(const std::string fileName)
     return (stat(fileName.c_str(), &buffer) == 0);
 }
 
-void Utils::ltrim(std::string &s) {
-    s.erase(s.begin(), std::find_if(s.begin(), s.end(), [](int ch) {
+void Utils::ltrim(std::string &s)
+{
+    s.erase(s.begin(), std::find_if(s.begin(), s.end(), [](int ch)
+    {
         return !std::isspace(ch);
     }));
 }
 
-void Utils::rtrim(std::string &s) {
-    s.erase(std::find_if(s.rbegin(), s.rend(), [](int ch) {
+void Utils::rtrim(std::string &s)
+{
+    s.erase(std::find_if(s.rbegin(), s.rend(), [](int ch)
+    {
         return !std::isspace(ch);
     }).base(), s.end());
 }
 
-void Utils::trim(std::string &s) {
+void Utils::trim(std::string &s)
+{
     ltrim(s);
     rtrim(s);
 }

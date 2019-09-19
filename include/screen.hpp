@@ -21,8 +21,11 @@ class Screen
     */
 public:
 
-    // Stores the previous screen, if there is
-    Screen* prevScreen;
+    /**
+    Stores the next screen, what must be
+    loaded when this screen is closing
+    */
+    Screen* nextScreen = nullptr;
 
     /**
     Called for displaying and updating the given screen.

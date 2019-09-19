@@ -23,7 +23,6 @@ private:
     */
     std::vector<std::vector<std::vector<unsigned int>>> layers;
     std::vector<Resource> resources;
-    Tileset tileset;
 
 
     /**
@@ -44,6 +43,9 @@ private:
     std::vector<unsigned int> parseTileRow(std::string line);
 
 public:
+    Tileset tileset;
+
+
     Map();
 
     /**

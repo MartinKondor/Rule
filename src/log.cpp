@@ -18,20 +18,24 @@ const bool openMessageBox(const std::string message)
     Button okButton(10, (int) (windowHeight - charSize * 2.5), "Ok");
 
     okButton.label.setCharacterSize(charSize);
-    okButton.label.setColor(fontColor);
-    messageText.setColor(fontColor);
+    okButton.label.setFillColor(fontColor);
+    messageText.setFillColor(fontColor);
     messageText.setPosition((int) (windowWidth / 2 - message.length() * charSize / 4), (int) (charSize / 2));
 
-    while (msgWindow.isOpen()) {
-        while (msgWindow.pollEvent(event)) {
-            if (event.type == sf::Event::Closed) {
+    while (msgWindow.isOpen())
+    {
+        while (msgWindow.pollEvent(event))
+        {
+            if (event.type == sf::Event::Closed)
+            {
                 msgWindow.close();
             }
         }
         msgWindow.clear(bgColor);
 
         // Handle ok button press
-        if (okButton.state == ButtonState::RELEASED) {
+        if (okButton.state == ButtonState::RELEASED)
+        {
             okButton.state = ButtonState::NORMAL;
             return true;
         }
@@ -43,4 +47,3 @@ const bool openMessageBox(const std::string message)
 
     return false;
 }
-

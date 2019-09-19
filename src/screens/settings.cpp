@@ -2,7 +2,8 @@
 
 
 const unsigned int KEY_COUNT = 101;
-std::string KEY_LABELS[KEY_COUNT] = {
+std::string KEY_LABELS[KEY_COUNT] =
+{
     "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W",
     "X","Y","Z","0","1","2","3","4","5","6","7","8","9","Escape","Left Control","Left Shift",
     "Left Alt","Left System","Right Control","Right Shift","Right Alt","Right System","Menu",
@@ -15,9 +16,9 @@ std::string KEY_LABELS[KEY_COUNT] = {
 };
 
 
-SettingsScreen::SettingsScreen(Screen* prevScreen)
+SettingsScreen::SettingsScreen(Screen* nextScreen)
 {
-    this->prevScreen = prevScreen;
+    this->nextScreen = nextScreen;
 
     sf::Image logoImage;
     logoImage.loadFromFile(IMAGE_FOLDER + "logo.png");

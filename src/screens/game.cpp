@@ -41,11 +41,11 @@ ScreenType GameScreen::displayInGameMenu(sf::RenderWindow& window)
     }
     else if (this->inGameSaveGameButton.state == ButtonState::RELEASED)
     {
-        // ...
+        log("Save button pressed");
     }
     else if (this->inGameResignButton.state == ButtonState::RELEASED)
     {
-        // ...
+        log("Resign button pressed");
     }
     else if (this->inGameSettingsButton.state == ButtonState::RELEASED)
     {
@@ -73,10 +73,12 @@ ScreenType GameScreen::display(sf::RenderWindow& window)
         this->inGameMenuBackground.setTexture(*tempTexture);
         this->inGameMenuBackground.setColor(sf::Color(127, 127, 127, 255));
 
+        window.setView(window.getDefaultView());
         this->subScreen = GameSubScreen::IN_GAME;
         return this->displayInGameMenu(window);
     }
-    else if (this->subScreen == GameSubScreen::IN_GAME)
+
+    if (this->subScreen == GameSubScreen::IN_GAME)
     {
         return this->displayInGameMenu(window);
     }

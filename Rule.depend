@@ -8,7 +8,7 @@
 	<SFML/Graphics.hpp>
 	<utils.hpp>
 
-1568840456 source:c:\files\projects\rule\src\main.cpp
+1568922497 source:c:\files\projects\rule\src\main.cpp
 	<iostream>
 	<string>
 	<SFML/Graphics.hpp>
@@ -442,7 +442,7 @@
 	<screen.hpp>
 	<button.hpp>
 
-1568836067 c:\files\projects\rule\include\screen.hpp
+1568922333 c:\files\projects\rule\include\screen.hpp
 	<SFML/Graphics.hpp>
 
 1568750096 c:\files\projects\rule\include\enums.hpp
@@ -942,12 +942,13 @@
 	<enums.hpp>
 	<screen.hpp>
 
-1568836067 c:\files\projects\rule\include\utils.hpp
+1568906796 c:\files\projects\rule\include\utils.hpp
 	<string>
 	<sstream>
 	<sys/stat.h>
+	<algorithm>
 
-1568836067 source:c:\files\projects\rule\src\utils.cpp
+1568906991 source:c:\files\projects\rule\src\utils.cpp
 	"utils.hpp"
 
 1568893000 d:\projects\rule\include\utils.hpp
@@ -1082,7 +1083,7 @@
 	"gui/slider.hpp"
 	"utils.hpp"
 
-1568835752 source:c:\files\projects\rule\src\global.cpp
+1568906796 source:c:\files\projects\rule\src\global.cpp
 	<string>
 	"config.hpp"
 
@@ -1103,7 +1104,7 @@
 	"button.hpp"
 	"config.hpp"
 
-1568836067 source:c:\files\projects\rule\src\gui\slider.cpp
+1568906796 source:c:\files\projects\rule\src\gui\slider.cpp
 	"gui/slider.hpp"
 
 1568836067 c:\files\projects\rule\include\gui\slider.hpp
@@ -1122,7 +1123,7 @@
 	"config.hpp"
 	"screen.hpp"
 
-1568837102 c:\files\projects\rule\include\screens\settings.hpp
+1568922487 c:\files\projects\rule\include\screens\settings.hpp
 	<SFML/Graphics.hpp>
 	"config.hpp"
 	"screen.hpp"
@@ -1137,24 +1138,27 @@
 	"screen.hpp"
 	"gui/button.hpp"
 
-1568836067 c:\files\projects\rule\include\screens\game.hpp
+1568906796 c:\files\projects\rule\include\screens\game.hpp
+	<string>
 	<SFML/Graphics.hpp>
+	"config.hpp"
 	"screen.hpp"
 	"gui/button.hpp"
+	"game_play.hpp"
 
 1568836067 source:c:\files\projects\rule\src\screens\credits.cpp
 	"screens/credits.hpp"
 
-1568836068 source:c:\files\projects\rule\src\screens\game.cpp
+1568921309 source:c:\files\projects\rule\src\screens\game.cpp
 	"screens/game.hpp"
 
 1568836067 source:c:\files\projects\rule\src\screens\loading.cpp
 	"screens/loading.hpp"
 
-1568838862 source:c:\files\projects\rule\src\screens\main_menu.cpp
+1568906796 source:c:\files\projects\rule\src\screens\main_menu.cpp
 	"screens/main_menu.hpp"
 
-1568838597 source:c:\files\projects\rule\src\screens\settings.cpp
+1568922457 source:c:\files\projects\rule\src\screens\settings.cpp
 	"screens/settings.hpp"
 
 1568875847 source:d:\projects\rule\src\entites\entity.cpp
@@ -1242,4 +1246,74 @@
 
 1568900291 source:d:\projects\rule\src\log.cpp
 	"log.hpp"
+
+1568910347 c:\files\projects\rule\include\map
+
+1568906796 source:c:\files\projects\rule\src\entites\human.cpp
+	"human.hpp"
+
+1568906796 c:\files\projects\rule\include\entites\human.hpp
+	<string>
+	"gfx/animation.hpp"
+	"entity.hpp"
+
+1568906796 c:\files\projects\rule\include\gfx\animation.hpp
+	<string>
+	<SFML/Graphics.hpp>
+	"log.hpp"
+
+1568921271 c:\files\projects\rule\include\log.hpp
+	<iostream>
+	<string>
+	<SFML/Graphics.hpp>
+	"config.hpp"
+	"gui/button.hpp"
+
+1568906796 c:\files\projects\rule\include\entity.hpp
+	<SFML/Graphics.hpp>
+
+1568910409 source:c:\files\projects\rule\src\game_play.cpp
+	"game_play.hpp"
+
+1568910256 c:\files\projects\rule\include\game_play.hpp
+	<vector>
+	<SFML/Graphics.hpp>
+	"config.hpp"
+	"map.hpp"
+	"entity.hpp"
+	"human.hpp"
+
+1568910347 c:\files\projects\rule\include\map\map.hpp
+	<fstream>
+	<string>
+	<SFML/Graphics.hpp>
+	"config.hpp"
+	"resource.hpp"
+	"tileset.hpp"
+	"utils.hpp"
+	"log.hpp"
+
+1568906796 c:\files\projects\rule\include\map\resource.hpp
+	<string>
+
+1568906796 c:\files\projects\rule\include\map\tileset.hpp
+	<string>
+	<SFML/Graphics.hpp>
+	"log.hpp"
+
+1568906796 source:c:\files\projects\rule\src\gfx\animation.cpp
+	"animation.hpp"
+
+1568906796 source:c:\files\projects\rule\src\map\resource.cpp
+	"resource.hpp"
+
+1568909066 source:c:\files\projects\rule\src\map\tileset.cpp
+	"tileset.hpp"
+
+1568921251 source:c:\files\projects\rule\src\log.cpp
+	"log.hpp"
+
+1568910492 source:c:\files\projects\rule\src\map\map.cpp
+	"map.hpp"
+	<iostream>
 

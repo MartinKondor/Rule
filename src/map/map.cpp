@@ -169,7 +169,11 @@ std::vector<unsigned int> Map::parseTileRow(std::string line)
         }
         else if (line[i] == ',')
         {
-            tileRow.push_back(std::stoi(currentValue));
+            try
+            {
+                tileRow.push_back(std::stoi(currentValue));
+            }
+            catch (std::exception) {}
             currentValue = "";
             continue;
         }
@@ -188,6 +192,8 @@ std::vector<unsigned int> Map::parseTileRow(std::string line)
 void Map::display(sf::RenderWindow& window)
 {
     sf::Sprite tileSprite;
+    int cartX = 0;
+    int cartY = 0;
 
     for (std::vector<std::vector<unsigned int>> layer : this->layers)
     {
@@ -195,17 +201,13 @@ void Map::display(sf::RenderWindow& window)
         {
             for (unsigned int j = 0; j < layer[i].size(); j++)
             {
-                sf::Text text(Utils::to_string(i) + ", " + Utils::to_string(j), CONFIG.MAIN_FONT, CONFIG.CHARACTER_SIZE);
                 tileSprite.setTexture(*this->tileset.tiles[layer[i][j]]);
 
-                tileSprite.setPosition(j * this->tileset.tileWidth / 2 - i * this->tileset.tileWidth / 4,
-                                       j * this->tileset.tileHeight / 4 + i * this->tileset.tileHeight / 2);
+                cartX = j * this->tileset.tileWidth / 2;
+                cartY = i * this->tileset.tileHeight / 2;
 
-                text.setPosition(j * this->tileset.tileWidth / 2 - i * this->tileset.tileWidth / 4,
-                                       j * this->tileset.tileHeight / 4 + i * this->tileset.tileHeight / 2);
-
+                tileSprite.setPosition(cartX - cartY, (cartX + cartY) / 2);
                 window.draw(tileSprite);
-                window.draw(text);
             }
         }
     }

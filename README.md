@@ -1,12 +1,14 @@
 <p align="center">
-    <img src="bin/images/flag/flag.png" width=350>
+    <img src="bin/images/logo/logo.png" width="250" style="filter: invert(1);">
 </p>
 
-# Rule
+# <img src="bin/images/flag/flag.png" width="50"> Rule
 
-[![version](https://img.shields.io/badge/version-v0.1.0-red.svg)](https://github.com/MartinKondor/Rule) [![Project Status](https://img.shields.io/badge/status-active-brightgreen.svg)](https://github.com/MartinKondor/Rule) ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg) [![GitHub Issues](https://img.shields.io/github/issues/Rule/MustFind.svg)](https://github.com/MartinKondor/Rule/issues)
+[![version](https://img.shields.io/badge/version-v0.1.0-red.svg)](https://github.com/MartinKondor/Rule) [![C++](https://img.shields.io/badge/C++-17-blue.svg)](https://github.com/MartinKondor/WildTetris) [![Project Status](https://img.shields.io/badge/status-active-brightgreen.svg)](https://github.com/MartinKondor/Rule) ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg) [![GitHub Issues](https://img.shields.io/github/issues/MartinKondor/Rule.svg)](https://github.com/MartinKondor/Rule/issues)
 
 Rule is a 2D isometric game where your main task is to lead humans in a harsh planet.
+
+_The flag does not try to intend represent any existing community, country or anything else, it's only intended to be the symbol of the game._
 
 # Project structure
 
