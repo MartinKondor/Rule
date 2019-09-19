@@ -4,6 +4,7 @@
 #include <string>
 #include <sstream>
 #include <sys/stat.h>
+#include <algorithm>
 
 
 namespace Utils
@@ -18,6 +19,15 @@ bool isFileExists(const std::string fileName);
 Parses the current working directory from the exeFilePath parameter.
 */
 std::string getBaseDir(const std::string exeFilePath);
+
+void ltrim(std::string &s);
+
+void rtrim(std::string &s);
+
+/**
+* Trim the given string from both ends (in place)
+*/
+void trim(std::string &s);
 
 /**
 Turns type T to string.

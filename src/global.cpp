@@ -18,3 +18,4 @@ std::string IMAGE_FOLDER;
 std::string ANIMATION_FOLDER;
 std::string TILESET_FOLDER;
 std::string MAP_FOLDER;
+std::string RESOURCES_FOLDER;

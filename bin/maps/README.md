@@ -13,8 +13,10 @@
 
 * Layers are separated with {} signs.
 
-* Layers will be placed down in the same order
+* Layers will be placed down in the opposite order
   as they are placed in the map file.
+
+* tileWidth and tileHeight must be defined before the tileset.
 
 ## Resources
 

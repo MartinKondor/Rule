@@ -472,7 +472,7 @@
 	<SFML/Graphics.hpp>
 	<utils.hpp>
 
-1568887753 source:d:\projects\rule\src\main.cpp
+1568897542 source:d:\projects\rule\src\main.cpp
 	<iostream>
 	<string>
 	<SFML/Graphics.hpp>
@@ -950,10 +950,11 @@
 1568836067 source:c:\files\projects\rule\src\utils.cpp
 	"utils.hpp"
 
-1568873662 d:\projects\rule\include\utils.hpp
+1568893000 d:\projects\rule\include\utils.hpp
 	<string>
 	<sstream>
 	<sys/stat.h>
+	<algorithm>
 
 1568815754 d:\projects\rule\include\loading_screen.hpp
 	<SFML/Graphics.hpp>
@@ -974,10 +975,10 @@
 1568816049 source:d:\projects\rule\src\settings_screen.cpp
 	"settings_screen.hpp"
 
-1568873662 source:d:\projects\rule\src\utils.cpp
+1568893006 source:d:\projects\rule\src\utils.cpp
 	"utils.hpp"
 
-1568887736 source:d:\projects\rule\src\global.cpp
+1568897561 source:d:\projects\rule\src\global.cpp
 	<string>
 	"config.hpp"
 
@@ -1049,9 +1050,8 @@
 	"screen.hpp"
 	"gui/button.hpp"
 
-1568886902 source:d:\projects\rule\src\screens\game.cpp
+1568891195 source:d:\projects\rule\src\screens\game.cpp
 	"screens/game.hpp"
-	<iostream>
 
 1568886921 d:\projects\rule\include\screens\game.hpp
 	<string>
@@ -1192,26 +1192,42 @@
 	"entity.hpp"
 	"human.hpp"
 
-1568888708 source:d:\projects\rule\src\game_play.cpp
+1568891228 source:d:\projects\rule\src\game_play.cpp
 	"game_play.hpp"
 
 1568884642 d:\projects\rule\include\gfx\animation.hpp
 	<string>
 	<SFML/Graphics.hpp>
 
-1568884762 source:d:\projects\rule\src\gfx\animation.cpp
+1568893092 source:d:\projects\rule\src\gfx\animation.cpp
 	"animation.hpp"
 	<iostream>
 
-1568890792 d:\projects\rule\include\map
+1568898990 d:\projects\rule\include\map
 
-1568890792 d:\projects\rule\include\map\map.hpp
+1568897617 d:\projects\rule\include\map\map.hpp
 	<fstream>
 	<string>
 	<SFML/Graphics.hpp>
+	"resource.hpp"
+	"tileset.hpp"
 	"utils.hpp"
 
-1568890728 source:d:\projects\rule\src\map\map.cpp
+1568898173 source:d:\projects\rule\src\map\map.cpp
 	"map.hpp"
+	<iostream>
+
+1568898990 d:\projects\rule\include\map\tileset.hpp
+	<string>
+	<SFML/Graphics.hpp>
+
+1568897587 d:\projects\rule\include\map\resource.hpp
+	<string>
+
+1568897442 source:d:\projects\rule\src\map\resource.cpp
+	"resource.hpp"
+
+1568898203 source:d:\projects\rule\src\map\tileset.cpp
+	"tileset.hpp"
 	<iostream>
 

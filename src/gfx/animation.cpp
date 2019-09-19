@@ -34,7 +34,6 @@ Animation::Animation(const std::string animationName)
         std::cout << "Cannot load animation (" << animationName << ")" << std::endl;
         exit(1);
     }
-
 }
 
 bool Animation::load(const std::string fileName)

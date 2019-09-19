@@ -16,6 +16,7 @@ extern std::string BASE_FOLDER;
 extern std::string IMAGE_FOLDER;
 extern std::string ANIMATION_FOLDER;
 extern std::string TILESET_FOLDER;
+extern std::string RESOURCES_FOLDER;
 
 
 int main(const int argc, const char** argv)
@@ -27,6 +28,7 @@ int main(const int argc, const char** argv)
     ANIMATION_FOLDER = BASE_FOLDER + "gfx/";
     TILESET_FOLDER = BASE_FOLDER + "tilesets/";
     MAP_FOLDER = BASE_FOLDER + "maps/";
+    RESOURCES_FOLDER = MAP_FOLDER + "resources/";
 
     if (!CONFIG.load(BASE_FOLDER + "config.ini"))
     {
