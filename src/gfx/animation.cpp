@@ -1,10 +1,7 @@
 #include "animation.hpp"
 
-#include <iostream>
 
-
-Animation::Animation()
-{}
+Animation::Animation() {}
 
 Animation::Animation(const std::string animationName)
 {
@@ -24,15 +21,15 @@ Animation::Animation(const std::string animationName)
     }
     else
     {
-        std::cout << "Unknown animation name (" << animationName << ")" << std::endl;
-        exit(1);
+        openMessageBox("Unknown animation name (" + animationName + ")");
+        exit(EXIT_FAILURE);
     }
 
     // Load the animation
     if (!this->load(ANIMATION_FOLDER + animationName + "/spritesheet.png"))
     {
-        std::cout << "Cannot load animation (" << animationName << ")" << std::endl;
-        exit(1);
+        openMessageBox("Cannot load animation (" + ANIMATION_FOLDER + animationName + "/spritesheet.png" + ")");
+        exit(EXIT_FAILURE);
     }
 }
 

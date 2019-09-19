@@ -12,8 +12,8 @@ Map::Map(const std::string mapName)
     // Check for the file first
     if (!Utils::isFileExists(fileName))
     {
-        std::cout << "Cannot load map, as the " << fileName << "doesn't exist." << std::endl;
-        exit(1);
+        openMessageBox("Cannot load map, as the (" + fileName + ") doesn't exist.");
+        exit(EXIT_FAILURE);
     }
 
     this->load(fileName);
@@ -187,5 +187,27 @@ std::vector<unsigned int> Map::parseTileRow(std::string line)
 
 void Map::display(sf::RenderWindow& window)
 {
+    sf::Sprite tileSprite;
+
+    for (std::vector<std::vector<unsigned int>> layer : this->layers)
+    {
+        for (unsigned int i = 0; i < layer.size(); i++)
+        {
+            for (unsigned int j = 0; j < layer[i].size(); j++)
+            {
+                sf::Text text(Utils::to_string(i) + ", " + Utils::to_string(j), CONFIG.MAIN_FONT, CONFIG.CHARACTER_SIZE);
+                tileSprite.setTexture(*this->tileset.tiles[layer[i][j]]);
+
+                tileSprite.setPosition(j * this->tileset.tileWidth / 2 - i * this->tileset.tileWidth / 4,
+                                       j * this->tileset.tileHeight / 4 + i * this->tileset.tileHeight / 2);
+
+                text.setPosition(j * this->tileset.tileWidth / 2 - i * this->tileset.tileWidth / 4,
+                                       j * this->tileset.tileHeight / 4 + i * this->tileset.tileHeight / 2);
+
+                window.draw(tileSprite);
+                window.draw(text);
+            }
+        }
+    }
 
 }

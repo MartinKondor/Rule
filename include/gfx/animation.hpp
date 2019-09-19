@@ -3,6 +3,7 @@
 
 #include <string>
 #include <SFML/Graphics.hpp>
+#include "log.hpp"
 
 extern std::string ANIMATION_FOLDER;
 

@@ -12,12 +12,12 @@ GamePlay::GamePlay(bool load)
 
 void GamePlay::display(sf::RenderWindow& window)
 {
+    // Display the map
+    this->map->display(window);
+
     // Display entities
     for (Entity* entity : this->entities)
     {
         entity->display(window);
     }
-
-    // Display the map
-    this->map->display(window);
 }

@@ -4,10 +4,13 @@
 #include <fstream>
 #include <string>
 #include <SFML/Graphics.hpp>
+#include "config.hpp"
 #include "resource.hpp"
 #include "tileset.hpp"
 #include "utils.hpp"
+#include "log.hpp"
 
+extern Config CONFIG;
 extern std::string MAP_FOLDER;
 
 

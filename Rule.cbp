@@ -59,6 +59,7 @@
 		<Unit filename="include/gui/button.hpp" />
 		<Unit filename="include/gui/checkbox.hpp" />
 		<Unit filename="include/gui/slider.hpp" />
+		<Unit filename="include/log.hpp" />
 		<Unit filename="include/map/map.hpp" />
 		<Unit filename="include/map/resource.hpp" />
 		<Unit filename="include/map/tileset.hpp" />
@@ -77,6 +78,7 @@
 		<Unit filename="src/gui/button.cpp" />
 		<Unit filename="src/gui/checkbox.cpp" />
 		<Unit filename="src/gui/slider.cpp" />
+		<Unit filename="src/log.cpp" />
 		<Unit filename="src/main.cpp" />
 		<Unit filename="src/map/map.cpp" />
 		<Unit filename="src/map/resource.cpp" />

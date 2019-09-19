@@ -47,7 +47,7 @@ int main(const int argc, const char** argv)
     Screen* screen = new LoadingScreen();
     ScreenType nextScreenType = ScreenType::LOADING;
     ScreenType currentScreenType = ScreenType::LOADING;
-    sf::Color gameBgColor(0, 0, 0);
+    sf::Color gameBgColor(100, 0, 0);
 
 
     // Main loop

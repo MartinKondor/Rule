@@ -27,6 +27,7 @@ GameScreen::GameScreen()
 
 ScreenType GameScreen::displayInGameMenu(sf::RenderWindow& window)
 {
+    window.draw(this->inGameMenuBackground);
     window.draw(this->logo);
     this->inGameResumeButton.display(window);
     this->inGameSaveGameButton.display(window);
@@ -61,10 +62,17 @@ ScreenType GameScreen::displayInGameMenu(sf::RenderWindow& window)
 
 ScreenType GameScreen::display(sf::RenderWindow& window)
 {
-    // std::cout << (int) this->subScreen << std::endl;
-
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
     {
+        // Make a screenshot of the game as a wallpaper
+        this->game.display(window);
+        sf::Vector2u windowSize = window.getSize();
+        sf::Texture* tempTexture = new sf::Texture();
+        tempTexture->create(windowSize.x, windowSize.y);
+        tempTexture->update(window);
+        this->inGameMenuBackground.setTexture(*tempTexture);
+        this->inGameMenuBackground.setColor(sf::Color(127, 127, 127, 255));
+
         this->subScreen = GameSubScreen::IN_GAME;
         return this->displayInGameMenu(window);
     }

@@ -472,7 +472,7 @@
 	<SFML/Graphics.hpp>
 	<utils.hpp>
 
-1568897542 source:d:\projects\rule\src\main.cpp
+1568901622 source:d:\projects\rule\src\main.cpp
 	<iostream>
 	<string>
 	<SFML/Graphics.hpp>
@@ -1025,7 +1025,7 @@
 1568873662 source:d:\projects\rule\src\gui\button.cpp
 	"gui/button.hpp"
 
-1568873662 source:d:\projects\rule\src\gui\slider.cpp
+1568901058 source:d:\projects\rule\src\gui\slider.cpp
 	"gui/slider.hpp"
 
 1568873662 d:\projects\rule\include\gui\slider.hpp
@@ -1050,10 +1050,10 @@
 	"screen.hpp"
 	"gui/button.hpp"
 
-1568891195 source:d:\projects\rule\src\screens\game.cpp
+1568901677 source:d:\projects\rule\src\screens\game.cpp
 	"screens/game.hpp"
 
-1568886921 d:\projects\rule\include\screens\game.hpp
+1568901366 d:\projects\rule\include\screens\game.hpp
 	<string>
 	<SFML/Graphics.hpp>
 	"config.hpp"
@@ -1070,7 +1070,7 @@
 	"screen.hpp"
 	"gui/button.hpp"
 
-1568886260 source:d:\projects\rule\src\screens\settings.cpp
+1568901119 source:d:\projects\rule\src\screens\settings.cpp
 	"screens/settings.hpp"
 
 1568886407 d:\projects\rule\include\screens\settings.hpp
@@ -1192,34 +1192,37 @@
 	"entity.hpp"
 	"human.hpp"
 
-1568891228 source:d:\projects\rule\src\game_play.cpp
+1568902269 source:d:\projects\rule\src\game_play.cpp
 	"game_play.hpp"
 
-1568884642 d:\projects\rule\include\gfx\animation.hpp
+1568899981 d:\projects\rule\include\gfx\animation.hpp
 	<string>
 	<SFML/Graphics.hpp>
+	"log.hpp"
 
-1568893092 source:d:\projects\rule\src\gfx\animation.cpp
+1568900615 source:d:\projects\rule\src\gfx\animation.cpp
 	"animation.hpp"
-	<iostream>
 
-1568898990 d:\projects\rule\include\map
+1568903968 d:\projects\rule\include\map
 
-1568897617 d:\projects\rule\include\map\map.hpp
+1568903968 d:\projects\rule\include\map\map.hpp
 	<fstream>
 	<string>
 	<SFML/Graphics.hpp>
+	"config.hpp"
 	"resource.hpp"
 	"tileset.hpp"
 	"utils.hpp"
+	"log.hpp"
 
-1568898173 source:d:\projects\rule\src\map\map.cpp
+1568902741 source:d:\projects\rule\src\map\map.cpp
 	"map.hpp"
 	<iostream>
 
-1568898990 d:\projects\rule\include\map\tileset.hpp
+1568902065 d:\projects\rule\include\map\tileset.hpp
 	<string>
 	<SFML/Graphics.hpp>
+	"log.hpp"
 
 1568897587 d:\projects\rule\include\map\resource.hpp
 	<string>
@@ -1227,7 +1230,16 @@
 1568897442 source:d:\projects\rule\src\map\resource.cpp
 	"resource.hpp"
 
-1568898203 source:d:\projects\rule\src\map\tileset.cpp
+1568901990 source:d:\projects\rule\src\map\tileset.cpp
 	"tileset.hpp"
 	<iostream>
+
+1568900165 d:\projects\rule\include\log.hpp
+	<string>
+	<SFML/Graphics.hpp>
+	"config.hpp"
+	"gui/button.hpp"
+
+1568900291 source:d:\projects\rule\src\log.cpp
+	"log.hpp"
 

@@ -108,7 +108,7 @@ ScreenType SettingsScreen::display(sf::RenderWindow &window)
     else if (this->upButton.state == ButtonState::RELEASED && !this->waitingForKey)
     {
         this->waitingForKey = true;
-        this->upButton.label.setString("Please press a key ...");
+        this->upButton.label.setString("...");
         this->upButton.display(window);
         window.display();
         CONFIG.KEY_UP = this->getPressedKey(CONFIG.KEY_UP);
@@ -117,7 +117,7 @@ ScreenType SettingsScreen::display(sf::RenderWindow &window)
     else if (this->downButton.state == ButtonState::RELEASED && !this->waitingForKey)
     {
         this->waitingForKey = true;
-        this->downButton.label.setString("Please press a key ...");
+        this->downButton.label.setString("...");
         this->downButton.display(window);
         window.display();
         CONFIG.KEY_DOWN = this->getPressedKey(CONFIG.KEY_DOWN);
@@ -126,7 +126,7 @@ ScreenType SettingsScreen::display(sf::RenderWindow &window)
     else if (this->leftButton.state == ButtonState::RELEASED && !this->waitingForKey)
     {
         this->waitingForKey = true;
-        this->leftButton.label.setString("Please press a key ...");
+        this->leftButton.label.setString("...");
         this->leftButton.display(window);
         window.display();
         CONFIG.KEY_LEFT = this->getPressedKey(CONFIG.KEY_LEFT);
@@ -135,7 +135,7 @@ ScreenType SettingsScreen::display(sf::RenderWindow &window)
     else if (this->rightButton.state == ButtonState::RELEASED && !this->waitingForKey)
     {
         this->waitingForKey = true;
-        this->rightButton.label.setString("Please press a key ...");
+        this->rightButton.label.setString("...");
         this->rightButton.display(window);
         window.display();
         CONFIG.KEY_RIGHT = this->getPressedKey(CONFIG.KEY_RIGHT);

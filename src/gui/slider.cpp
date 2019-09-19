@@ -17,7 +17,7 @@ Slider::Slider(const unsigned int xPos, const unsigned int yPos, const unsigned 
     this->maxValue = max;
 
     this->text.setFont(CONFIG.MAIN_FONT);
-    this->text.setFillColor(sf::Color(5, 5, 5));
+    this->text.setFillColor(sf::Color(250, 250, 250));
 
     this->axis.setPosition(xPos, yPos);
     this->axis.setOrigin(0, this->axisHeight / 2);
