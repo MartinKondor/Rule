@@ -1,6 +1,7 @@
 #ifndef GAME_SCREEN_HPP
 #define GAME_SCREEN_HPP
 
+#include <string>
 #include <SFML/Graphics.hpp>
 #include "config.hpp"
 #include "screen.hpp"
@@ -8,6 +9,7 @@
 #include "game_play.hpp"
 
 extern Config CONFIG;
+extern std::string IMAGE_FOLDER;
 
 
 enum class GameSubScreen
@@ -27,6 +29,8 @@ private:
     GameSubScreen subScreen;
 
     // In game menu elements
+    sf::Sprite logo;
+    sf::Texture logoTexture;
     Button inGameResumeButton;
     Button inGameSaveGameButton;
     Button inGameResignButton;

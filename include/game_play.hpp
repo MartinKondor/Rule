@@ -4,6 +4,7 @@
 #include <vector>
 #include <SFML/Graphics.hpp>
 #include "screen.hpp"
+#include "map.hpp"
 #include "entity.hpp"
 #include "human.hpp"
 
@@ -11,10 +12,12 @@
 class GamePlay
 {
 private:
+    Map* map;
     std::vector<Entity*> entities;
 
 public:
     GamePlay();
+    GamePlay(bool load);
 
     /**
     Called from GameScreen.

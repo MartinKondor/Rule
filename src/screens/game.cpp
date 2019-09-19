@@ -1,12 +1,17 @@
 #include "screens/game.hpp"
 
-#include <iostream>
-
 
 GameScreen::GameScreen()
 {
-    this->game = GamePlay();
+    this->game = GamePlay(true);
     this->subScreen = GameSubScreen::GAME;
+
+    // Load logo
+    sf::Image logoImage;
+    logoImage.loadFromFile(IMAGE_FOLDER + "logo.png");
+    this->logoTexture.loadFromImage(logoImage);
+    this->logo.setTexture(logoTexture);
+    this->logo.setPosition(CONFIG.WINDOW_WIDTH - logoImage.getSize().x, 0);
 
     // In game menu elements
     unsigned int buttonMargin = 42;
@@ -22,6 +27,7 @@ GameScreen::GameScreen()
 
 ScreenType GameScreen::displayInGameMenu(sf::RenderWindow& window)
 {
+    window.draw(this->logo);
     this->inGameResumeButton.display(window);
     this->inGameSaveGameButton.display(window);
     this->inGameResignButton.display(window);

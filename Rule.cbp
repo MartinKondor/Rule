@@ -18,6 +18,7 @@
 					<Add directory="include" />
 					<Add directory="include/entites" />
 					<Add directory="include/gfx" />
+					<Add directory="include/map" />
 				</Compiler>
 				<Linker>
 					<Add option="-static-libstdc++" />
@@ -40,6 +41,7 @@
 					<Add directory="include" />
 					<Add directory="include/entites" />
 					<Add directory="include/gfx" />
+					<Add directory="include/map" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -57,6 +59,7 @@
 		<Unit filename="include/gui/button.hpp" />
 		<Unit filename="include/gui/checkbox.hpp" />
 		<Unit filename="include/gui/slider.hpp" />
+		<Unit filename="include/map/map.hpp" />
 		<Unit filename="include/screen.hpp" />
 		<Unit filename="include/screens/credits.hpp" />
 		<Unit filename="include/screens/game.hpp" />
@@ -73,6 +76,7 @@
 		<Unit filename="src/gui/checkbox.cpp" />
 		<Unit filename="src/gui/slider.cpp" />
 		<Unit filename="src/main.cpp" />
+		<Unit filename="src/map/map.cpp" />
 		<Unit filename="src/screens/credits.cpp" />
 		<Unit filename="src/screens/game.cpp" />
 		<Unit filename="src/screens/loading.cpp" />

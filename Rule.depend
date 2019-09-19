@@ -472,7 +472,7 @@
 	<SFML/Graphics.hpp>
 	<utils.hpp>
 
-1568886368 source:d:\projects\rule\src\main.cpp
+1568887753 source:d:\projects\rule\src\main.cpp
 	<iostream>
 	<string>
 	<SFML/Graphics.hpp>
@@ -977,7 +977,7 @@
 1568873662 source:d:\projects\rule\src\utils.cpp
 	"utils.hpp"
 
-1568878295 source:d:\projects\rule\src\global.cpp
+1568887736 source:d:\projects\rule\src\global.cpp
 	<string>
 	"config.hpp"
 
@@ -1043,16 +1043,18 @@
 1568873662 source:d:\projects\rule\src\screens\credits.cpp
 	"screens/credits.hpp"
 
-1568873662 d:\projects\rule\include\screens\credits.hpp
+1568886823 d:\projects\rule\include\screens\credits.hpp
 	<SFML/Graphics.hpp>
 	"config.hpp"
 	"screen.hpp"
 	"gui/button.hpp"
 
-1568886161 source:d:\projects\rule\src\screens\game.cpp
+1568886902 source:d:\projects\rule\src\screens\game.cpp
 	"screens/game.hpp"
+	<iostream>
 
-1568885521 d:\projects\rule\include\screens\game.hpp
+1568886921 d:\projects\rule\include\screens\game.hpp
+	<string>
 	<SFML/Graphics.hpp>
 	"config.hpp"
 	"screen.hpp"
@@ -1169,7 +1171,7 @@
 1568879654 source:d:\projects\rule\src\entites\human.cpp
 	"human.hpp"
 
-1568876320 d:\projects\rule\include\entity.hpp
+1568888638 d:\projects\rule\include\entity.hpp
 	<SFML/Graphics.hpp>
 
 1568876704 source:d:\projects\rule\src\game.cpp
@@ -1182,14 +1184,15 @@
 	"entity.hpp"
 	"human.hpp"
 
-1568877261 d:\projects\rule\include\game_play.hpp
+1568891123 d:\projects\rule\include\game_play.hpp
 	<vector>
 	<SFML/Graphics.hpp>
 	"screen.hpp"
+	"map.hpp"
 	"entity.hpp"
 	"human.hpp"
 
-1568879020 source:d:\projects\rule\src\game_play.cpp
+1568888708 source:d:\projects\rule\src\game_play.cpp
 	"game_play.hpp"
 
 1568884642 d:\projects\rule\include\gfx\animation.hpp
@@ -1198,5 +1201,17 @@
 
 1568884762 source:d:\projects\rule\src\gfx\animation.cpp
 	"animation.hpp"
+	<iostream>
+
+1568890792 d:\projects\rule\include\map
+
+1568890792 d:\projects\rule\include\map\map.hpp
+	<fstream>
+	<string>
+	<SFML/Graphics.hpp>
+	"utils.hpp"
+
+1568890728 source:d:\projects\rule\src\map\map.cpp
+	"map.hpp"
 	<iostream>
 

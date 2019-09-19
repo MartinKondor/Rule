@@ -6,6 +6,11 @@
 
 class Entity
 {
+    /**
+    Abstract entity class.
+
+    Every living object must inherit this class.
+    */
 public:
     unsigned int id;
     unsigned int xPos;
