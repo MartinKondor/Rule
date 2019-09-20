@@ -6,7 +6,7 @@
   where tileset.png is an existing file in the tilesets folder.
 
 * Resources must be defined on the top of the file like:
-            resources = "resources.res"
+            resources = "resources.txt"
   where tileset.png is an existing file in the tilesets folder.
 
 * The map must have at least one layer, but there is no maximum limit.

@@ -201,6 +201,11 @@ void Map::display(sf::RenderWindow& window)
         {
             for (unsigned int j = 0; j < this->layers[layerIndex][i].size(); j++)
             {
+                if (this->layers[layerIndex][i][j] == 0)
+                {
+                    continue;
+                }
+
                 tileSprite.setTexture(*this->tileset.tiles[this->layers[layerIndex][i][j]]);
 
                 cartX = j * this->tileset.tileWidth / 2;

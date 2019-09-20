@@ -55,7 +55,7 @@ int main(const int argc, const char** argv)
     sf::Color gameBgColor(0, 0, 0);
 
     // Load flag background
-    AnimatedFlag flagBg("rule_flag", 1);
+    // AnimatedFlag flagBg("rule_flag", 1);
 
     // Main loop
     while (window.isOpen())

@@ -15,6 +15,7 @@ class GamePlay
 {
 private:
     Map* map;
+    unsigned int entityIndex;
     std::vector<Entity*> entities;
 
 public:

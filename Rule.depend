@@ -8,7 +8,7 @@
 	<SFML/Graphics.hpp>
 	<utils.hpp>
 
-1568999123 source:c:\files\projects\rule\src\main.cpp
+1569008538 source:c:\files\projects\rule\src\main.cpp
 	<iostream>
 	<string>
 	<SFML/Graphics.hpp>
@@ -1141,7 +1141,7 @@
 	"screen.hpp"
 	"gui/button.hpp"
 
-1568992102 c:\files\projects\rule\include\screens\game.hpp
+1569009816 c:\files\projects\rule\include\screens\game.hpp
 	<string>
 	<SFML/Graphics.hpp>
 	"config.hpp"
@@ -1152,7 +1152,7 @@
 1568992102 source:c:\files\projects\rule\src\screens\credits.cpp
 	"screens/credits.hpp"
 
-1568992102 source:c:\files\projects\rule\src\screens\game.cpp
+1568999222 source:c:\files\projects\rule\src\screens\game.cpp
 	"screens/game.hpp"
 
 1568992102 source:c:\files\projects\rule\src\screens\loading.cpp
@@ -1281,10 +1281,10 @@
 1568928780 c:\files\projects\rule\include\entity.hpp
 	<SFML/Graphics.hpp>
 
-1568928615 source:c:\files\projects\rule\src\game_play.cpp
+1569009763 source:c:\files\projects\rule\src\game_play.cpp
 	"game_play.hpp"
 
-1568992102 c:\files\projects\rule\include\game_play.hpp
+1569009734 c:\files\projects\rule\include\game_play.hpp
 	<vector>
 	<SFML/Graphics.hpp>
 	"config.hpp"
@@ -1322,7 +1322,7 @@
 1568921251 source:c:\files\projects\rule\src\log.cpp
 	"log.hpp"
 
-1568992102 source:c:\files\projects\rule\src\map\map.cpp
+1569010264 source:c:\files\projects\rule\src\map\map.cpp
 	"map.hpp"
 	<iostream>
 

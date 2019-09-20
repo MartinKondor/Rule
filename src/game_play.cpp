@@ -7,7 +7,11 @@ GamePlay::GamePlay(bool load)
 {
     // For testing load a map and an example human
     this->map = new Map("flatland.map");
+    this->entityIndex = 0;
+
+    // Adding entities for testing
     this->entities.push_back(new Human(0, 10, 10));
+
     this->cameraX = 0;
     this->cameraY = 0;
     this->view.reset(sf::FloatRect(0, 0, CONFIG.WINDOW_WIDTH, CONFIG.WINDOW_HEIGHT));

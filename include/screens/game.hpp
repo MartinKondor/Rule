@@ -28,6 +28,9 @@ private:
     GamePlay game;
     GameSubScreen subScreen;
 
+    // HUD elements
+    /// TODO
+
     // In game menu elements
     sf::Texture logoTexture;
     sf::Sprite logo;

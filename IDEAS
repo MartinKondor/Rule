@@ -1,0 +1,53 @@
+The game, in sandbox mode starts with the task that you need to define the society of your species,
+if your species are droped down on the map they will be called society, since the only civilized entity
+groups can be your main species. After that the group you can "Rule" above will all consist of your species
+you will have the right to command them to do things, like building, grathering, hunting or fighting, it all
+depends on you. But you must be careful, you start the game with some materials you need from the begining
+(wood, stone, food, water), you can build your own civilization up from these, but if there is not enough food
+or water, your species may be rebelious and will do as their need wishes, what's more, they might migrate to
+somewhere else to build a completly new society. Other communites/societies can appear in the game, on the same
+map as you, since there can be species whom have the Civilized trait, they can fight with you, trade with you
+or just be neutral, it depends on their traits, and yours. 
+
+
+* Entities (Animals or other any kind of fantastical entity) with abstract description
+	Each animal can have traits/properties like:
+		- Can be tamed 
+		- Edible
+		- Agressive/Passive
+		- Carnivore/Omnivore/Herbivore
+		- Speed (0 - no max value)
+		- Health (0 - no max value)
+		- Strenght (0 - no max value)
+		- Foods (anything, even rocks if needed)
+		- Drinks
+		- Civilized, or not
+		- Sounds (talking, fighting, gathering, eating)
+
+* If an entity is civilized, it can have traits like:
+	 - Ethics:
+		*Xenophobe or Xenophile:
+			Xenophobes don't like foregin species
+			Xenophiles like foregin species
+		* Millitarist or Pacifist:
+			Millitarist likes to fight
+			Pacifist only fights for their own defence
+		* Materialist - Spiritualist:
+			Materialist works a lot but consumes a lot
+			Spiritualist doesn't work too much but consumes much less
+	- Personality:
+		* Adaptive (good survivor, doesn't need that much resources)
+		* Agrarian (good farmer)
+		* Charismatic (good trader)
+		* Engineer (they build much faster)
+		* Scientist (research)
+		* Intelligent
+		* Breeders (fast reproduciblity)
+		
+		and their opposite.
+	
+
+* Each community can have different society, meaning:
+	* Any religion (must be defined in some kind of file)
+	* Prefered living spaces (Hot, cold, moderate or their combination)
+	* 
