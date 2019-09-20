@@ -74,6 +74,8 @@ SettingsScreen::SettingsScreen(Screen* nextScreen)
     this->masterVolumeSlider.setSliderValue(CONFIG.MASTER_VOLUME);
     this->soundVolumeSlider.setSliderValue(CONFIG.SOUND_VOLUME);
     this->musicVolumeSlider.setSliderValue(CONFIG.MUSIC_VOLUME);
+
+    this->screenIsLoaded = true;
 }
 
 ScreenType SettingsScreen::display(sf::RenderWindow &window)
@@ -150,6 +152,8 @@ ScreenType SettingsScreen::display(sf::RenderWindow &window)
     CONFIG.IS_FULLSCREEN = this->fullscreenCheckbox.isChecked;
     return ScreenType::SETTINGS;
 }
+
+void SettingsScreen::event(sf::Event& event) {}
 
 sf::Keyboard::Key SettingsScreen::getPressedKey(sf::Keyboard::Key currentKey)
 {

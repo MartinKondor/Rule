@@ -19,13 +19,14 @@ private:
     sf::Text screenTitle;
     sf::Text credits;
     sf::Texture logoTexture;
-    sf::Texture sfmlLogoTexture;
     sf::Sprite logo;
+    sf::Texture sfmlLogoTexture;
     sf::Sprite sfmlLogo;
     Button backButton;
 
 public:
     CreditsScreen();
+    virtual void event(sf::Event& event);
     virtual ScreenType display(sf::RenderWindow& window);
 };
 

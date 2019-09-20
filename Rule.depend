@@ -463,16 +463,16 @@
 	<SFML/Graphics.hpp>
 	<config.hpp>
 
-1568873662 source:d:\projects\rule\src\config.cpp
+1568970304 source:d:\projects\rule\src\config.cpp
 	"config.hpp"
 
-1568873662 d:\projects\rule\include\config.hpp
+1568970298 d:\projects\rule\include\config.hpp
 	<string>
 	<fstream>
 	<SFML/Graphics.hpp>
 	<utils.hpp>
 
-1568901622 source:d:\projects\rule\src\main.cpp
+1568987177 source:d:\projects\rule\src\main.cpp
 	<iostream>
 	<string>
 	<SFML/Graphics.hpp>
@@ -483,6 +483,7 @@
 	"screens/settings.hpp"
 	"screens/main_menu.hpp"
 	"screens/game.hpp"
+	"log.hpp"
 
 1568705448 d:\projects\rule\lib\sfml-2.5.1\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -902,7 +903,7 @@
 	<screen.hpp>
 	<button.hpp>
 
-1568886432 d:\projects\rule\include\screen.hpp
+1568971156 d:\projects\rule\include\screen.hpp
 	<SFML/Graphics.hpp>
 
 1568787942 d:\projects\rule\include\enums.hpp
@@ -976,7 +977,7 @@
 1568816049 source:d:\projects\rule\src\settings_screen.cpp
 	"settings_screen.hpp"
 
-1568893006 source:d:\projects\rule\src\utils.cpp
+1568959954 source:d:\projects\rule\src\utils.cpp
 	"utils.hpp"
 
 1568897561 source:d:\projects\rule\src\global.cpp
@@ -1034,27 +1035,27 @@
 	"config.hpp"
 	"utils.hpp"
 
-1568873662 source:d:\projects\rule\src\screens\loading.cpp
+1568971197 source:d:\projects\rule\src\screens\loading.cpp
 	"screens/loading.hpp"
 
-1568873662 d:\projects\rule\include\screens\loading.hpp
+1568969315 d:\projects\rule\include\screens\loading.hpp
 	<SFML/Graphics.hpp>
 	"config.hpp"
 	"screen.hpp"
 
-1568873662 source:d:\projects\rule\src\screens\credits.cpp
+1568971182 source:d:\projects\rule\src\screens\credits.cpp
 	"screens/credits.hpp"
 
-1568886823 d:\projects\rule\include\screens\credits.hpp
+1568970962 d:\projects\rule\include\screens\credits.hpp
 	<SFML/Graphics.hpp>
 	"config.hpp"
 	"screen.hpp"
 	"gui/button.hpp"
 
-1568901677 source:d:\projects\rule\src\screens\game.cpp
+1568971190 source:d:\projects\rule\src\screens\game.cpp
 	"screens/game.hpp"
 
-1568901366 d:\projects\rule\include\screens\game.hpp
+1568970978 d:\projects\rule\include\screens\game.hpp
 	<string>
 	<SFML/Graphics.hpp>
 	"config.hpp"
@@ -1062,19 +1063,19 @@
 	"gui/button.hpp"
 	"game_play.hpp"
 
-1568875087 source:d:\projects\rule\src\screens\main_menu.cpp
+1568971203 source:d:\projects\rule\src\screens\main_menu.cpp
 	"screens/main_menu.hpp"
 
-1568873662 d:\projects\rule\include\screens\main_menu.hpp
+1568970927 d:\projects\rule\include\screens\main_menu.hpp
 	<SFML/Graphics.hpp>
 	"config.hpp"
 	"screen.hpp"
 	"gui/button.hpp"
 
-1568901119 source:d:\projects\rule\src\screens\settings.cpp
+1568971212 source:d:\projects\rule\src\screens\settings.cpp
 	"screens/settings.hpp"
 
-1568886407 d:\projects\rule\include\screens\settings.hpp
+1568970947 d:\projects\rule\include\screens\settings.hpp
 	<SFML/Graphics.hpp>
 	"config.hpp"
 	"screen.hpp"
@@ -1172,10 +1173,10 @@
 	"gfx/animation.hpp"
 	"entity.hpp"
 
-1568879654 source:d:\projects\rule\src\entites\human.cpp
+1568964612 source:d:\projects\rule\src\entites\human.cpp
 	"human.hpp"
 
-1568888638 d:\projects\rule\include\entity.hpp
+1568959954 d:\projects\rule\include\entity.hpp
 	<SFML/Graphics.hpp>
 
 1568876704 source:d:\projects\rule\src\game.cpp
@@ -1188,28 +1189,31 @@
 	"entity.hpp"
 	"human.hpp"
 
-1568891123 d:\projects\rule\include\game_play.hpp
+1568960442 d:\projects\rule\include\game_play.hpp
 	<vector>
 	<SFML/Graphics.hpp>
-	"screen.hpp"
+	"config.hpp"
 	"map.hpp"
 	"entity.hpp"
 	"human.hpp"
 
-1568902269 source:d:\projects\rule\src\game_play.cpp
+1568968890 source:d:\projects\rule\src\game_play.cpp
 	"game_play.hpp"
 
-1568899981 d:\projects\rule\include\gfx\animation.hpp
+1568963254 d:\projects\rule\include\gfx\animation.hpp
 	<string>
+	<fstream>
 	<SFML/Graphics.hpp>
+	"utils.hpp"
+	"entity.hpp"
 	"log.hpp"
 
-1568900615 source:d:\projects\rule\src\gfx\animation.cpp
+1568965260 source:d:\projects\rule\src\gfx\animation.cpp
 	"animation.hpp"
 
-1568903968 d:\projects\rule\include\map
+1568959954 d:\projects\rule\include\map
 
-1568903968 d:\projects\rule\include\map\map.hpp
+1568959954 d:\projects\rule\include\map\map.hpp
 	<fstream>
 	<string>
 	<SFML/Graphics.hpp>
@@ -1219,7 +1223,7 @@
 	"utils.hpp"
 	"log.hpp"
 
-1568902741 source:d:\projects\rule\src\map\map.cpp
+1568968615 source:d:\projects\rule\src\map\map.cpp
 	"map.hpp"
 	<iostream>
 
@@ -1234,17 +1238,17 @@
 1568897442 source:d:\projects\rule\src\map\resource.cpp
 	"resource.hpp"
 
-1568901990 source:d:\projects\rule\src\map\tileset.cpp
+1568959954 source:d:\projects\rule\src\map\tileset.cpp
 	"tileset.hpp"
-	<iostream>
 
-1568900165 d:\projects\rule\include\log.hpp
+1568959954 d:\projects\rule\include\log.hpp
+	<iostream>
 	<string>
 	<SFML/Graphics.hpp>
 	"config.hpp"
 	"gui/button.hpp"
 
-1568900291 source:d:\projects\rule\src\log.cpp
+1568959954 source:d:\projects\rule\src\log.cpp
 	"log.hpp"
 
 1568910347 c:\files\projects\rule\include\map

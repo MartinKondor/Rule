@@ -2,7 +2,9 @@
 #define ANIMATION_HPP
 
 #include <string>
+#include <fstream>
 #include <SFML/Graphics.hpp>
+#include "utils.hpp"
 #include "entity.hpp"
 #include "log.hpp"
 
@@ -39,7 +41,13 @@ public:
     Loads animation from the given file.
     @returns false if animation cannot be loaded.
     */
-    bool load(const std::string fileName);
+    bool load(const std::string fileName, const std::string infoFileName);
+
+    /**
+    Loads animation info from the given file.
+    @returns false if info file cannot be loaded.
+    */
+    bool loadInfo(const std::string infoFileName);
 
     /**
     Changes the animation frame to the next one, and draws it out.

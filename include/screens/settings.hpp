@@ -21,6 +21,7 @@ class SettingsScreen : public Screen
 private:
     sf::Texture logoTexture;
     sf::Sprite logo;
+
     sf::Text screenTitle;
     Button backButton;
     Button upButton;
@@ -47,6 +48,7 @@ public:
 
     SettingsScreen(Screen* nextScreen);
     sf::Keyboard::Key getPressedKey(sf::Keyboard::Key currentKey);
+    virtual void event(sf::Event& event);
     virtual ScreenType display(sf::RenderWindow& window);
 };
 

@@ -26,6 +26,8 @@ MainMenuScreen::MainMenuScreen()
     this->loadGameSubScreenTitle = sf::Text("Load game", CONFIG.TITLE_FONT, CONFIG.TITLE_CHARACTER_SIZE);
     this->newGameSubScreenTitle.setPosition(2 * CONFIG.CHARACTER_SIZE, 2 * CONFIG.CHARACTER_SIZE);
     this->loadGameSubScreenTitle.setPosition(2 * CONFIG.CHARACTER_SIZE, 2 * CONFIG.CHARACTER_SIZE);
+
+    this->screenIsLoaded = true;
 }
 
 ScreenType MainMenuScreen::displaySubScreen(sf::RenderWindow &window)
@@ -48,6 +50,8 @@ ScreenType MainMenuScreen::displaySubScreen(sf::RenderWindow &window)
     }
     return ScreenType::MAIN_MENU;
 }
+
+void MainMenuScreen::event(sf::Event& event) {}
 
 ScreenType MainMenuScreen::display(sf::RenderWindow &window)
 {

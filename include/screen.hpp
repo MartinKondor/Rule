@@ -28,6 +28,17 @@ public:
     Screen* nextScreen = nullptr;
 
     /**
+    Must become true at the end of the constructor.
+    */
+    bool screenIsLoaded = false;
+
+
+    /**
+    Handle the polled window event.
+    */
+    virtual void event(sf::Event& event) = 0;
+
+    /**
     Called for displaying and updating the given screen.
     */
     virtual ScreenType display(sf::RenderWindow& window) = 0;

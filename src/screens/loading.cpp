@@ -20,7 +20,11 @@ LoadingScreen::LoadingScreen()
 
     this->screenTitle = sf::Text("Loading ...", CONFIG.TITLE_FONT, CONFIG.TITLE_CHARACTER_SIZE);
     this->screenTitle.setPosition(2 * CONFIG.CHARACTER_SIZE, 2 * CONFIG.CHARACTER_SIZE);
+
+    this->screenIsLoaded = true;
 }
+
+void LoadingScreen::event(sf::Event& event) {}
 
 ScreenType LoadingScreen::display(sf::RenderWindow &window)
 {

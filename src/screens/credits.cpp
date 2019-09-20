@@ -23,7 +23,11 @@ CreditsScreen::CreditsScreen()
     this->logo.setPosition(CONFIG.WINDOW_WIDTH - logoImage.getSize().x, 0);
     this->screenTitle.setPosition(2 * CONFIG.CHARACTER_SIZE, 2 * CONFIG.CHARACTER_SIZE);
     this->credits.setPosition(CONFIG.WINDOW_WIDTH / 2, 2.2 * this->logoTexture.getSize().y);
+
+    this->screenIsLoaded = true;
 }
+
+void CreditsScreen::event(sf::Event& event) {}
 
 ScreenType CreditsScreen::display(sf::RenderWindow& window)
 {

@@ -11,42 +11,40 @@ Animation::Animation(const std::string animationName)
     this->frameIndex = 0;
     this->frameCount = 0;
     this->framesPerSecond = 8;
+    this->width = 0;
+    this->height = 0;
     this->counter.restart();
 
-    // Determine animation size
-    if (animationName == "human")
-    {
-        this->width = 48;
-        this->height = 48;
-    }
-    else
+    const std::string infoFileName = ANIMATION_FOLDER + animationName + "/info.txt";
+    const std::string spritesheetFileName = ANIMATION_FOLDER + animationName + "/spritesheet.png";
+
+    // Check the info file
+    if (!Utils::isFileExists(infoFileName) || !Utils::isFileExists(spritesheetFileName))
     {
         openMessageBox("Unknown animation name (" + animationName + ")");
         exit(EXIT_FAILURE);
     }
 
     // Load the animation
-    if (!this->load(ANIMATION_FOLDER + animationName + "/spritesheet.png"))
+    if (!this->load(spritesheetFileName, infoFileName))
     {
-        openMessageBox("Cannot load animation (" + ANIMATION_FOLDER + animationName + "/spritesheet.png" + ")");
+        openMessageBox("Cannot load animation (" + spritesheetFileName + ")");
         exit(EXIT_FAILURE);
     }
 }
 
-bool Animation::load(const std::string fileName)
+bool Animation::load(const std::string fileName, const std::string infoFileName)
 {
     // Load animation image
     sf::Image animImg;
-    if (!animImg.loadFromFile(fileName))
+    if (!animImg.loadFromFile(fileName) || !this->loadInfo(infoFileName))
     {
         return false;
     }
 
+    // Determine sprite size from the info file
     sf::Vector2u imgSize = animImg.getSize();
 
-    /*
-    For testing load only the first row of the spritesheet.
-    */
     for (unsigned int i = 0; i < (unsigned int) (imgSize.y / this->height); i++)
     {
         for (unsigned int j = 0; j < (unsigned int) (imgSize.x / this->width); j++)
@@ -63,7 +61,59 @@ bool Animation::load(const std::string fileName)
         }
     }
 
-    this->frameCount = 8;  // this->frames.size();
+    this->frameCount = imgSize.x / this->width;  // this->frames.size();
+    return true;
+}
+
+bool Animation::loadInfo(const std::string infoFileName)
+{
+    std::string key;
+    std::string value;
+    bool inValue = false;
+
+    std::string line;
+    std::ifstream infoFile;
+    infoFile.open(infoFileName);
+
+    while (std::getline(infoFile, line))
+    {
+        for (unsigned int i = 0; i < line.length(); i++)
+        {
+            if (line[i] == ' ' || line[i] == '\t')
+            {
+                continue;
+            }
+            else if (line[i] == '=')
+            {
+                inValue = true;
+                continue;
+            }
+
+            if (inValue)
+            {
+                value += line[i];
+            }
+            else
+            {
+                key += line[i];
+            }
+        }
+
+        if (key == "width")
+        {
+            this->width = std::stoi(value);
+        }
+        else if (key == "height")
+        {
+            this->height = std::stoi(value);
+        }
+
+        key = "";
+        value = "";
+        inValue = false;
+    }
+
+    infoFile.close();
     return true;
 }
 

@@ -14,13 +14,12 @@ extern Config CONFIG;
 class GamePlay
 {
 private:
-    float cameraX;
-    float cameraY;
-
     Map* map;
     std::vector<Entity*> entities;
 
 public:
+    float cameraX;
+    float cameraY;
     sf::View view;  // Player's view
 
 

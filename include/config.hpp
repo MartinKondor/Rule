@@ -34,7 +34,7 @@ public:
     // Not settable variables
     sf::Font MAIN_FONT;
     sf::Font TITLE_FONT;
-    sf::Color BG_COLOR;
+    sf::Color BACKGROUND;
 
     Config();
 

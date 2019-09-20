@@ -23,6 +23,7 @@ private:
 
 public:
     LoadingScreen();
+    virtual void event(sf::Event& event);
     virtual ScreenType display(sf::RenderWindow& window);
 };
 

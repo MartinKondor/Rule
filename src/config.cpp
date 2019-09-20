@@ -61,7 +61,7 @@ bool Config::load(std::string fileName)
     {
         return false;
     }
-    this->BG_COLOR = sf::Color(37, 37, 37);
+    this->BACKGROUND = sf::Color(37, 37, 37);
 
     // Check errorous settings
     if (this->WINDOW_WIDTH < 800)

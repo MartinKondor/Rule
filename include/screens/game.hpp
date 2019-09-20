@@ -29,9 +29,11 @@ private:
     GameSubScreen subScreen;
 
     // In game menu elements
-    sf::Sprite inGameMenuBackground;
-    sf::Sprite logo;
     sf::Texture logoTexture;
+    sf::Sprite logo;
+
+    sf::Texture inGameMenuBackgroundTexture;
+    sf::Sprite inGameMenuBackground;
     Button inGameResumeButton;
     Button inGameSaveGameButton;
     Button inGameResignButton;
@@ -41,6 +43,7 @@ private:
 public:
     GameScreen();
     ScreenType displayInGameMenu(sf::RenderWindow& window);
+    virtual void event(sf::Event& event);
     virtual ScreenType display(sf::RenderWindow& window);
 };
 

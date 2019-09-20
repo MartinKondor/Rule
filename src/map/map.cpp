@@ -195,13 +195,13 @@ void Map::display(sf::RenderWindow& window)
     int cartX = 0;
     int cartY = 0;
 
-    for (std::vector<std::vector<unsigned int>> layer : this->layers)
+    for (unsigned int layerIndex = 0; layerIndex < this->layers.size(); layerIndex++)
     {
-        for (unsigned int i = 0; i < layer.size(); i++)
+        for (unsigned int i = 0; i < this->layers[layerIndex].size(); i++)
         {
-            for (unsigned int j = 0; j < layer[i].size(); j++)
+            for (unsigned int j = 0; j < this->layers[layerIndex][i].size(); j++)
             {
-                tileSprite.setTexture(*this->tileset.tiles[layer[i][j]]);
+                tileSprite.setTexture(*this->tileset.tiles[this->layers[layerIndex][i][j]]);
 
                 cartX = j * this->tileset.tileWidth / 2;
                 cartY = i * this->tileset.tileHeight / 2;

@@ -23,6 +23,8 @@ GameScreen::GameScreen()
     this->inGameResignButton = Button(CONFIG.WINDOW_WIDTH / 2 - commonWidth / 2, commonY + 3 * buttonMargin, "Resign", commonWidth, 0);
     this->inGameSettingsButton = Button(CONFIG.WINDOW_WIDTH / 2 - commonWidth / 2, commonY + 4 * buttonMargin, "Settings", commonWidth, 0);
     this->inGameExitButton = Button(CONFIG.WINDOW_WIDTH / 2 - commonWidth / 2, commonY + 5 * buttonMargin, "Exit", commonWidth, 0);
+
+    this->screenIsLoaded = true;
 }
 
 ScreenType GameScreen::displayInGameMenu(sf::RenderWindow& window)
@@ -60,18 +62,34 @@ ScreenType GameScreen::displayInGameMenu(sf::RenderWindow& window)
     return ScreenType::GAME;
 }
 
+void GameScreen::event(sf::Event& event)
+{
+    if (event.type == sf::Event::MouseWheelScrolled && event.mouseWheelScroll.wheel == sf::Mouse::VerticalWheel)
+    {
+        if(event.mouseWheelScroll.delta >= 1)
+        {
+            this->game.view.zoom(0.9);
+        }
+        else if (event.mouseWheelScroll.delta <= -1)
+        {
+            this->game.view.zoom(1.1);
+        }
+    }
+}
+
 ScreenType GameScreen::display(sf::RenderWindow& window)
 {
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
     {
         // Make a screenshot of the game as a wallpaper
         this->game.display(window);
-        sf::Vector2u windowSize = window.getSize();
-        sf::Texture* tempTexture = new sf::Texture();
-        tempTexture->create(windowSize.x, windowSize.y);
-        tempTexture->update(window);
-        this->inGameMenuBackground.setTexture(*tempTexture);
-        this->inGameMenuBackground.setColor(sf::Color(127, 127, 127, 255));
+
+        this->inGameMenuBackgroundTexture = sf::Texture();
+        this->inGameMenuBackgroundTexture.create(CONFIG.WINDOW_WIDTH, CONFIG.WINDOW_HEIGHT);
+        this->inGameMenuBackgroundTexture.update(window);
+
+        this->inGameMenuBackground.setTexture(this->inGameMenuBackgroundTexture);
+        this->inGameMenuBackground.setColor(sf::Color(180, 180, 180, 255));
 
         window.setView(window.getDefaultView());
         this->subScreen = GameSubScreen::IN_GAME;
