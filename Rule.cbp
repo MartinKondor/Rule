@@ -55,6 +55,7 @@
 		<Unit filename="include/entites/human.hpp" />
 		<Unit filename="include/entity.hpp" />
 		<Unit filename="include/game_play.hpp" />
+		<Unit filename="include/gfx/animated_flag.hpp" />
 		<Unit filename="include/gfx/animation.hpp" />
 		<Unit filename="include/gui/button.hpp" />
 		<Unit filename="include/gui/checkbox.hpp" />
@@ -73,6 +74,7 @@
 		<Unit filename="src/config.cpp" />
 		<Unit filename="src/entites/human.cpp" />
 		<Unit filename="src/game_play.cpp" />
+		<Unit filename="src/gfx/animated_flag.cpp" />
 		<Unit filename="src/gfx/animation.cpp" />
 		<Unit filename="src/global.cpp" />
 		<Unit filename="src/gui/button.cpp" />

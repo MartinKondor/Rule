@@ -1,14 +1,14 @@
 # depslib dependency file v1.0
-1568836067 source:c:\files\projects\rule\src\config.cpp
+1568992102 source:c:\files\projects\rule\src\config.cpp
 	"config.hpp"
 
-1568836067 c:\files\projects\rule\include\config.hpp
+1568992102 c:\files\projects\rule\include\config.hpp
 	<string>
 	<fstream>
 	<SFML/Graphics.hpp>
 	<utils.hpp>
 
-1568922497 source:c:\files\projects\rule\src\main.cpp
+1568999123 source:c:\files\projects\rule\src\main.cpp
 	<iostream>
 	<string>
 	<SFML/Graphics.hpp>
@@ -19,6 +19,8 @@
 	"screens/settings.hpp"
 	"screens/main_menu.hpp"
 	"screens/game.hpp"
+	"log.hpp"
+	"gfx/animated_flag.hpp"
 
 1568835752 c:\files\projects\rule\lib\sfml-2.5.1\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -442,7 +444,7 @@
 	<screen.hpp>
 	<button.hpp>
 
-1568922333 c:\files\projects\rule\include\screen.hpp
+1568992102 c:\files\projects\rule\include\screen.hpp
 	<SFML/Graphics.hpp>
 
 1568750096 c:\files\projects\rule\include\enums.hpp
@@ -1084,7 +1086,7 @@
 	"gui/slider.hpp"
 	"utils.hpp"
 
-1568906796 source:c:\files\projects\rule\src\global.cpp
+1568995603 source:c:\files\projects\rule\src\global.cpp
 	<string>
 	"config.hpp"
 
@@ -1113,18 +1115,18 @@
 	"config.hpp"
 	"utils.hpp"
 
-1568836067 c:\files\projects\rule\include\screens\credits.hpp
+1568992102 c:\files\projects\rule\include\screens\credits.hpp
 	<SFML/Graphics.hpp>
 	"config.hpp"
 	"screen.hpp"
 	"gui/button.hpp"
 
-1568836067 c:\files\projects\rule\include\screens\loading.hpp
+1568992102 c:\files\projects\rule\include\screens\loading.hpp
 	<SFML/Graphics.hpp>
 	"config.hpp"
 	"screen.hpp"
 
-1568922487 c:\files\projects\rule\include\screens\settings.hpp
+1568992102 c:\files\projects\rule\include\screens\settings.hpp
 	<SFML/Graphics.hpp>
 	"config.hpp"
 	"screen.hpp"
@@ -1133,13 +1135,13 @@
 	"gui/slider.hpp"
 	"utils.hpp"
 
-1568836067 c:\files\projects\rule\include\screens\main_menu.hpp
+1568992102 c:\files\projects\rule\include\screens\main_menu.hpp
 	<SFML/Graphics.hpp>
 	"config.hpp"
 	"screen.hpp"
 	"gui/button.hpp"
 
-1568928903 c:\files\projects\rule\include\screens\game.hpp
+1568992102 c:\files\projects\rule\include\screens\game.hpp
 	<string>
 	<SFML/Graphics.hpp>
 	"config.hpp"
@@ -1147,19 +1149,19 @@
 	"gui/button.hpp"
 	"game_play.hpp"
 
-1568836067 source:c:\files\projects\rule\src\screens\credits.cpp
+1568992102 source:c:\files\projects\rule\src\screens\credits.cpp
 	"screens/credits.hpp"
 
-1568921309 source:c:\files\projects\rule\src\screens\game.cpp
+1568992102 source:c:\files\projects\rule\src\screens\game.cpp
 	"screens/game.hpp"
 
-1568836067 source:c:\files\projects\rule\src\screens\loading.cpp
+1568992102 source:c:\files\projects\rule\src\screens\loading.cpp
 	"screens/loading.hpp"
 
-1568922975 source:c:\files\projects\rule\src\screens\main_menu.cpp
+1568992102 source:c:\files\projects\rule\src\screens\main_menu.cpp
 	"screens/main_menu.hpp"
 
-1568922457 source:c:\files\projects\rule\src\screens\settings.cpp
+1568992102 source:c:\files\projects\rule\src\screens\settings.cpp
 	"screens/settings.hpp"
 
 1568875847 source:d:\projects\rule\src\entites\entity.cpp
@@ -1261,9 +1263,11 @@
 	"gfx/animation.hpp"
 	"entity.hpp"
 
-1568928156 c:\files\projects\rule\include\gfx\animation.hpp
+1568992102 c:\files\projects\rule\include\gfx\animation.hpp
 	<string>
+	<fstream>
 	<SFML/Graphics.hpp>
+	"utils.hpp"
 	"entity.hpp"
 	"log.hpp"
 
@@ -1280,7 +1284,7 @@
 1568928615 source:c:\files\projects\rule\src\game_play.cpp
 	"game_play.hpp"
 
-1568910256 c:\files\projects\rule\include\game_play.hpp
+1568992102 c:\files\projects\rule\include\game_play.hpp
 	<vector>
 	<SFML/Graphics.hpp>
 	"config.hpp"
@@ -1306,7 +1310,7 @@
 	<SFML/Graphics.hpp>
 	"log.hpp"
 
-1568928405 source:c:\files\projects\rule\src\gfx\animation.cpp
+1568992102 source:c:\files\projects\rule\src\gfx\animation.cpp
 	"animation.hpp"
 
 1568906796 source:c:\files\projects\rule\src\map\resource.cpp
@@ -1318,7 +1322,17 @@
 1568921251 source:c:\files\projects\rule\src\log.cpp
 	"log.hpp"
 
-1568910492 source:c:\files\projects\rule\src\map\map.cpp
+1568992102 source:c:\files\projects\rule\src\map\map.cpp
 	"map.hpp"
 	<iostream>
+
+1568999086 source:c:\files\projects\rule\src\gfx\animated_flag.cpp
+	"animated_flag.hpp"
+
+1568997958 c:\files\projects\rule\include\gfx\animated_flag.hpp
+	<vector>
+	<string>
+	<SFML/Graphics.hpp>
+	"config.hpp"
+	"log.hpp"
 
