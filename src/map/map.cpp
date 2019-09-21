@@ -66,7 +66,7 @@ void Map::load(const std::string fileName)
             {
                 if (line[i] == '}')
                 {
-                    this->layers.push_back(currentLayer);
+                    this->layers.push_back(Layer(currentLayer));
                     currentLayer = {};
                     token = "";
                     inTileMatrix = false;
@@ -191,30 +191,8 @@ std::vector<unsigned int> Map::parseTileRow(std::string line)
 
 void Map::display(sf::RenderWindow& window)
 {
-    sf::Sprite tileSprite;
-    int cartX = 0;
-    int cartY = 0;
-
     for (unsigned int layerIndex = 0; layerIndex < this->layers.size(); layerIndex++)
     {
-        for (unsigned int i = 0; i < this->layers[layerIndex].size(); i++)
-        {
-            for (unsigned int j = 0; j < this->layers[layerIndex][i].size(); j++)
-            {
-                if (this->layers[layerIndex][i][j] == 0)
-                {
-                    continue;
-                }
-
-                tileSprite.setTexture(*this->tileset.tiles[this->layers[layerIndex][i][j]]);
-
-                cartX = j * this->tileset.tileWidth / 2;
-                cartY = i * this->tileset.tileHeight / 2;
-
-                tileSprite.setPosition(cartX - cartY, (cartX + cartY) / 2);
-                window.draw(tileSprite);
-            }
-        }
+        this->layers[layerIndex].display(window, this->tileset);
     }
-
 }

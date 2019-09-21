@@ -11,7 +11,17 @@
 
 * The map must have at least one layer, but there is no maximum limit.
 
-* Layers are separated with {} signs.
+* Layers declared with a * like:
+    layer* = {
+        0, 0, 0
+    }
+    means that the layer will be above the entites.
+
+* Layers are separated with {} signs like:
+    layer = {
+        0, 0, 0
+    }
+    where the 0th tile will not be printed.
 
 * Layers will be placed down in the opposite order
   as they are placed in the map file.

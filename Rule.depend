@@ -1253,7 +1253,7 @@
 1568959954 source:d:\projects\rule\src\log.cpp
 	"log.hpp"
 
-1568910347 c:\files\projects\rule\include\map
+1569057767 c:\files\projects\rule\include\map
 
 1568928136 source:c:\files\projects\rule\src\entites\human.cpp
 	"human.hpp"
@@ -1292,7 +1292,7 @@
 	"entity.hpp"
 	"human.hpp"
 
-1568910347 c:\files\projects\rule\include\map\map.hpp
+1569057428 c:\files\projects\rule\include\map\map.hpp
 	<fstream>
 	<string>
 	<SFML/Graphics.hpp>
@@ -1301,6 +1301,7 @@
 	"tileset.hpp"
 	"utils.hpp"
 	"log.hpp"
+	"layer.hpp"
 
 1568906796 c:\files\projects\rule\include\map\resource.hpp
 	<string>
@@ -1335,4 +1336,12 @@
 	<SFML/Graphics.hpp>
 	"config.hpp"
 	"log.hpp"
+
+1569057767 c:\files\projects\rule\include\map\layer.hpp
+	<vector>
+	<SFML/Graphics.hpp>
+	"tileset.hpp"
+
+1569057876 source:c:\files\projects\rule\src\map\layer.cpp
+	"layer.hpp"
 

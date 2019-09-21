@@ -9,6 +9,7 @@
 #include "tileset.hpp"
 #include "utils.hpp"
 #include "log.hpp"
+#include "layer.hpp"
 
 extern Config CONFIG;
 extern std::string MAP_FOLDER;
@@ -21,7 +22,7 @@ private:
     /**
     Each layer has a tile matrix.
     */
-    std::vector<std::vector<std::vector<unsigned int>>> layers;
+    std::vector<Layer> layers;
     std::vector<Resource> resources;
 
 
