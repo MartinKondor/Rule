@@ -14,19 +14,21 @@ extern std::string FLAG_FOLDER;
 class AnimatedFlag
 {
 private:
+    sf::VertexArray flagVertices;
+
     sf::Vector2u imgSize;
     unsigned int waveCount;
     sf::Sprite flag;
     std::vector<sf::Sprite> darkWaves;
     std::vector<sf::Sprite> lightWaves;
-    std::vector<int> darkWaveXs;
-    std::vector<int> lightWaveXs;
+    std::vector<float> darkWaveXs;
+    std::vector<float> lightWaveXs;
     sf::Texture flagTexture;
     sf::Texture lightWaveTexture;
     sf::Texture darkWaveTexture;
 
 public:
-    AnimatedFlag(const std::string flagName, const unsigned int waveCount);
+    AnimatedFlag(const std::string flagName);
     void play(sf::RenderWindow &window);
 };
 
