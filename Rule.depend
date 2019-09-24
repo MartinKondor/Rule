@@ -474,7 +474,8 @@
 	<SFML/Graphics.hpp>
 	<utils.hpp>
 
-1569248614 source:d:\projects\rule\src\main.cpp
+1569316901 source:d:\projects\rule\src\main.cpp
+	<random>
 	<iostream>
 	<string>
 	<SFML/Graphics.hpp>
@@ -1352,10 +1353,13 @@
 	<SFML/Graphics.hpp>
 	"tileset.hpp"
 
-1569250011 source:d:\projects\rule\src\gfx\animated_flag.cpp
+1569319375 source:d:\projects\rule\src\gfx\animated_flag.cpp
 	"animated_flag.hpp"
+	<iostream>
 
-1569249913 d:\projects\rule\include\gfx\animated_flag.hpp
+1569318995 d:\projects\rule\include\gfx\animated_flag.hpp
+	<random>
+	<math.h>
 	<vector>
 	<string>
 	<SFML/Graphics.hpp>

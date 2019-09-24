@@ -1,3 +1,4 @@
+#include <random>
 #include <iostream>
 #include <string>
 #include <SFML/Graphics.hpp>
@@ -23,6 +24,7 @@ extern std::string FLAG_FOLDER;
 
 int main(const int argc, const char** argv)
 {
+    srand(time(NULL));
 
     // Define global variables
     BASE_FOLDER = Utils::getBaseDir(argv[0]);

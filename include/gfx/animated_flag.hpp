@@ -1,6 +1,8 @@
 #ifndef ANIMATEDFLAG_HPP
 #define ANIMATEDFLAG_HPP
 
+#include <random>
+#include <math.h>
 #include <vector>
 #include <string>
 #include <SFML/Graphics.hpp>
@@ -14,15 +16,11 @@ extern std::string FLAG_FOLDER;
 class AnimatedFlag
 {
 private:
+    unsigned int waveCounter;
     sf::VertexArray flagVertices;
-
-    sf::Vector2u imgSize;
-    unsigned int waveCount;
     sf::Sprite flag;
     std::vector<sf::Sprite> darkWaves;
     std::vector<sf::Sprite> lightWaves;
-    std::vector<float> darkWaveXs;
-    std::vector<float> lightWaveXs;
     sf::Texture flagTexture;
     sf::Texture lightWaveTexture;
     sf::Texture darkWaveTexture;
