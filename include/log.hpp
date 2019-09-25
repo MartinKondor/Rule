@@ -17,7 +17,8 @@ Opens a simple window with the given message.
 */
 const bool openMessageBox(const std::string message);
 
-template<typename T> void log(T const& s)
+template<typename T>
+void log(const T &s)
 {
     std::cout << s << std::endl;
 }

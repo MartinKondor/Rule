@@ -468,14 +468,16 @@
 1569219865 source:d:\projects\rule\src\config.cpp
 	"config.hpp"
 
-1569219864 d:\projects\rule\include\config.hpp
+1569336530 d:\projects\rule\include\config.hpp
 	<string>
 	<fstream>
 	<SFML/Graphics.hpp>
 	<utils.hpp>
 
-1569316901 source:d:\projects\rule\src\main.cpp
-	<random>
+1569420653 source:d:\projects\rule\src\main.cpp
+	<iostream>
+	<string>
+	<SFML/Graphics.hpp>
 	<iostream>
 	<string>
 	<SFML/Graphics.hpp>
@@ -486,8 +488,8 @@
 	"screens/settings.hpp"
 	"screens/main_menu.hpp"
 	"screens/game.hpp"
-	"log.hpp"
 	"gfx/animated_flag.hpp"
+	"log.hpp"
 
 1569219865 d:\projects\rule\lib\sfml-2.5.1\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -1076,7 +1078,7 @@
 	"screen.hpp"
 	"gui/button.hpp"
 
-1569219865 source:d:\projects\rule\src\screens\settings.cpp
+1569419989 source:d:\projects\rule\src\screens\settings.cpp
 	"screens/settings.hpp"
 
 1569219864 d:\projects\rule\include\screens\settings.hpp
@@ -1246,7 +1248,7 @@
 1569219865 source:d:\projects\rule\src\map\tileset.cpp
 	"tileset.hpp"
 
-1569219864 d:\projects\rule\include\log.hpp
+1569336321 d:\projects\rule\include\log.hpp
 	<iostream>
 	<string>
 	<SFML/Graphics.hpp>
@@ -1353,7 +1355,7 @@
 	<SFML/Graphics.hpp>
 	"tileset.hpp"
 
-1569319375 source:d:\projects\rule\src\gfx\animated_flag.cpp
+1569334829 source:d:\projects\rule\src\gfx\animated_flag.cpp
 	"animated_flag.hpp"
 	<iostream>
 

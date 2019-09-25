@@ -8,9 +8,8 @@
 #include "screens/settings.hpp"
 #include "screens/main_menu.hpp"
 #include "screens/game.hpp"
-#include "log.hpp"
 #include "gfx/animated_flag.hpp"
-
+#include "log.hpp"
 
 extern Config CONFIG;
 extern std::string BASE_FOLDER;
@@ -71,11 +70,14 @@ int main(const int argc, const char** argv)
 
         // Clear screen
         window.clear(CONFIG.BACKGROUND);
-        flagBg.play(window);
 
         // Display screen if it's loaded
         if (screen->screenIsLoaded)
         {
+            if (currentScreenType != ScreenType::GAME)
+            {
+                flagBg.play(window);
+            }
             nextScreenType = screen->display(window);
         }
         else
