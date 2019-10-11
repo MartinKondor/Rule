@@ -85,7 +85,7 @@ ScreenType GameScreen::display(sf::RenderWindow& window)
         this->game.display(window);
 
         this->inGameMenuBackgroundTexture = sf::Texture();
-        this->inGameMenuBackgroundTexture.create(CONFIG.WINDOW_WIDTH, CONFIG.WINDOW_HEIGHT);
+        this->inGameMenuBackgroundTexture.create(window.getSize().x, window.getSize().y);
         this->inGameMenuBackgroundTexture.update(window);
 
         this->inGameMenuBackground.setTexture(this->inGameMenuBackgroundTexture);

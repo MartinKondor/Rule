@@ -17,6 +17,9 @@ extern std::string MAP_FOLDER;
 
 class Map
 {
+    /**
+    Represents an isometric map.
+    */
 private:
 
     /**

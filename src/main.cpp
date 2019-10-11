@@ -76,7 +76,7 @@ int main(const int argc, const char** argv)
         {
             if (currentScreenType != ScreenType::GAME)
             {
-                flagBg.play(window);
+                // flagBg.play(window);
             }
             nextScreenType = screen->display(window);
         }

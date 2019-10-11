@@ -8,6 +8,9 @@
 
 class Human : public Entity
 {
+    /**
+    Represents a Human entity.
+    */
 private:
     Animation animation;
 

@@ -474,10 +474,7 @@
 	<SFML/Graphics.hpp>
 	<utils.hpp>
 
-1569420653 source:d:\projects\rule\src\main.cpp
-	<iostream>
-	<string>
-	<SFML/Graphics.hpp>
+1569422340 source:d:\projects\rule\src\main.cpp
 	<iostream>
 	<string>
 	<SFML/Graphics.hpp>
@@ -983,7 +980,7 @@
 1568816049 source:d:\projects\rule\src\settings_screen.cpp
 	"settings_screen.hpp"
 
-1569219865 source:d:\projects\rule\src\utils.cpp
+1569505366 source:d:\projects\rule\src\utils.cpp
 	"utils.hpp"
 
 1569219865 source:d:\projects\rule\src\global.cpp
@@ -1019,7 +1016,7 @@
 1569219865 source:d:\projects\rule\src\gui\checkbox.cpp
 	"gui/checkbox.hpp"
 
-1569219864 d:\projects\rule\include\gui\checkbox.hpp
+1569505535 d:\projects\rule\include\gui\checkbox.hpp
 	<string>
 	<SFML/Graphics.hpp>
 	"button.hpp"
@@ -1174,7 +1171,7 @@
 1568876320 d:\projects\rule\include\entites\entity.hpp
 	<SFML/Graphics.hpp>
 
-1569219864 d:\projects\rule\include\entites\human.hpp
+1569505470 d:\projects\rule\include\entites\human.hpp
 	<string>
 	"gfx/animation.hpp"
 	"entity.hpp"
@@ -1217,9 +1214,9 @@
 1569219865 source:d:\projects\rule\src\gfx\animation.cpp
 	"animation.hpp"
 
-1569219864 d:\projects\rule\include\map
+1569505569 d:\projects\rule\include\map
 
-1569219864 d:\projects\rule\include\map\map.hpp
+1569505569 d:\projects\rule\include\map\map.hpp
 	<fstream>
 	<string>
 	<SFML/Graphics.hpp>
@@ -1359,7 +1356,7 @@
 	"animated_flag.hpp"
 	<iostream>
 
-1569318995 d:\projects\rule\include\gfx\animated_flag.hpp
+1569505513 d:\projects\rule\include\gfx\animated_flag.hpp
 	<random>
 	<math.h>
 	<vector>

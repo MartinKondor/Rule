@@ -11,6 +11,9 @@ extern Config CONFIG;
 
 class Checkbox
 {
+    /**
+    Simple binary checkbox.
+    */
 private:
     unsigned int xPos;
     unsigned int yPos;

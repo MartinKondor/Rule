@@ -15,6 +15,9 @@ extern std::string FLAG_FOLDER;
 
 class AnimatedFlag
 {
+    /**
+    Animated flag to fill the screen as a background.
+    */
 private:
     unsigned int waveCounter;
     sf::VertexArray flagVertices;
