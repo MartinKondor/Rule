@@ -19,7 +19,7 @@ GamePlay::GamePlay(bool load)
 
 void GamePlay::display(sf::RenderWindow& window)
 {
-    // Check keypresses
+    // Check for keypress
     if (sf::Keyboard::isKeyPressed(CONFIG.KEY_UP))
     {
         this->cameraY -= this->map->tileset.tileHeight / 4;

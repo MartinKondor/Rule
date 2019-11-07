@@ -81,7 +81,7 @@ ScreenType GameScreen::display(sf::RenderWindow& window)
 {
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
     {
-        // Make a screenshot of the game as a wallpaper
+        // Make a screenshot to make it a menu background
         this->game.display(window);
 
         this->inGameMenuBackgroundTexture = sf::Texture();
