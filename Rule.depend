@@ -1,9 +1,14 @@
 # depslib dependency file v1.0
-1574325843 source:d:\projects\rule\src\main.cpp
+1574336710 source:d:\projects\rule\src\main.cpp
 	<iostream>
 	<irrlicht.h>
-	"Config.hpp"
-	"Utils.hpp"
+	"event_receiver.hpp"
+	"screen.hpp"
+	"main_menu_screen.hpp"
+	"game_screen.hpp"
+	"settings_screen.hpp"
+	"config.hpp"
+	"utils.hpp"
 
 1352128454 d:\projects\rule\lib\irrlicht\irrlicht.h
 	"IrrCompileConfig.h"
@@ -1985,22 +1990,66 @@
 	"matrix4.h"
 	"IVideoDriver.h"
 
-1574326553 source:d:\projects\rule\src\config.cpp
-	"Config.hpp"
+1574335867 source:d:\projects\rule\src\config.cpp
+	"config.hpp"
 
-1574326501 d:\projects\rule\hpp\config.hpp
+1574335884 d:\projects\rule\hpp\config.hpp
 	<string>
 	<fstream>
-	"Utils.hpp"
+	<irrlicht.h>
+	"utils.hpp"
 
 1574326318 d:\projects\rule\hpp\utils.hpp
 	<string>
 	<sstream>
 	<sys/stat.h>
 
-1574326038 source:d:\projects\rule\src\utils.cpp
-	"Utils.hpp"
+1574332012 source:d:\projects\rule\src\utils.cpp
+	"utils.hpp"
 
-1574325837 source:d:\projects\rule\src\global.cpp
-	"Config.hpp"
+1574331132 source:d:\projects\rule\src\global.cpp
+	"config.hpp"
+
+1574331241 source:d:\projects\rule\src\screens\mainmenuscreen.cpp
+	"mainmenuscreen.hpp"
+
+1574331257 d:\projects\rule\hpp\screens\mainmenuscreen.hpp
+	<screen.hpp>
+
+1574333691 d:\projects\rule\hpp\screen.hpp
+
+1574333669 d:\projects\rule\hpp\screens\main_menu_screen.hpp
+	<irrlicht.h>
+	"screen.hpp"
+	"config.hpp"
+
+1574333679 source:d:\projects\rule\src\screens\main_menu_screen.cpp
+	"main_menu_screen.hpp"
+	<iostream>
+
+1574332224 d:\projects\rule\hpp\screens\game_screen.hpp
+	<irrlicht.h>
+	"screen.hpp"
+	"config.hpp"
+
+1574332363 source:d:\projects\rule\src\screens\game_screen.cpp
+	"game_screen.hpp"
+	<iostream>
+
+1574333833 source:d:\projects\rule\src\screens\settings_screen.cpp
+	"settings_screen.hpp"
+	<iostream>
+
+1574333805 d:\projects\rule\hpp\screens\settings_screen.hpp
+	<irrlicht.h>
+	"screen.hpp"
+	"config.hpp"
+
+1574335816 source:d:\projects\rule\src\event_receiver.cpp
+	"event_receiver.hpp"
+	<iostream>
+
+1574335901 d:\projects\rule\hpp\event_receiver.hpp
+	<irrlicht.h>
+	"config.hpp"
 

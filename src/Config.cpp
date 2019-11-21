@@ -1,4 +1,4 @@
-#include "Config.hpp"
+#include "config.hpp"
 
 
 Config::Config() {}
@@ -16,6 +16,7 @@ void Config::load(std::string baseFolder, std::string fileName)
 
 void Config::load(std::string fileName)
 {
+    this->setDefault();
     this->configFileName = fileName;
 
     if (!utils::isFileExists(fileName))
@@ -94,7 +95,14 @@ void Config::save(std::string fileName)
     configFile.close();
 }
 
-void Config::setDefault() {
+void Config::setDefault()
+{
+    // Set every key's state to false by default
+    for (unsigned int i = 0; i < irr::KEY_KEY_CODES_COUNT; i++)
+    {
+        this->keyState[i] = false;
+    }
+
     this->WINDOW_WIDTH = 800;
     this->WINDOW_HEIGHT = 600;
     this->MUSIC_VOLUME = 50;

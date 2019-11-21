@@ -3,23 +3,25 @@
 
 #include <string>
 #include <fstream>
-#include "Utils.hpp"
+#include <irrlicht.h>
+#include "utils.hpp"
 
 
-class Config {
+class Config
+{
 public:
+    bool keyState[irr::KEY_KEY_CODES_COUNT];  // Keys status
     std::string configFileName;
     std::string BASE_FOLDER = "";
 
     // Default values
-    unsigned int WINDOW_WIDTH = 800;
-    unsigned int WINDOW_HEIGHT = 600;
-    unsigned int MUSIC_VOLUME = 50;
-    unsigned int SOUND_VOLUME = 50;
-    unsigned int MASTER_VOLUME = 100;
-    bool IS_FULLSCREEN = false;
-    bool VSYNC_ENABLED = true;
-    // BACKGROUND
+    unsigned int WINDOW_WIDTH;
+    unsigned int WINDOW_HEIGHT;
+    unsigned int MUSIC_VOLUME;
+    unsigned int SOUND_VOLUME;
+    unsigned int MASTER_VOLUME;
+    bool IS_FULLSCREEN;
+    bool VSYNC_ENABLED;
 
     Config();
     Config(std::string baseFolder, std::string fileName);

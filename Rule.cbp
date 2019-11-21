@@ -15,6 +15,7 @@
 					<Add option="-g" />
 					<Add directory="lib/Irrlicht" />
 					<Add directory="hpp" />
+					<Add directory="hpp/screens" />
 				</Compiler>
 				<Linker>
 					<Add library="bin/Irrlicht.dll" />
@@ -27,6 +28,8 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="hpp" />
+					<Add directory="hpp/screens" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -36,12 +39,20 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="hpp/Config.hpp" />
-		<Unit filename="hpp/Utils.hpp" />
-		<Unit filename="src/Config.cpp" />
-		<Unit filename="src/Global.cpp" />
-		<Unit filename="src/Main.cpp" />
-		<Unit filename="src/Utils.cpp" />
+		<Unit filename="hpp/config.hpp" />
+		<Unit filename="hpp/event_receiver.hpp" />
+		<Unit filename="hpp/screen.hpp" />
+		<Unit filename="hpp/screens/game_screen.hpp" />
+		<Unit filename="hpp/screens/main_menu_screen.hpp" />
+		<Unit filename="hpp/screens/settings_screen.hpp" />
+		<Unit filename="hpp/utils.hpp" />
+		<Unit filename="src/config.cpp" />
+		<Unit filename="src/global.cpp" />
+		<Unit filename="src/main.cpp" />
+		<Unit filename="src/screens/game_screen.cpp" />
+		<Unit filename="src/screens/main_menu_screen.cpp" />
+		<Unit filename="src/screens/settings_screen.cpp" />
+		<Unit filename="src/utils.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

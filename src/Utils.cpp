@@ -1,10 +1,13 @@
-#include "Utils.hpp"
+#include "utils.hpp"
 
 
-std::string utils::getBaseDir(std::string exeFilePath) {
+std::string utils::getBaseDir(std::string exeFilePath)
+{
     unsigned int lastSlashIndex = 0;
-    for (unsigned int i = 0; i < exeFilePath.length(); i++) {
-        if (exeFilePath[i] == '\\' || exeFilePath[i] == '/') {
+    for (unsigned int i = 0; i < exeFilePath.length(); i++)
+    {
+        if (exeFilePath[i] == '\\' || exeFilePath[i] == '/')
+        {
             lastSlashIndex = i;
         }
     }

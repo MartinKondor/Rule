@@ -6,7 +6,7 @@ extern VarType VAR_NAME;
 ```
 on the global scope.
 */
-#include "Config.hpp"
+#include "config.hpp"
 
 
 Config CONFIG;
