@@ -3,14 +3,12 @@
 
 #include <string>
 #include <fstream>
-#include <irrlicht.h>
 #include "utils.hpp"
 
 
 class Config
 {
 public:
-    bool keyState[irr::KEY_KEY_CODES_COUNT];  // Keys status
     std::string configFileName;
     std::string BASE_FOLDER = "";
 

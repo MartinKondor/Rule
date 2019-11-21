@@ -4,12 +4,25 @@
 #include <irrlicht.h>
 #include "screen.hpp"
 #include "config.hpp"
+#include "input_holder.hpp"
 
 
 class GameScreen : public Screen
 {
 public:
-    GameScreen(irr::IrrlichtDevice* device);
+
+    // Camera variables
+    irr::scene::ICameraSceneNode* cam;
+    int cameraX;
+    int cameraY;
+    int cameraZ;
+
+    /// TEST
+    irr::scene::IAnimatedMesh* mesh;
+    irr::scene::IAnimatedMeshSceneNode* node;
+    /// END TEST
+
+    GameScreen(irr::IrrlichtDevice* device, irr::scene::ISceneManager* smgr, irr::video::IVideoDriver* driver);
     ScreenType display();
 };
 

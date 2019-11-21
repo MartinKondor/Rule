@@ -2,7 +2,7 @@
 #define EVENT_RECEIVER_HPP_INCLUDED
 
 #include <irrlicht.h>
-#include "config.hpp"
+#include "input_holder.hpp"
 
 
 struct SAppContext

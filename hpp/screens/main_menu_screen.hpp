@@ -13,7 +13,7 @@ public:
     irr::gui::IGUIButton* settingsButton;
     irr::gui::IGUIButton* exitButton;
 
-    MainMenuScreen(irr::IrrlichtDevice* device);
+    MainMenuScreen(irr::IrrlichtDevice* device, irr::scene::ISceneManager* smgr, irr::video::IVideoDriver* driver);
     ScreenType display();
 };
 

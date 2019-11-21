@@ -7,6 +7,8 @@ extern VarType VAR_NAME;
 on the global scope.
 */
 #include "config.hpp"
+#include "input_holder.hpp"
 
 
 Config CONFIG;
+InputHolder INPUT;

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1574336710 source:d:\projects\rule\src\main.cpp
+1574338913 source:d:\projects\rule\src\main.cpp
 	<iostream>
 	<irrlicht.h>
 	"event_receiver.hpp"
@@ -1990,13 +1990,12 @@
 	"matrix4.h"
 	"IVideoDriver.h"
 
-1574335867 source:d:\projects\rule\src\config.cpp
+1574345912 source:d:\projects\rule\src\config.cpp
 	"config.hpp"
 
-1574335884 d:\projects\rule\hpp\config.hpp
+1574345947 d:\projects\rule\hpp\config.hpp
 	<string>
 	<fstream>
-	<irrlicht.h>
 	"utils.hpp"
 
 1574326318 d:\projects\rule\hpp\utils.hpp
@@ -2007,8 +2006,9 @@
 1574332012 source:d:\projects\rule\src\utils.cpp
 	"utils.hpp"
 
-1574331132 source:d:\projects\rule\src\global.cpp
+1574345979 source:d:\projects\rule\src\global.cpp
 	"config.hpp"
+	"input_holder.hpp"
 
 1574331241 source:d:\projects\rule\src\screens\mainmenuscreen.cpp
 	"mainmenuscreen.hpp"
@@ -2016,40 +2016,51 @@
 1574331257 d:\projects\rule\hpp\screens\mainmenuscreen.hpp
 	<screen.hpp>
 
-1574333691 d:\projects\rule\hpp\screen.hpp
+1574340662 d:\projects\rule\hpp\screen.hpp
+	<irrlicht.h>
 
-1574333669 d:\projects\rule\hpp\screens\main_menu_screen.hpp
+1574338936 d:\projects\rule\hpp\screens\main_menu_screen.hpp
 	<irrlicht.h>
 	"screen.hpp"
 	"config.hpp"
 
-1574333679 source:d:\projects\rule\src\screens\main_menu_screen.cpp
+1574346083 source:d:\projects\rule\src\screens\main_menu_screen.cpp
 	"main_menu_screen.hpp"
 	<iostream>
 
-1574332224 d:\projects\rule\hpp\screens\game_screen.hpp
+1574346010 d:\projects\rule\hpp\screens\game_screen.hpp
 	<irrlicht.h>
 	"screen.hpp"
 	"config.hpp"
+	"input_holder.hpp"
 
-1574332363 source:d:\projects\rule\src\screens\game_screen.cpp
+1574347071 source:d:\projects\rule\src\screens\game_screen.cpp
 	"game_screen.hpp"
 	<iostream>
 
-1574333833 source:d:\projects\rule\src\screens\settings_screen.cpp
+1574346079 source:d:\projects\rule\src\screens\settings_screen.cpp
 	"settings_screen.hpp"
 	<iostream>
 
-1574333805 d:\projects\rule\hpp\screens\settings_screen.hpp
+1574338941 d:\projects\rule\hpp\screens\settings_screen.hpp
 	<irrlicht.h>
 	"screen.hpp"
 	"config.hpp"
 
-1574335816 source:d:\projects\rule\src\event_receiver.cpp
+1574347228 source:d:\projects\rule\src\event_receiver.cpp
 	"event_receiver.hpp"
 	<iostream>
 
-1574335901 d:\projects\rule\hpp\event_receiver.hpp
+1574345799 d:\projects\rule\hpp\event_receiver.hpp
 	<irrlicht.h>
-	"config.hpp"
+	"input_holder.hpp"
+
+1574340646 source:d:\projects\rule\src\screen.cpp
+	"screen.hpp"
+
+1574346587 d:\projects\rule\hpp\input_holder.hpp
+	<irrlicht.h>
+
+1574345921 source:d:\projects\rule\src\input_holder.cpp
+	"input_holder.hpp"
 

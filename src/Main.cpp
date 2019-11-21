@@ -17,8 +17,8 @@ int main(unsigned int argc, const char** argv)
     CONFIG.load(utils::getBaseDir(argv[0]), "config.ini");
 
     irr::IrrlichtDevice* device = irr::createDevice(
-                    irr::video::EDT_OPENGL, irr::core::dimension2d<irr::u32>(CONFIG.WINDOW_WIDTH, CONFIG.WINDOW_HEIGHT),
-                    32, CONFIG.IS_FULLSCREEN, false, CONFIG.VSYNC_ENABLED, 0);
+                                      irr::video::EDT_OPENGL, irr::core::dimension2d<irr::u32>(CONFIG.WINDOW_WIDTH, CONFIG.WINDOW_HEIGHT),
+                                      32, CONFIG.IS_FULLSCREEN, false, CONFIG.VSYNC_ENABLED, 0);
     if (!device)
     {
         return EXIT_FAILURE;
@@ -33,7 +33,7 @@ int main(unsigned int argc, const char** argv)
     // Screen variables
     ScreenType currentScreenType = ScreenType::MAIN_MENU;
     ScreenType lastScreenType = ScreenType::MAIN_MENU;
-    Screen* currentScreen = new MainMenuScreen(device);
+    Screen* currentScreen = new MainMenuScreen(device, smgr, driver);
 
     // Background variables
     irr::video::SColor bgColor = irr::video::SColor(255, 119, 172, 242);
@@ -44,19 +44,6 @@ int main(unsigned int argc, const char** argv)
     context.device = device;
     EventReceiver receiver(context);
     device->setEventReceiver(&receiver);
-
-    irr::scene::ICameraSceneNode* cam = smgr->addCameraSceneNode();
-
-    //// TEST
-    const irr::scene::IGeometryCreator* geomentryCreator = smgr->getGeometryCreator();
-    irr::scene::IMesh* plane = geomentryCreator->createPlaneMesh(irr::core::dimension2d<irr::f32>(100, 100), irr::core::dimension2d<irr::u32>(100, 100));
-    irr::scene::ISceneNode* cube = smgr->addCubeSceneNode(20);
-    irr::scene::ISceneNode* ground = smgr->addMeshSceneNode(plane);
-    ground->setPosition(irr::core::vector3df(10, 0, 10));
-    plane->setMaterialFlag(irr::video::EMF_LIGHTING, false);
-    smgr->addMeshSceneNode(plane);
-    int camX = 0, camY = 50, camZ = 0;
-    //// END TEST
 
     while (device->run())
     {
@@ -81,41 +68,7 @@ int main(unsigned int argc, const char** argv)
         }
 
         smgr->drawAll();
-
-        //// TEST
-        cube->render();
-        cam->setPosition(irr::core::vector3df(camX, camY, camZ));
-        cam->setTarget(ground->getPosition());
-
-        if (CONFIG.keyState[irr::KEY_KEY_W])
-        {
-            camY++;
-        }
-        if (CONFIG.keyState[irr::KEY_KEY_S])
-        {
-            camY--;
-        }
-
-        if (CONFIG.keyState[irr::KEY_KEY_D])
-        {
-            camX++;
-        }
-        if (CONFIG.keyState[irr::KEY_KEY_A])
-        {
-            camX--;
-        }
-
-        if (CONFIG.keyState[irr::KEY_KEY_E])
-        {
-            camZ++;
-        }
-        if (CONFIG.keyState[irr::KEY_KEY_Q])
-        {
-            camZ--;
-        }
-        //// END TEST
-
-        // currentScreenType = currentScreen->display();
+        currentScreenType = currentScreen->display();
         driver->endScene();
 
         // Choose screen
@@ -129,15 +82,15 @@ int main(unsigned int argc, const char** argv)
             }
             else if (currentScreenType == ScreenType::GAME)
             {
-                currentScreen = new GameScreen(device);
+                currentScreen = new GameScreen(device, smgr, driver);
             }
             else if (currentScreenType == ScreenType::SETTINGS)
             {
-                currentScreen = new SettingsScreen(device);
+                currentScreen = new SettingsScreen(device, smgr, driver);
             }
             else
             {
-                currentScreen = new MainMenuScreen(device);
+                currentScreen = new MainMenuScreen(device, smgr, driver);
             }
         }
 

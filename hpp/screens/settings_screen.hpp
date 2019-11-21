@@ -9,7 +9,7 @@
 class SettingsScreen : public Screen
 {
 public:
-    SettingsScreen(irr::IrrlichtDevice* device);
+    SettingsScreen(irr::IrrlichtDevice* device, irr::scene::ISceneManager* smgr, irr::video::IVideoDriver* driver);
     ScreenType display();
 };
 

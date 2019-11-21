@@ -6,7 +6,8 @@
 extern Config CONFIG;
 
 
-MainMenuScreen::MainMenuScreen(irr::IrrlichtDevice* device)
+MainMenuScreen::MainMenuScreen(irr::IrrlichtDevice* device, irr::scene::ISceneManager* smgr, irr::video::IVideoDriver* driver)
+    : Screen(device, smgr, driver)
 {
     this->env = device->getGUIEnvironment();
 

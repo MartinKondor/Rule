@@ -6,7 +6,8 @@
 extern Config CONFIG;
 
 
-SettingsScreen::SettingsScreen(irr::IrrlichtDevice* device)
+SettingsScreen::SettingsScreen(irr::IrrlichtDevice* device, irr::scene::ISceneManager* smgr, irr::video::IVideoDriver* driver)
+    : Screen(device, smgr, driver)
 {}
 
 ScreenType SettingsScreen::display()

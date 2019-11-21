@@ -41,14 +41,18 @@
 		</Compiler>
 		<Unit filename="hpp/config.hpp" />
 		<Unit filename="hpp/event_receiver.hpp" />
+		<Unit filename="hpp/input_holder.hpp" />
 		<Unit filename="hpp/screen.hpp" />
 		<Unit filename="hpp/screens/game_screen.hpp" />
 		<Unit filename="hpp/screens/main_menu_screen.hpp" />
 		<Unit filename="hpp/screens/settings_screen.hpp" />
 		<Unit filename="hpp/utils.hpp" />
 		<Unit filename="src/config.cpp" />
+		<Unit filename="src/event_receiver.cpp" />
 		<Unit filename="src/global.cpp" />
+		<Unit filename="src/input_holder.cpp" />
 		<Unit filename="src/main.cpp" />
+		<Unit filename="src/screen.cpp" />
 		<Unit filename="src/screens/game_screen.cpp" />
 		<Unit filename="src/screens/main_menu_screen.cpp" />
 		<Unit filename="src/screens/settings_screen.cpp" />
