@@ -13,9 +13,9 @@ public:
 
     // Camera variables
     irr::scene::ICameraSceneNode* cam;
-    int cameraX;
-    int cameraY;
-    int cameraZ;
+    float cameraX;
+    float cameraY;
+    float cameraZ;
 
     /// TEST
     irr::scene::IAnimatedMesh* mesh;
